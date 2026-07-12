@@ -67,29 +67,6 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       image: '/assets/images/real-estate-website-ui-design.webp'
     },
     {
-      id: 'ai_video',
-      title: 'Nexora Kids Bootcamp Video',
-      category: 'AI Video',
-      categoryIcon: <Video className="w-3.5 h-3.5" />,
-      categoryTheme: 'bg-rose-50/80 text-rose-700 border-rose-100/50',
-      description: <span>Turn holidays into a month of creativity and learning. At <span className="font-semibold text-slate-800">Nexora Kids Bootcamp</span>, children gain practical skills in coding, design, and AI basics.</span>,
-      techStack: ['Premiere Pro', 'ChatGPT'],
-      mockupBg: 'bg-[#020205]',
-      image: '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4'
-    },
-    {
-      id: 'thinkpros',
-      title: 'ThinkPros Accounting',
-      category: 'Website',
-      categoryIcon: <Briefcase className="w-3.5 h-3.5" />,
-      categoryTheme: 'bg-blue-50/80 text-blue-600 border-blue-100/50',
-      description: <span>Corporate accounting website built for a U.S.-based firm, optimized for <span className="font-semibold text-slate-800">business credibility</span>, <span className="font-semibold text-slate-800">lead generation</span>, and client onboarding.</span>,
-      techStack: ['WordPress', 'PHP', 'MySQL', 'Elementor'],
-      mockupBg: 'bg-slate-50',
-      image: '/assets/images/accounting-bookkeeping-website-ui-design.webp.webp',
-      liveLink: 'https://thinkpros-accounting.netlify.app/'
-    },
-    {
       id: 'nexapay',
       title: 'NexaPay Mobile App',
       category: 'Mobile App',
@@ -99,6 +76,28 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       techStack: ['React Native', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express'],
       mockupBg: 'bg-[#18142c]',
       image: '/assets/images/mobile-banking-app-ui-design.webp'
+    },
+    {
+      id: 'beauty_brand_collection',
+      title: 'Beauty Brand Collection',
+      category: 'Branding',
+      categoryIcon: <Sparkles className="w-3.5 h-3.5" />,
+      categoryTheme: 'bg-indigo-50/80 text-indigo-700 border-indigo-100/50',
+      description: <span>Beauty & Salon Marketing Campaigns featuring <span className="font-semibold text-slate-800">luxury aesthetics</span>.</span>,
+      techStack: ['Creative Direction', 'Brand Identity Systems', 'Visual Storytelling', 'Asset Pack Creation'],
+      mockupBg: 'bg-[#0a0f1d]',
+      image: '/assets/images/Free_A4_Flyers_Grid_Mockup_po.webp'
+    },
+    {
+      id: 'ai_video',
+      title: 'Nexora Kids Bootcamp Video',
+      category: 'AI Video',
+      categoryIcon: <Video className="w-3.5 h-3.5" />,
+      categoryTheme: 'bg-rose-50/80 text-rose-700 border-rose-100/50',
+      description: <span>Turn holidays into a month of creativity and learning. At <span className="font-semibold text-slate-800">Nexora Kids Bootcamp</span>, children gain practical skills in coding, design, and AI basics.</span>,
+      techStack: ['Premiere Pro', 'ChatGPT'],
+      mockupBg: 'bg-[#020205]',
+      image: '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4'
     }
   ];
 
@@ -171,7 +170,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
                       <span className="w-2 h-2 rounded-full bg-green-400" />
                     </div>
                     <div className="w-32 bg-white/60 h-3.5 rounded-md text-[5.5px] font-mono text-slate-400 flex items-center justify-center" id={`browser-url-${project.id}`}>
-                      {project.id === 'thinkpros' ? 'thinkprosaccounting.com' : 
+                      {project.id === 'beauty_brand_collection' ? 'beautybranding.design' : 
                        project.id === 'branding_flyers' ? 'nexorabranding.design' :
                        project.id === 'ai_video' ? 'nexoravideo.ai' :
                        `${project.id === 'nexorafit' ? 'nexorafitness' : project.id}.com`}

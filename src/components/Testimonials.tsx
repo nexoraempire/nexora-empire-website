@@ -69,6 +69,39 @@ const testimonials: Testimonial[] = [
     rating: 5,
     headline: "Earning steady income from freelance projects.",
     quote: <span>Nexora Empire is a direct reflection of <span className="font-semibold text-slate-800">true teamwork, professionalism, and consistency</span>. As an entrepreneur, I've seen how difficult it is to build something that lasts, but this team is led by people who <span className="font-semibold text-slate-800">don't give up when challenges arise</span>. If you're looking for a <span className="font-semibold text-slate-800">reliable digital agency</span> that genuinely delivers on its promises, Nexora Empire is one you can trust.</span>
+  },
+  {
+    id: 5,
+    name: "Manas",
+    role: "Web & Mobile App Developer",
+    location: "Cameroon",
+    flag: "🇨🇲",
+    photo: "/assets/images/photo_1_2026-07-12_09-29-53.jpg",
+    rating: 5,
+    headline: "Unmatched developer confidence and structure.",
+    quote: <span>I started with the <span className="font-semibold text-slate-800">Web Development course</span> to master full-stack engineering, and then immediately completed the <span className="font-semibold text-slate-800">Mobile App Development course</span>. Building real-world commercial platforms under expert mentors gave me unmatched developer confidence!</span>
+  },
+  {
+    id: 6,
+    name: "Tenyiyim Bright",
+    role: "AI Video Creation Expert",
+    location: "Cameroon",
+    flag: "🇨🇲",
+    photo: "/assets/images/bright.webp",
+    rating: 5,
+    headline: "Offered the opportunity to join the team.",
+    quote: <span>Taking the <span className="font-semibold text-slate-800">Video Creation with AI course</span> completely upgraded my skillset. Thanks to my outstanding performance during the training and internship, <span className="font-semibold text-slate-800">I was offered the opportunity to join the Nexora team full-time</span> as a video editor!</span>
+  },
+  {
+    id: 7,
+    name: "Mbekenyui Favor",
+    role: "Graphic Designer",
+    location: "Cameroon",
+    flag: "🇨🇲",
+    photo: "/assets/images/favor.png",
+    rating: 5,
+    headline: "From student internship to a full-time career.",
+    quote: <span>Enrolling in the <span className="font-semibold text-slate-800">Graphic Design course</span> was the turning point in my career. Because of my high-quality layout submissions and strong portfolio, <span className="font-semibold text-slate-800">I was hired full-time by Nexora Empire</span> directly after completing my internship!</span>
   }
 ];
 

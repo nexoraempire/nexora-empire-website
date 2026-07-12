@@ -4,6 +4,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header.tsx';
 import { Hero } from './components/Hero.tsx';
 import { About } from './components/About.tsx';
@@ -488,47 +489,58 @@ export default function App() {
       <Header view={view} setView={setView} />
 
       {/* Main content blocks */}
-      <main>
-        {view === 'home' ? (
-          <>
-            <Hero />
-            <About setView={setView} />
-            <Services setView={setView} />
-            <FeaturedProjects setView={setView} />
-            <TechStack />
-            <WhyNexora />
-            <Pricing />
-            <Testimonials />
-            <FAQ />
-            <FinalCTA />
-            <ReadyToBuild />
-          </>
-        ) : view === 'about-us' ? (
-          <AboutUsPage setView={setView} />
-        ) : view === 'web-dev' ? (
-          <WebDevPage setView={setView} />
-        ) : view === 'mobile-dev' ? (
-          <MobileDevPage setView={setView} />
-        ) : view === 'branding-design' ? (
-          <BrandingDesignPage setView={setView} />
-        ) : view === 'seo-growth' ? (
-          <SEOGrowthPage setView={setView} />
-        ) : view === 'ai-video' ? (
-          <AIVideoPage setView={setView} />
-        ) : view === 'social-media-management' ? (
-          <SocialMediaManagementPage setView={setView} />
-        ) : view === 'portfolio' ? (
-          <PortfolioPage setView={setView} />
-        ) : view === 'pricing' ? (
-          <PricingPage setView={setView} />
-        ) : view === 'training-internship' ? (
-          <TrainingInternshipPage setView={setView} />
-        ) : (
-          <>
-            <ContactPage setView={setView} />
-            <ReadyToBuild />
-          </>
-        )}
+      <main className="relative w-full">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={view}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18, ease: 'easeOut' }}
+            className="w-full"
+          >
+            {view === 'home' ? (
+              <>
+                <Hero />
+                <About setView={setView} />
+                <Services setView={setView} />
+                <FeaturedProjects setView={setView} />
+                <TechStack />
+                <WhyNexora />
+                <Pricing />
+                <Testimonials />
+                <FAQ />
+                <FinalCTA />
+                <ReadyToBuild />
+              </>
+            ) : view === 'about-us' ? (
+              <AboutUsPage setView={setView} />
+            ) : view === 'web-dev' ? (
+              <WebDevPage setView={setView} />
+            ) : view === 'mobile-dev' ? (
+              <MobileDevPage setView={setView} />
+            ) : view === 'branding-design' ? (
+              <BrandingDesignPage setView={setView} />
+            ) : view === 'seo-growth' ? (
+              <SEOGrowthPage setView={setView} />
+            ) : view === 'ai-video' ? (
+              <AIVideoPage setView={setView} />
+            ) : view === 'social-media-management' ? (
+              <SocialMediaManagementPage setView={setView} />
+            ) : view === 'portfolio' ? (
+              <PortfolioPage setView={setView} />
+            ) : view === 'pricing' ? (
+              <PricingPage setView={setView} />
+            ) : view === 'training-internship' ? (
+              <TrainingInternshipPage setView={setView} />
+            ) : (
+              <>
+                <ContactPage setView={setView} />
+                <ReadyToBuild />
+              </>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       {/* Footer block at the bottom */}

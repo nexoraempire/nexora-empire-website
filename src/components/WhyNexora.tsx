@@ -26,10 +26,8 @@ import weBuildWebsites from '../assets/images/we-build-websites.jpg';
 import seoTraining from '../assets/images/seo_training.png';
 // @ts-ignore
 import goodDesign from '../assets/images/good-design-vs-bad-design.jpg';
-// @ts-ignore
-import techTrainingVideo from '../assets/images/nexora-empire-tech-training-ai-video.mp4';
-// @ts-ignore
-import kidsBootcampVideo from '../assets/images/nexora-empire-kids-bootcamp-ai-video.mp4';
+const techTrainingVideo = '/assets/images/nexora-empire-student-ai-video.mp4';
+const kidsBootcampVideo = '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4';
 // @ts-ignore
 import nexoraTechEmpire from '../assets/images/nexora-tech-empire.jpg';
 
@@ -307,7 +305,7 @@ export const WhyNexora: React.FC = () => {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(109,40,217,0.02)_0%,transparent_100%)] pointer-events-none" />
 
                     {/* Left half of Right Card: Rounded embedded image flush with boundaries */}
-                    <div className="w-full md:w-[45%] relative overflow-hidden min-h-[160px] md:h-full border-b md:border-b-0 md:border-r border-zinc-900/60 shrink-0">
+                    <div className="w-full md:w-[45%] relative overflow-hidden h-[250px] sm:h-[280px] md:h-full border-b md:border-b-0 md:border-r border-zinc-900/60 shrink-0">
                       {card.workImage.endsWith('.mp4') ? (
                         <video 
                           src={card.workImage} 

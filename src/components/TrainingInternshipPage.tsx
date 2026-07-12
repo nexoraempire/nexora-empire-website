@@ -40,6 +40,19 @@ import {
   Headphones
 } from 'lucide-react';
 
+// @ts-ignore
+import ashleyPhoto from '../assets/images/Ashley.jpg';
+// @ts-ignore
+import syntiaPhoto from '../assets/images/syntia-bekap.jpg';
+// @ts-ignore
+import manaPhoto from '../assets/images/photo_1_2026-07-12_09-29-53.jpg';
+// @ts-ignore
+import favorPhoto from '../assets/images/favor.png';
+// @ts-ignore
+import brightPhoto from '../assets/images/bright.webp';
+// @ts-ignore
+import carinePhoto from '../assets/images/photo_2_2026-07-12_09-29-53.jpg';
+
 interface TrainingInternshipPageProps {
   setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
 }
@@ -452,43 +465,48 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
     }
   ];
 
-  // 5. Student Projects Showcase
   const studentProjects = [
     {
       title: 'Business Dashboard',
       skills: 'React, Tailwind, Lenis Scroll',
       preview: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop',
-      studentPhoto: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop'
+      studentPhoto: manaPhoto,
+      studentName: 'Manas'
     },
     {
       title: 'Mobile Banking App',
       skills: 'React Native, Expo, Async Storage',
       preview: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=400&auto=format&fit=crop',
-      studentPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop'
+      studentPhoto: carinePhoto,
+      studentName: 'Carine'
     },
     {
       title: 'Restaurant Website',
       skills: 'HTML, CSS, React, Framer Motion',
       preview: '/assets/images/nexora-empire-student-restaurant-website.png',
-      studentPhoto: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop'
+      studentPhoto: syntiaPhoto,
+      studentName: 'Ashley Syntia Bekap'
     },
     {
       title: 'UI/UX Case Study',
       skills: 'Figma, Wireframes, Prototyping',
       preview: '/assets/images/nexora-empire-student-uiux-figma.jpg',
-      studentPhoto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop'
+      studentPhoto: ashleyPhoto,
+      studentName: 'Ashley'
     },
     {
       title: 'Brand Identity Showcase',
       skills: 'Adobe Illustrator, Logo Design',
       preview: '/assets/images/nexora-empire-student-graphic-design.png',
-      studentPhoto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop'
+      studentPhoto: favorPhoto,
+      studentName: 'Mbekenyui Favor'
     },
     {
       title: 'Coding Masterclass Promo',
       skills: 'HTML, CSS, JS, React, Node, Git, AI-assisted Coding',
       preview: '/assets/images/nexora-empire-student-ai-video.mp4',
-      studentPhoto: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=150&auto=format&fit=crop'
+      studentPhoto: brightPhoto,
+      studentName: 'Tenyiyim Bright'
     }
   ];
 
@@ -530,28 +548,27 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
     }
   ];
 
-  // 8. Testimonials
   const testimonials = [
     {
-      name: 'Asaah Divine',
+      name: 'Manas',
       country: 'Cameroon',
-      program: 'Graphic Design Graduate',
-      review: 'Nexora Academy completely reshaped my perspective of digital layouts. The project-based learning forced me to solve real problems instead of memorizing menus. Today I craft full corporate visual packages for local and foreign brands.',
-      photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop'
+      program: 'Web & Mobile App Development',
+      review: <span>I started with the <span className="font-semibold text-slate-900 bg-yellow-100/60 px-1 rounded">Web Development course</span> to master full-stack engineering, and then immediately completed the <span className="font-semibold text-slate-900 bg-yellow-100/60 px-1 rounded">Mobile App Development course</span>. Building real-world commercial platforms under expert mentors gave me unmatched developer confidence!</span>,
+      photo: manaPhoto
     },
     {
-      name: 'Nji Rodrick',
-      country: 'Nigeria',
-      program: 'Full-Stack Development Graduate',
-      review: 'The curriculum was intense but incredibly structured. Transitioning from basic syntax to modeling reactive database servers was a life-changing experience. The guaranteed internship at Nexora gave me the developer confidence I needed.',
-      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop'
+      name: 'Tenyiyim Bright',
+      country: 'Cameroon',
+      program: 'AI Video Creation & Production',
+      review: <span>Taking the <span className="font-semibold text-slate-900 bg-yellow-100/60 px-1 rounded">Video Creation with AI course</span> completely upgraded my skillset. Thanks to my outstanding performance during the training, <span className="font-bold text-violet-700 bg-violet-50 px-1 rounded">I was offered the opportunity to join the Nexora team full-time</span> as a video editor!</span>,
+      photo: brightPhoto
     },
     {
-      name: 'Sandra Keming',
+      name: 'Mbekenyui Favor',
       country: 'Cameroon',
-      program: 'AI Video Creation Graduate',
-      review: 'Combining CapCut workflows with Generative AI tools allowed me to create high-impact, cinematic ads. The mentorship sessions were outstanding. I transitioned from zero knowledge to landing freelance contracts within 4 months.',
-      photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop'
+      program: 'Graphic Design',
+      review: <span>Enrolling in the <span className="font-semibold text-slate-900 bg-yellow-100/60 px-1 rounded">Graphic Design course</span> was the turning point in my career. Because of my high-quality layout submissions and strong portfolio, <span className="font-bold text-violet-700 bg-violet-50 px-1 rounded">I was hired full-time by Nexora Empire</span> directly after completing my internship!</span>,
+      photo: favorPhoto
     }
   ];
 
@@ -1162,7 +1179,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                         className="w-6 h-6 rounded-full object-cover border border-violet-400"
                         referrerPolicy="no-referrer"
                       />
-                      <span className="font-mono text-[9px] font-bold text-slate-300 tracking-wider uppercase">Nexora Student</span>
+                      <span className="font-mono text-[9px] font-bold text-slate-300 tracking-wider uppercase">{proj.studentName}</span>
                     </div>
                   </div>
 
@@ -1446,7 +1463,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
 
                   {/* Review Text */}
                   <p className="font-sans text-xs sm:text-sm text-slate-500 leading-relaxed italic">
-                    "{testi.review}"
+                    “{testi.review}”
                   </p>
                 </div>
 

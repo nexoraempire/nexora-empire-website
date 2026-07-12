@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { AnimatedCounter } from './AnimatedCounter';
 import { 
   ShieldCheck, 
   Cpu, 
@@ -297,91 +296,14 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.15 }}
-                className="absolute left-0 top-[18%] w-[56%] bg-white rounded-3xl shadow-[0_30px_70px_rgba(15,23,42,0.12)] border border-slate-150/80 p-4 sm:p-5 z-10 text-left overflow-hidden"
+                className="absolute left-0 top-[18%] w-[56%] bg-white rounded-3xl shadow-[0_30px_70px_rgba(15,23,42,0.12)] border border-slate-150/80 z-10 text-left overflow-hidden"
               >
-                {/* Header */}
-                <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-xl bg-[#060814] flex items-center justify-center font-black text-white text-xs shadow-md">
-                    N
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="text-xs sm:text-sm font-black text-slate-800 leading-tight">Good morning, Nexora 👋</h4>
-                    <p className="text-[9px] sm:text-[10px] text-slate-400 font-sans mt-0.5">Here's what's happening with your projects.</p>
-                  </div>
-                </div>
-
-                {/* Stats Row */}
-                <div className="grid grid-cols-3 gap-2 mt-4">
-                  <div className="bg-slate-50/50 p-2 sm:p-2.5 rounded-xl border border-slate-100/80">
-                    <p className="text-[8px] text-slate-400 font-medium font-sans">Projects Delivered</p>
-                    <p className="text-sm sm:text-base font-extrabold text-slate-850 font-display mt-0.5"><AnimatedCounter value="50+" /></p>
-                    <p className="text-[8px] text-emerald-600 font-sans font-semibold mt-0.5">↑ <AnimatedCounter value="22%" /> this year</p>
-                  </div>
-                  <div className="bg-slate-50/50 p-2 sm:p-2.5 rounded-xl border border-slate-100/80">
-                    <p className="text-[8px] text-slate-400 font-medium font-sans">Happy Clients</p>
-                    <p className="text-sm sm:text-base font-extrabold text-slate-850 font-display mt-0.5"><AnimatedCounter value="20+" /></p>
-                    <p className="text-[8px] text-emerald-600 font-sans font-semibold mt-0.5">↑ <AnimatedCounter value="18%" /> this year</p>
-                  </div>
-                  <div className="bg-slate-50/50 p-2 sm:p-2.5 rounded-xl border border-slate-100/80">
-                    <p className="text-[8px] text-slate-400 font-medium font-sans">Success Rate</p>
-                    <p className="text-sm sm:text-base font-extrabold text-slate-850 font-display mt-0.5"><AnimatedCounter value="98%" /></p>
-                    <p className="text-[8px] text-emerald-600 font-sans font-semibold mt-0.5">↑ <AnimatedCounter value="12%" /> this year</p>
-                  </div>
-                </div>
-
-                {/* Main section: Graph & Activity */}
-                <div className="grid grid-cols-12 gap-3 mt-4 pt-4 border-t border-slate-100">
-                  {/* Progress chart */}
-                  <div className="col-span-7 flex flex-col justify-between">
-                    <p className="text-[9px] font-bold text-slate-800 font-sans tracking-tight">Project Progress</p>
-                    
-                    <div className="relative mt-2 h-20 w-full flex items-end">
-                      {/* Floating tooltip badge */}
-                      <span className="absolute top-2 right-4 bg-slate-50 border border-slate-200 text-slate-700 text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-sm">
-                        <AnimatedCounter value="85%" />
-                      </span>
-
-                      {/* Smooth curvy graph lines */}
-                      <svg className="w-full h-16 text-blue-600" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 35 Q 15 25, 30 20 T 60 15 T 80 5 T 100 8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-                        <circle cx="80" cy="5" r="2.5" fill="currentColor" />
-                      </svg>
-                    </div>
-
-                    <div className="flex justify-between text-[7px] text-slate-400 font-sans font-medium mt-1 px-1">
-                      <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
-                    </div>
-                  </div>
-
-                  {/* Activity list */}
-                  <div className="col-span-5 border-l border-slate-100 pl-3 flex flex-col justify-between">
-                    <p className="text-[9px] font-bold text-slate-800 font-sans tracking-tight mb-2">Recent Activity</p>
-                    
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-4 h-4 rounded bg-blue-50 flex items-center justify-center font-bold text-blue-600 text-[8px]">M</div>
-                        <div>
-                          <p className="text-[8px] font-black text-slate-700 leading-tight">Nexora Fitness</p>
-                          <p className="text-[6.5px] text-slate-450">Website Development</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-4 h-4 rounded bg-rose-50 flex items-center justify-center font-bold text-rose-600 text-[8px]">V</div>
-                        <div>
-                          <p className="text-[8px] font-black text-slate-700 leading-tight">AI Video Campaign</p>
-                          <p className="text-[6.5px] text-slate-450">AI Production</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-4 h-4 rounded bg-cyan-50 flex items-center justify-center font-bold text-cyan-600 text-[8px]">R</div>
-                        <div>
-                          <p className="text-[8px] font-black text-slate-700 leading-tight">Real Estate Platform</p>
-                          <p className="text-[6.5px] text-slate-450">Web Development</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src={dashboardImg} 
+                  alt="Nexora Dashboard Mockup" 
+                  className="w-full h-auto object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </motion.div>
 
               {/* Tech Team Collaborating (Bottom-Right Foreground Layer) */}

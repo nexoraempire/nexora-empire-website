@@ -27,6 +27,21 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
+  React.useEffect(() => {
+    const lenis = (window as any).lenis;
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      if (lenis) lenis.stop();
+    } else {
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     'Home',
     'About',
@@ -388,7 +403,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-[#020205]/95 backdrop-blur-2xl border-b border-indigo-950/40 p-6 flex flex-col gap-4 animate-fade-in" id="mobile-dropdown-menu">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-[#020205]/95 backdrop-blur-2xl border-b border-indigo-950/40 p-6 flex flex-col gap-4 animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto" id="mobile-dropdown-menu" data-lenis-prevent>
           {navLinks.map((link) => {
             const isCurrentActive = view === 'about-us' ? link === 'About' : (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video') ? link === 'Services' : view === 'portfolio' ? link === 'Portfolio' : view === 'pricing' ? link === 'Pricing' : view === 'training-internship' ? link === 'Training & Internship' : activeLink === link;
             

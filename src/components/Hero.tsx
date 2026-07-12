@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
           style={{ mixBlendMode: 'screen' }}
         >
           <source 
-            src="https://labs.google/fx/api/og-video/shared/a4edb00e-15f5-46bd-b5a2-996bdb18e164" 
+            src="/assets/images/nexora-empire-hero-bg.mp4" 
             type="video/mp4" 
           />
         </video>
