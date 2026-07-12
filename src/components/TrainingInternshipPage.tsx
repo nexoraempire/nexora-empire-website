@@ -469,25 +469,25 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
     {
       title: 'Restaurant Website',
       skills: 'HTML, CSS, React, Framer Motion',
-      preview: '/src/assets/images/nexora-empire-student-restaurant-website.png',
+      preview: '/assets/images/nexora-empire-student-restaurant-website.png',
       studentPhoto: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop'
     },
     {
       title: 'UI/UX Case Study',
       skills: 'Figma, Wireframes, Prototyping',
-      preview: '/src/assets/images/nexora-empire-student-uiux-figma.jpg',
+      preview: '/assets/images/nexora-empire-student-uiux-figma.jpg',
       studentPhoto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop'
     },
     {
       title: 'Brand Identity Showcase',
       skills: 'Adobe Illustrator, Logo Design',
-      preview: '/src/assets/images/nexora-empire-student-graphic-design.png',
+      preview: '/assets/images/nexora-empire-student-graphic-design.png',
       studentPhoto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop'
     },
     {
       title: 'Coding Masterclass Promo',
       skills: 'HTML, CSS, JS, React, Node, Git, AI-assisted Coding',
-      preview: '/src/assets/images/nexora-empire-student-ai-video.mp4',
+      preview: '/assets/images/nexora-empire-student-ai-video.mp4',
       studentPhoto: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=150&auto=format&fit=crop'
     }
   ];
@@ -1225,7 +1225,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
               className="relative rounded-2xl overflow-hidden aspect-video shadow-2xl border border-slate-100"
             >
               <img 
-                src="/src/assets/images/nexora-empire-tech-team-collaboration.png" 
+                src="/assets/images/nexora-empire-tech-team-collaboration.png" 
                 alt="Students collaborating" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

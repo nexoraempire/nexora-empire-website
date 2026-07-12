@@ -40,7 +40,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       description: <span>Luxury automotive website experience designed with <span className="font-semibold text-slate-800">immersive visuals</span>, <span className="font-semibold text-slate-800">modern animations</span>, and a <span className="font-semibold text-slate-800">premium user experience</span>.</span>,
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       mockupBg: 'bg-[#060608]',
-      image: '/src/assets/images/modern-car-website-ui-design.webp',
+      image: '/assets/images/modern-car-website-ui-design.webp',
       liveLink: 'https://hypergt-apex.vercel.app/'
     },
     {
@@ -52,7 +52,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       description: <span>Fitness platform focused on <span className="font-semibold text-slate-800">health transformations</span>, customized workouts, and <span className="font-semibold text-slate-800">high user engagement</span>.</span>,
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
       mockupBg: 'bg-[#0f0f12]',
-      image: '/src/assets/images/modern-fitness-website-design-nexora-fitness.webp',
+      image: '/assets/images/modern-fitness-website-design-nexora-fitness.webp',
       liveLink: 'https://nexora-fitness-v2.vercel.app/'
     },
     {
@@ -64,7 +64,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       description: <span>Real estate web application tailored for the <span className="font-semibold text-slate-800">Cameroonian local market</span>, optimized for local property discovery and <span className="font-semibold text-slate-800">trusted broker connections</span>.</span>,
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
       mockupBg: 'bg-[#090b0e]',
-      image: '/src/assets/images/real-estate-website-ui-design.webp'
+      image: '/assets/images/real-estate-website-ui-design.webp'
     },
     {
       id: 'ai_video',
@@ -75,7 +75,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       description: <span>Turn holidays into a month of creativity and learning. At <span className="font-semibold text-slate-800">Nexora Kids Bootcamp</span>, children gain practical skills in coding, design, and AI basics.</span>,
       techStack: ['Premiere Pro', 'ChatGPT'],
       mockupBg: 'bg-[#020205]',
-      image: '/src/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4'
+      image: '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4'
     },
     {
       id: 'thinkpros',
@@ -86,7 +86,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       description: <span>Corporate accounting website built for a U.S.-based firm, optimized for <span className="font-semibold text-slate-800">business credibility</span>, <span className="font-semibold text-slate-800">lead generation</span>, and client onboarding.</span>,
       techStack: ['WordPress', 'PHP', 'MySQL', 'Elementor'],
       mockupBg: 'bg-slate-50',
-      image: '/src/assets/images/accounting-bookkeeping-website-ui-design.webp.webp',
+      image: '/assets/images/accounting-bookkeeping-website-ui-design.webp.webp',
       liveLink: 'https://thinkpros-accounting.netlify.app/'
     },
     {
@@ -98,7 +98,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
       description: <span>Next-generation <span className="font-semibold text-slate-800">mobile banking application</span> offering secure transfers, instant spend metrics, and smart card management.</span>,
       techStack: ['React Native', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express'],
       mockupBg: 'bg-[#18142c]',
-      image: '/src/assets/images/mobile-banking-app-ui-design.webp'
+      image: '/assets/images/mobile-banking-app-ui-design.webp'
     }
   ];
 

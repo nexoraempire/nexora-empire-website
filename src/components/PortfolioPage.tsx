@@ -100,7 +100,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: '**HyperGT Apex** is a masterclass in **digital automotive storytelling**. We conceptualized and engineered an **ultra-premium web portal** featuring **interactive model visualizers**, full **60fps gestural transitions**, and a **highly secure pre-order architecture** that captures customer interest on contact.',
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Three.js'],
       mockupBg: 'bg-[#060608]',
-      imageUrl: '/src/assets/images/modern-car-website-ui-design.webp',
+      imageUrl: '/assets/images/modern-car-website-ui-design.webp',
       glowColor: 'rgba(99, 102, 241, 0.08)',
       borderColor: 'rgba(99, 102, 241, 0.3)',
       liveLink: 'https://hypergt-apex.vercel.app/',
@@ -182,7 +182,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: '**Nexora Fitness** is an intelligent **health tracking portal**. We engineered a smooth, lightweight application with integrated **progress metrics**, hydration targets, **personal achievement thresholds**, and a custom scheduling engine that keeps users motivated daily.',
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma'],
       mockupBg: 'bg-[#0f0f12]',
-      imageUrl: '/src/assets/images/modern-fitness-website-design-nexora-fitness.webp',
+      imageUrl: '/assets/images/modern-fitness-website-design-nexora-fitness.webp',
       glowColor: 'rgba(16, 185, 129, 0.08)',
       borderColor: 'rgba(16, 185, 129, 0.3)',
       liveLink: 'https://nexora-fitness-v2.vercel.app/',
@@ -263,7 +263,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: '**ThinkPros** is an enterprise portal designed for **corporate tax consultancy**. We custom-developed a highly professional corporate platform utilizing **stable database models**, custom lead routing forms, and **visual ROI estimators**.',
       techStack: ['WordPress Core', 'PHP Engine', 'MySQL Database', 'Tailwind CSS'],
       mockupBg: 'bg-slate-50',
-      imageUrl: '/src/assets/images/accounting-bookkeeping-website-ui-design.webp.webp',
+      imageUrl: '/assets/images/accounting-bookkeeping-website-ui-design.webp.webp',
       glowColor: 'rgba(59, 130, 246, 0.08)',
       borderColor: 'rgba(59, 130, 246, 0.3)',
       liveLink: 'https://thinkpros-accounting.netlify.app/',
@@ -339,7 +339,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: '**NexaPay** is a fintech application crafted for **secure online banking**. We designed and engineered the mobile client from the ground up, implementing **biometric authentication**, real-time peer-to-peer transfers, and a **dynamic dashboard** summarizing financial health.',
       techStack: ['React Native', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit', 'Node.js'],
       mockupBg: 'bg-[#18142c]',
-      imageUrl: '/src/assets/images/mobile-banking-app-ui-design.webp',
+      imageUrl: '/assets/images/mobile-banking-app-ui-design.webp',
       glowColor: 'rgba(168, 85, 247, 0.08)',
       borderColor: 'rgba(168, 85, 247, 0.3)',
       metrics: [
@@ -416,7 +416,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'A collection of **promotional flyer designs** created for businesses across different industries, including corporate brands, social campaigns, weekend promotions, and product marketing. Each design focuses on **strong visual hierarchy**, modern layouts, and clear messaging to **maximize audience engagement** and brand awareness.',
       techStack: ['Photoshop', 'Figma', 'Illustrator'],
       mockupBg: 'bg-[#0a0f1d]',
-      imageUrl: '/src/assets/images/Free_A4_Flyers_Grid_Mockup_pok0.webp',
+      imageUrl: '/assets/images/Free_A4_Flyers_Grid_Mockup_pok0.webp',
       glowColor: 'rgba(59, 130, 246, 0.08)',
       borderColor: 'rgba(59, 130, 246, 0.3)',
       metrics: [
@@ -483,7 +483,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'A collection of **premium branding and promotional materials** designed for beauty salons, makeup artists, and cosmetic businesses. The designs emphasize **luxury aesthetics**, clean typography, and persuasive layouts that help brands **attract clients** and strengthen their **visual identity**.',
       techStack: ['Figma', 'Photoshop', 'Illustrator'],
       mockupBg: 'bg-[#0a0f1d]',
-      imageUrl: '/src/assets/images/Free_A4_Flyers_Grid_Mockup_po.webp',
+      imageUrl: '/assets/images/Free_A4_Flyers_Grid_Mockup_po.webp',
       glowColor: 'rgba(99, 102, 241, 0.08)',
       borderColor: 'rgba(99, 102, 241, 0.3)',
       metrics: [
@@ -544,7 +544,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'A promotional campaign designed for Nexora Academy to advertise AI masterclasses, coding bootcamps, internships, and technology training programs. The designs combine modern visuals, clear information hierarchy, and engaging layouts to encourage registrations and build trust.',
       techStack: ['Figma', 'Photoshop', 'After Effects'],
       mockupBg: 'bg-[#0a0f1d]',
-      imageUrl: '/src/assets/images/Free_A4_Flyers_Grid_Mockup_pok.webp',
+      imageUrl: '/assets/images/Free_A4_Flyers_Grid_Mockup_pok.webp',
       glowColor: 'rgba(244, 63, 94, 0.08)',
       borderColor: 'rgba(244, 63, 94, 0.3)',
       metrics: [
@@ -611,7 +611,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'Designed a series of social media campaigns for Nexora Empire to strengthen brand awareness, promote services, and engage audiences across digital platforms. Every design follows a consistent visual identity while combining modern layouts, compelling messaging, and strategic branding to increase recognition and support business growth.',
       techStack: ['Figma', 'Illustrator', 'Photoshop'],
       mockupBg: 'bg-[#0a0f1d]',
-      imageUrl: '/src/assets/images/Free_A4_Flyers_Grid_Mockup_5.webp',
+      imageUrl: '/assets/images/Free_A4_Flyers_Grid_Mockup_5.webp',
       glowColor: 'rgba(99, 102, 241, 0.08)',
       borderColor: 'rgba(99, 102, 241, 0.3)',
       metrics: [
@@ -674,7 +674,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'An exciting kids technology bootcamp video presentation. Perfect for introducing youngsters to Computer Fundamentals, Programming Basics, PowerPoint, Graphic Design, and Artificial Intelligence (AI) through a fun, supportive learning environment.',
       techStack: ['CapCut', 'ChatGPT', 'Canva'],
       mockupBg: 'bg-[#0f0e15]',
-      imageUrl: '/src/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4',
+      imageUrl: '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4',
       glowColor: 'rgba(168, 85, 247, 0.08)',
       borderColor: 'rgba(168, 85, 247, 0.3)',
       metrics: [
@@ -748,7 +748,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'A custom-tailored real estate web application optimized for the Cameroonian local housing and land acquisition market. Designed to bridge the gap between local landlords, brokers, and property buyers with localized search, neighborhood directories, and broker verification.',
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma'],
       mockupBg: 'bg-[#0b0c10]',
-      imageUrl: '/src/assets/images/real-estate-website-ui-design.webp',
+      imageUrl: '/assets/images/real-estate-website-ui-design.webp',
       glowColor: 'rgba(99, 102, 241, 0.08)',
       borderColor: 'rgba(99, 102, 241, 0.3)',
       metrics: [
@@ -806,7 +806,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'A narrative video campaign depicting a career-changing journey of two friends. It showcases how transitioning from passive screen time to professional tech training at Nexora Empire empowers beginner and intermediate students to land jobs and acquire high-paying clients.',
       techStack: ['Adobe Premiere Pro', 'ChatGPT', 'Photoshop'],
       mockupBg: 'bg-[#0e0a16]',
-      imageUrl: '/src/assets/images/nexora-empire-web-devopment-tech-training.mp4',
+      imageUrl: '/assets/images/nexora-empire-web-devopment-tech-training.mp4',
       glowColor: 'rgba(168, 85, 247, 0.08)',
       borderColor: 'rgba(168, 85, 247, 0.3)',
       metrics: [
@@ -870,7 +870,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
       fullDescription: 'A high-conversion 45-second promo video detailing the curriculum of the intensive 2-month Coding Masterclass. Highlights practical projects, flexible online/on-site schedules, and modern technology competencies.',
       techStack: ['Premiere Pro', 'ChatGPT'],
       mockupBg: 'bg-[#020205]',
-      imageUrl: '/src/assets/images/nexora-empire-student-ai-video.mp4',
+      imageUrl: '/assets/images/nexora-empire-student-ai-video.mp4',
       glowColor: 'rgba(168, 85, 247, 0.08)',
       borderColor: 'rgba(168, 85, 247, 0.3)',
       metrics: [
@@ -1374,28 +1374,28 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                 value: '100', 
                 sub: 'Search Engine Optimization', 
                 color: 'text-emerald-500',
-                imageUrl: '/src/assets/images/seo.png'
+                imageUrl: '/assets/images/seo.png'
               },
               { 
                 label: 'Best Practices', 
                 value: '100', 
                 sub: 'Modern Web Standards', 
                 color: 'text-emerald-500',
-                imageUrl: '/src/assets/images/best-practices.png'
+                imageUrl: '/assets/images/best-practices.png'
               },
               { 
                 label: 'Performance', 
                 value: '96', 
                 sub: 'Fast Loading & Interactivity', 
                 color: 'text-emerald-500',
-                imageUrl: '/src/assets/images/performance.png'
+                imageUrl: '/assets/images/performance.png'
               },
               { 
                 label: 'Accessibility', 
                 value: '100', 
                 sub: 'Inclusive & Compliant Design', 
                 color: 'text-emerald-500',
-                imageUrl: '/src/assets/images/accessibility.png'
+                imageUrl: '/assets/images/accessibility.png'
               }
             ].map((stat, idx) => (
               <div 

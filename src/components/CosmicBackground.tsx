@@ -19,7 +19,7 @@ export const CosmicBackground: React.FC<CosmicBackgroundProps> = ({ showOrbit = 
         style={{ mixBlendMode: 'screen' }}
       >
         <source 
-          src="/src/assets/images/nexora-empire-hero-bg.mp4" 
+          src="/assets/images/nexora-empire-hero-bg.mp4" 
           type="video/mp4" 
         />
       </video>

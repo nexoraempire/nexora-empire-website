@@ -105,7 +105,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       name: 'Foffe Lili Fideline',
       role: 'Founder & CEO & CTO',
       bio: 'Full stack developer with a passion for building scalable digital solutions and driving innovation.',
-      image: '/src/assets/images/photo_2026-06-28_08-05-38.jpg',
+      image: '/assets/images/photo_2026-06-28_08-05-38.jpg',
       badgeIcon: Crown,
       badgeColor: 'text-violet-500 bg-violet-50 border-violet-100',
       socials: [
@@ -120,7 +120,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       name: 'Gemon Yeseh',
       role: 'Co-founder & SEO Specialist',
       bio: 'Lead graphic designer and SEO specialist with an eye for detail and a passion for brand visibility.',
-      image: '/src/assets/images/gemon_yeseh.webp',
+      image: '/assets/images/gemon_yeseh.webp',
       badgeIcon: PenTool,
       badgeColor: 'text-indigo-500 bg-indigo-50 border-indigo-100',
       socials: [
@@ -137,7 +137,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       name: 'Tenyiyim Bright',
       role: 'Video Editor',
       bio: 'Transforms raw footage into powerful visual stories that captivate and engage.',
-      image: '/src/assets/images/bright.jpg',
+      image: '/assets/images/bright.jpg',
       badgeIcon: Video,
       badgeColor: 'text-purple-500 bg-purple-50 border-purple-100',
       socials: [
@@ -151,7 +151,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       name: 'Remy Malick',
       role: 'Video Editor',
       bio: 'Creates compelling edits that bring ideas to life through creativity and precision.',
-      image: '/src/assets/images/malick.jpg',
+      image: '/assets/images/malick.jpg',
       badgeIcon: Video,
       badgeColor: 'text-purple-500 bg-purple-50 border-purple-100',
       socials: [
@@ -165,7 +165,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       name: 'Mbekenyui Favor',
       role: 'Graphic Designer',
       bio: 'Tells compelling brand stories through beautiful graphic designs and pixel-perfect layouts.',
-      image: '/src/assets/images/favor.png',
+      image: '/assets/images/favor.png',
       badgeIcon: PenTool,
       badgeColor: 'text-pink-500 bg-pink-50 border-pink-100',
       socials: [
@@ -180,7 +180,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       name: 'Marcus Tunde',
       role: 'UI/UX Designer',
       bio: 'Designs seamless and intuitive digital experiences that delight users and drive results.',
-      image: '/src/assets/images/marcus_avatar_1782241668323.jpg',
+      image: '/assets/images/marcus_avatar_1782241668323.jpg',
       badgeIcon: Layers,
       badgeColor: 'text-pink-500 bg-pink-50 border-pink-100',
       socials: [
@@ -284,7 +284,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
                 className="absolute top-[8%] right-0 w-[46%] aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 z-0 bg-slate-50"
               >
                 <img 
-                  src="/src/assets/images/modern-office-nexora-empire-workspace-office.png" 
+                  src="/assets/images/modern-office-nexora-empire-workspace-office.png" 
                   alt="Modern Nexora Empire Workspace Office" 
                   className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.05]"
                   referrerPolicy="no-referrer"
@@ -393,7 +393,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
                 className="absolute bottom-[8%] right-0 w-[46%] aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 z-20 bg-slate-50"
               >
                 <img 
-                  src="/src/assets/images/nexora-empire-tech-team-collaboration.png" 
+                  src="/assets/images/nexora-empire-tech-team-collaboration.png" 
                   alt="Nexora Tech Team Collaborating" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

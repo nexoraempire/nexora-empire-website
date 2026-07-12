@@ -305,7 +305,7 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
                 {/* Primary display */}
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-indigo-950/40 mb-3 group-hover:scale-[1.01] transition-transform duration-500">
                   <img
-                    src="/src/assets/images/ai_video_hero_1782584633591.jpg"
+                    src="/assets/images/ai_video_hero_1782584633591.jpg"
                     alt="AI Video Editing Workspace Mockup"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

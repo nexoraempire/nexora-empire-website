@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
     company: "ThinkPros Bookkeeping",
     location: "USA",
     flag: "🇺🇸",
-    photo: "/src/assets/images/client_lesly_grace.webp",
+    photo: "/assets/images/client_lesly_grace.webp",
     rating: 5,
     headline: "Nexora Empire exceeded our expectations.",
     quote: <span>They built a <span className="font-semibold text-slate-800">fast, secure, and visually stunning website</span> that perfectly represents our brand. The team was professional, responsive, and delivered on time. Their solutions have helped us <span className="font-semibold text-slate-800">improve our online presence</span> and <span className="font-semibold text-slate-800">attract more clients</span>.</span>
@@ -42,7 +42,7 @@ const testimonials: Testimonial[] = [
     role: "Full-Stack Developer",
     location: "Russia",
     flag: "RU",
-    photo: "/src/assets/images/jordan.webp",
+    photo: "/assets/images/jordan.webp",
     rating: 5,
     headline: "Professionalism and unmatched code quality.",
     quote: <span>Collaborating with the Nexora development team was an absolute pleasure. Their professionalism, <span className="font-semibold text-slate-800">strict adherence to high code quality</span>, and exceptional teamwork stood out from day one. They engineer <span className="font-semibold text-slate-800">clean, scalable solutions</span> with absolute precision.</span>
@@ -53,7 +53,7 @@ const testimonials: Testimonial[] = [
     role: "AI Video Creation Graduate",
     location: "Cameroon",
     flag: "🇨🇲",
-    photo: "/src/assets/images/student_blessing.webp",
+    photo: "/assets/images/student_blessing.webp",
     rating: 5,
     headline: "Gained incredible confidence and video skills.",
     quote: <span>Completing Nexora Empire's AI Video Creation Training was a turning point for me. I went from having zero video skills to actively <span className="font-semibold text-slate-800">creating and posting high-quality videos</span>. The training was incredibly practical, giving me the <span className="font-semibold text-slate-800">confidence and tools</span> to share my voice.</span>
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
     company: "Soluty Agency",
     location: "Cameroon",
     flag: "🇨🇲",
-    photo: "/src/assets/images/mansha.webp",
+    photo: "/assets/images/mansha.webp",
     rating: 5,
     headline: "Earning steady income from freelance projects.",
     quote: <span>Nexora Empire is a direct reflection of <span className="font-semibold text-slate-800">true teamwork, professionalism, and consistency</span>. As an entrepreneur, I've seen how difficult it is to build something that lasts, but this team is led by people who <span className="font-semibold text-slate-800">don't give up when challenges arise</span>. If you're looking for a <span className="font-semibold text-slate-800">reliable digital agency</span> that genuinely delivers on its promises, Nexora Empire is one you can trust.</span>
