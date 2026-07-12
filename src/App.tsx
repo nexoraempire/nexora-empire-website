@@ -8,17 +8,17 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header.tsx';
 import { Hero } from './components/Hero.tsx';
 import { About } from './components/About.tsx';
-import { AboutUsPage } from './components/AboutUsPage.tsx';
-import { PortfolioPage } from './components/PortfolioPage.tsx';
-import { PricingPage } from './components/PricingPage.tsx';
-import { TrainingInternshipPage } from './components/TrainingInternshipPage.tsx';
-import { ContactPage } from './components/ContactPage.tsx';
-import { WebDevPage } from './components/WebDevPage.tsx';
-import { MobileDevPage } from './components/MobileDevPage.tsx';
-import { BrandingDesignPage } from './components/BrandingDesignPage.tsx';
-import { SEOGrowthPage } from './components/SEOGrowthPage.tsx';
-import { AIVideoPage } from './components/AIVideoPage.tsx';
-import { SocialMediaManagementPage } from './components/SocialMediaManagementPage.tsx';
+const AboutUsPage = React.lazy(() => import('./components/AboutUsPage.tsx').then(m => ({ default: m.AboutUsPage })));
+const PortfolioPage = React.lazy(() => import('./components/PortfolioPage.tsx').then(m => ({ default: m.PortfolioPage })));
+const PricingPage = React.lazy(() => import('./components/PricingPage.tsx').then(m => ({ default: m.PricingPage })));
+const TrainingInternshipPage = React.lazy(() => import('./components/TrainingInternshipPage.tsx').then(m => ({ default: m.TrainingInternshipPage })));
+const ContactPage = React.lazy(() => import('./components/ContactPage.tsx').then(m => ({ default: m.ContactPage })));
+const WebDevPage = React.lazy(() => import('./components/WebDevPage.tsx').then(m => ({ default: m.WebDevPage })));
+const MobileDevPage = React.lazy(() => import('./components/MobileDevPage.tsx').then(m => ({ default: m.MobileDevPage })));
+const BrandingDesignPage = React.lazy(() => import('./components/BrandingDesignPage.tsx').then(m => ({ default: m.BrandingDesignPage })));
+const SEOGrowthPage = React.lazy(() => import('./components/SEOGrowthPage.tsx').then(m => ({ default: m.SEOGrowthPage })));
+const AIVideoPage = React.lazy(() => import('./components/AIVideoPage.tsx').then(m => ({ default: m.AIVideoPage })));
+const SocialMediaManagementPage = React.lazy(() => import('./components/SocialMediaManagementPage.tsx').then(m => ({ default: m.SocialMediaManagementPage })));
 import { WhyNexora } from './components/WhyNexora.tsx';
 import { Services } from './components/Services.tsx';
 import { FeaturedProjects } from './components/FeaturedProjects.tsx';
@@ -499,46 +499,52 @@ export default function App() {
             transition={{ duration: 0.18, ease: 'easeOut' }}
             className="w-full"
           >
-            {view === 'home' ? (
-              <>
-                <Hero />
-                <About setView={setView} />
-                <Services setView={setView} />
-                <FeaturedProjects setView={setView} />
-                <TechStack />
-                <WhyNexora />
-                <Pricing />
-                <Testimonials />
-                <FAQ />
-                <FinalCTA />
-                <ReadyToBuild />
-              </>
-            ) : view === 'about-us' ? (
-              <AboutUsPage setView={setView} />
-            ) : view === 'web-dev' ? (
-              <WebDevPage setView={setView} />
-            ) : view === 'mobile-dev' ? (
-              <MobileDevPage setView={setView} />
-            ) : view === 'branding-design' ? (
-              <BrandingDesignPage setView={setView} />
-            ) : view === 'seo-growth' ? (
-              <SEOGrowthPage setView={setView} />
-            ) : view === 'ai-video' ? (
-              <AIVideoPage setView={setView} />
-            ) : view === 'social-media-management' ? (
-              <SocialMediaManagementPage setView={setView} />
-            ) : view === 'portfolio' ? (
-              <PortfolioPage setView={setView} />
-            ) : view === 'pricing' ? (
-              <PricingPage setView={setView} />
-            ) : view === 'training-internship' ? (
-              <TrainingInternshipPage setView={setView} />
-            ) : (
-              <>
-                <ContactPage setView={setView} />
-                <ReadyToBuild />
-              </>
-            )}
+            <React.Suspense fallback={
+              <div className="min-h-screen bg-brand-dark flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full border-2 border-brand-violet border-t-transparent animate-spin"></div>
+              </div>
+            }>
+              {view === 'home' ? (
+                <>
+                  <Hero />
+                  <About setView={setView} />
+                  <Services setView={setView} />
+                  <FeaturedProjects setView={setView} />
+                  <TechStack />
+                  <WhyNexora />
+                  <Pricing />
+                  <Testimonials />
+                  <FAQ />
+                  <FinalCTA />
+                  <ReadyToBuild />
+                </>
+              ) : view === 'about-us' ? (
+                <AboutUsPage setView={setView} />
+              ) : view === 'web-dev' ? (
+                <WebDevPage setView={setView} />
+              ) : view === 'mobile-dev' ? (
+                <MobileDevPage setView={setView} />
+              ) : view === 'branding-design' ? (
+                <BrandingDesignPage setView={setView} />
+              ) : view === 'seo-growth' ? (
+                <SEOGrowthPage setView={setView} />
+              ) : view === 'ai-video' ? (
+                <AIVideoPage setView={setView} />
+              ) : view === 'social-media-management' ? (
+                <SocialMediaManagementPage setView={setView} />
+              ) : view === 'portfolio' ? (
+                <PortfolioPage setView={setView} />
+              ) : view === 'pricing' ? (
+                <PricingPage setView={setView} />
+              ) : view === 'training-internship' ? (
+                <TrainingInternshipPage setView={setView} />
+              ) : (
+                <>
+                  <ContactPage setView={setView} />
+                  <ReadyToBuild />
+                </>
+              )}
+            </React.Suspense>
           </motion.div>
         </AnimatePresence>
       </main>
