@@ -20,6 +20,7 @@ export const Hero: React.FC = () => {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover opacity-55 select-none pointer-events-none transition-opacity duration-1000"
           style={{ mixBlendMode: 'screen' }}
         >
