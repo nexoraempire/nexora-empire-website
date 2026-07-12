@@ -894,11 +894,13 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="font-mono text-[9px] font-bold text-slate-400 uppercase">
+                      <label htmlFor="meeting-time" className="font-mono text-[9px] font-bold text-slate-400 uppercase">
                         Select Time Slot *
                       </label>
                       <select
                         required
+                        id="meeting-time"
+                        aria-label="Select Time Slot"
                         value={meetingTime}
                         onChange={(e) => setMeetingTime(e.target.value)}
                         className="w-full px-3 py-2.5 bg-[#030307] border border-indigo-950/40 rounded-xl font-sans text-xs text-white focus:border-brand-purple-vibrant focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:border-transparent cursor-pointer"

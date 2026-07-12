@@ -302,6 +302,8 @@ export const FinalCTA: React.FC = () => {
                       <Briefcase className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4 pointer-events-none" />
                       <select
                         required
+                        id="cta-project-type"
+                        aria-label="Select Project Type"
                         value={formState.projectType}
                         onChange={(e) => setFormState({ ...formState, projectType: e.target.value })}
                         className="w-full pl-11 pr-10 py-3.5 rounded-xl bg-slate-50 border border-slate-200/80 focus:border-indigo-500 focus:bg-white focus:outline-none font-sans text-sm text-slate-900 transition-all duration-300 appearance-none cursor-pointer"

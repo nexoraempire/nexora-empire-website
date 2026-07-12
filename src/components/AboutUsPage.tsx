@@ -301,6 +301,8 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
                 <img 
                   src={dashboardImg} 
                   alt="Nexora Dashboard Mockup" 
+                  width={1200}
+                  height={896}
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
                 />

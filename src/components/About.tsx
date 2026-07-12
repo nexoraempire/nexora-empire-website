@@ -194,6 +194,8 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               <img 
                 src={dashboardImg} 
                 alt="Nexora Empire SaaS Web CRM Dashboard" 
+                width={1200}
+                height={896}
                 className="w-full h-auto object-cover rounded-lg"
                 referrerPolicy="no-referrer"
               />

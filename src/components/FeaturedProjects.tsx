@@ -195,6 +195,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
                       <img 
                         src={project.image} 
                         alt={project.title} 
+                        width={1200}
+                        height={1040}
                         className="mockup-scroll-img"
                         id={`project-img-${project.id}`}
                         referrerPolicy="no-referrer"

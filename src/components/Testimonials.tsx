@@ -313,7 +313,7 @@ export const Testimonials: React.FC = () => {
                       <h3 className="font-display text-lg font-bold text-slate-900/60 leading-snug line-clamp-1 mb-2">
                         {currentNext1.headline}
                       </h3>
-                      <p className="font-sans text-slate-400 text-xs line-clamp-2 leading-relaxed">
+                      <p className="font-sans text-slate-600 text-xs line-clamp-2 leading-relaxed">
                         {currentNext1.quote}
                       </p>
                     </div>
@@ -411,7 +411,7 @@ export const Testimonials: React.FC = () => {
                             {/* Country Flag Capsule located DIRECTLY below name & description */}
                             <div className="flex items-center gap-1.5 mt-1.5">
                               <span className="text-sm leading-none shrink-0">{current.flag}</span>
-                              <span className="text-[10px] text-slate-400 font-bold tracking-wider uppercase">{current.location}</span>
+                              <span className="text-[10px] text-slate-600 font-bold tracking-wider uppercase">{current.location}</span>
                             </div>
                           </div>
                         </div>
@@ -446,13 +446,15 @@ export const Testimonials: React.FC = () => {
                       setDirection(index > activeIndex ? 'right' : 'left');
                       setActiveIndex(index);
                     }}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                    className="w-6 h-6 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-full cursor-pointer"
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  >
+                    <span className={`h-1.5 rounded-full transition-all duration-300 ${
                       index === activeIndex 
                         ? 'w-7 bg-gradient-to-r from-[#1f39c4] to-[#8b1dca]' 
-                        : 'w-1.5 bg-slate-200 hover:bg-slate-300'
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
+                        : 'w-1.5 bg-slate-200'
+                    }`} />
+                  </button>
                 ))}
               </div>
 

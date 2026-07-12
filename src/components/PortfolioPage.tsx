@@ -1251,6 +1251,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                               <img
                                 src={project.imageUrl}
                                 alt={project.title}
+                                width={1200}
+                                height={1040}
                                 className="mockup-scroll-img"
                                 referrerPolicy="no-referrer"
                               />
