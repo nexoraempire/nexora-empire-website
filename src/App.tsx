@@ -73,33 +73,33 @@ export default function App() {
 
     // 2. Dynamic Title Map for search engine indexers and bookmarking usability
     const titleMap: Record<string, string> = {
-      'home': 'Nexora Empire | Enterprise Software Development & Digital Solutions Agency',
-      'about-us': 'About Nexora Empire | Global Software Company & Technology Partner',
-      'portfolio': 'Our Selected Portfolio & Case Studies | Nexora Empire Digital Craft',
-      'pricing': 'Transparent Software Development Pricing | Nexora Empire',
-      'training-internship': 'Academy Training & Industry Internship | Nexora Academy',
-      'contact': 'Connect With Us | Contact Nexora Empire Executive Team',
-      'web-dev': 'Custom Web Development Services | Nexora Empire',
-      'mobile-dev': 'Custom Mobile App Development Company | Nexora Empire',
-      'branding-design': 'Premium Branding, Visual Identity & Creative Direction | Nexora Empire',
-      'seo-growth': 'Advanced Technical SEO & Hyper-Growth Marketing | Nexora Empire',
-      'ai-video': 'State-of-the-Art Generative AI Video Creation & Production | Nexora Empire',
+      'home': 'Nexora Empire | Best Software & Web Development Company Cameroon',
+      'about-us': 'About Nexora Empire | Elite Software Developers & Tech Consultants',
+      'portfolio': 'Bespoke Software & Web Applications Portfolio | Nexora Empire',
+      'pricing': 'Transparent Software Development & SEO Investment Plans | Nexora Empire',
+      'training-internship': 'Tech Training & Software Engineering Internships | Nexora Academy',
+      'contact': 'Hire Software Developers | Contact Nexora Empire Executive Team',
+      'web-dev': 'Custom Web Development Services & SaaS Engineering | Nexora Empire',
+      'mobile-dev': 'Native & Cross-Platform Mobile App Development | Nexora Empire',
+      'branding-design': 'Premium Graphic Design & Corporate Visual Identity | Nexora Empire',
+      'seo-growth': 'Advanced Technical SEO & Google Search Strategy | Nexora Empire',
+      'ai-video': 'Generative AI Video Production & AI Automation | Nexora Empire',
       'social-media-management': 'Strategic Social Media Management & Organic Growth | Nexora Empire'
     };
 
     // 3. Dynamic Meta Description Map to prevent identical search snippets
     const descMap: Record<string, string> = {
-      'home': 'Nexora Empire is a premier software development company and digital agency crafting enterprise websites, high-performance mobile apps, custom AI automation, and premium brand designs.',
-      'about-us': 'Discover Nexora Empire, an elite global software company and technology partner. Learn about our software engineers, mission, and how we drive digital transformation.',
-      'portfolio': 'Browse our showcase of bespoke full-stack applications, enterprise web platforms, custom mobile apps, and strategic high-growth search campaigns.',
-      'pricing': 'Review transparent, custom-tailored investment plans for web engineering, mobile development, custom design systems, and hyper-targeted organic search growth programs.',
-      'training-internship': 'Accelerate your career with real-world customer-facing training, live coding classes, direct staff mentoring, and certified software engineering internship placements.',
-      'contact': 'Reach out to our elite software and digital strategy team. Book an executive consultation. Office: Before slaughterhouse, Buea Town. Call +237 677 079 559.',
-      'web-dev': 'Pristine, responsive, highly secure enterprise web applications and custom software products crafted with state-of-the-art architectures, headless CMS, and lightning-fast speed.',
-      'mobile-dev': 'Tailor-made, high-performance native iOS & Android systems running with elegant micro-interactions, responsive React Native architectures, and optimized fluid physics.',
-      'branding-design': 'Bespoke corporate design files, premium guidelines, logos, custom typography pairings, and elegant executive visual identities to establish industry authority.',
-      'seo-growth': 'Dominate search results, triple organic conversion funnels, and restructure technical schema with expert optimization and Google Search/AI search strategy.',
-      'ai-video': 'Create engaging, high-conversion visual marketing videos, generative interactive voice assets, and realistic 3D generative content for modern campaigns.',
+      'home': 'Nexora Empire is the best software development company in Cameroon crafting enterprise websites, high-performance mobile apps, custom AI solutions, and premium branding globally.',
+      'about-us': 'Meet Nexora Empire\'s expert software engineering team. Based in Cameroon and serving clients worldwide, we build scalable software systems and custom digital solutions.',
+      'portfolio': 'Explore our case studies of custom React apps, native mobile app development, e-commerce, and successful technical SEO campaigns delivered globally.',
+      'pricing': 'Flexible pricing packages for web engineering, mobile app development, custom branding design systems, and hyper-targeted organic search engine growth.',
+      'training-internship': 'Join practical coding training programs in Cameroon. Learn web/mobile app development, UI/UX, AI video, and secure certified internship placements at Nexora.',
+      'contact': 'Hire the best software developers and digital marketers in Cameroon. Book an executive consultation. Office: Buea Town. Call +237 677 079 559.',
+      'web-dev': 'Pristine, responsive, and highly secure enterprise web applications, React / Next.js web systems, and custom SaaS software products with lightning-fast speeds.',
+      'mobile-dev': 'High-performance native iOS & Android applications running with custom React Native & Expo architectures, fluid interactions, and optimized security.',
+      'branding-design': 'Visual identity design, logos, custom typography guidelines, and corporate branding files to establish market authority for local and global enterprises.',
+      'seo-growth': 'Rank first on Google. We offer organic growth marketing, semantic keyword mapping, site audits, and structured schema data optimized for search crawlers.',
+      'ai-video': 'Transform campaigns with state-of-the-art AI-driven video creation, interactive synthetic media assets, and realistic 3D generative content.',
       'social-media-management': 'Expand your social reach, scale brand impressions organically, and manage premium content calendar systems across major industry platforms.'
     };
 

@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import fs from "fs/promises";
 import { createServer as createViteServer } from "vite";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
@@ -293,10 +294,149 @@ async function startServer() {
     // Serve static files in production
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+
+    const titleMap: Record<string, string> = {
+      "": "Nexora Empire | Best Software & Web Development Company Cameroon",
+      "/about-us": "About Nexora Empire | Elite Software Developers & Tech Consultants",
+      "/portfolio": "Bespoke Software & Web Applications Portfolio | Nexora Empire",
+      "/pricing": "Transparent Software Development & SEO Investment Plans | Nexora Empire",
+      "/training-internship": "Tech Training & Software Engineering Internships | Nexora Academy",
+      "/contact": "Hire Software Developers | Contact Nexora Empire Executive Team",
+      "/web-dev": "Custom Web Development Services & SaaS Engineering | Nexora Empire",
+      "/mobile-dev": "Native & Cross-Platform Mobile App Development | Nexora Empire",
+      "/branding-design": "Premium Graphic Design & Corporate Visual Identity | Nexora Empire",
+      "/seo-growth": "Advanced Technical SEO & Google Search Strategy | Nexora Empire",
+      "/ai-video": "Generative AI Video Production & AI Automation | Nexora Empire",
+      "/social-media-management": "Strategic Social Media Management & Organic Growth | Nexora Empire"
+    };
+
+    const descMap: Record<string, string> = {
+      "": "Nexora Empire is the best software development company in Cameroon crafting enterprise websites, high-performance mobile apps, custom AI solutions, and premium branding globally.",
+      "/about-us": "Meet Nexora Empire's expert software engineering team. Based in Cameroon and serving clients worldwide, we build scalable software systems and custom digital solutions.",
+      "/portfolio": "Explore our case studies of custom React apps, native mobile app development, e-commerce, and successful technical SEO campaigns delivered globally.",
+      "/pricing": "Flexible pricing packages for web engineering, mobile app development, custom branding design systems, and hyper-targeted organic search engine growth.",
+      "/training-internship": "Join practical coding training programs in Cameroon. Learn web/mobile app development, UI/UX, AI video, and secure certified internship placements at Nexora.",
+      "/contact": "Hire the best software developers and digital marketers in Cameroon. Book an executive consultation. Office: Buea Town. Call +237 677 079 559.",
+      "/web-dev": "Pristine, responsive, and highly secure enterprise web applications, React / Next.js web systems, and custom SaaS software products with lightning-fast speeds.",
+      "/mobile-dev": "High-performance native iOS & Android applications running with custom React Native & Expo architectures, fluid interactions, and optimized security.",
+      "/branding-design": "Visual identity design, logos, custom typography guidelines, and corporate branding files to establish market authority for local and global enterprises.",
+      "/seo-growth": "Rank first on Google. We offer organic growth marketing, semantic keyword mapping, site audits, and structured schema data optimized for search crawlers.",
+      "/ai-video": "Transform campaigns with state-of-the-art AI-driven video creation, interactive synthetic media assets, and realistic 3D generative content.",
+      "/social-media-management": "Expand your social reach, scale brand impressions organically, and manage premium content calendar systems across major industry platforms."
+    };
+
+    const keywordsMap: Record<string, string> = {
+      "": "software development company, digital agency, custom software development, mobile app development, enterprise web application, branding agency, AI automation, software company, best software company Cameroon, best web development company Cameroon",
+      "/about-us": "software company, technology partner, software engineers, digital innovation, Nexora crew, technology consulting, digital transformation, Cameroon developers",
+      "/portfolio": "portfolio, case studies, software development portfolio, website showcase, mobile app design, brand identities, custom solutions, React developers, web portfolio",
+      "/pricing": "pricing, software development cost, web development plans, mobile app pricing, branding budget, SEO services cost, app cost Cameroon",
+      "/training-internship": "software training, coding academy, tech internship, learn web development, mobile app course, Cameroon software training, Nexora Academy, learn tech skills Buea",
+      "/contact": "contact Nexora Empire, hire software developers, software company office hours, Buea Town Cameroon software, schedule consultation, phone number Nexora",
+      "/web-dev": "web development company, website development services, custom web applications, full-stack development, SaaS development, enterprise web development, Next.js agency, React developers",
+      "/mobile-dev": "mobile app development company, iOS developers, Android app development, cross-platform app, React Native development, mobile application agency, Expo app developers",
+      "/branding-design": "branding agency, graphic design agency, visual identity, corporate brand design, logo creator, creative director, style guidelines, typography design",
+      "/seo-growth": "SEO agency, technical SEO company, organic growth marketing, search engine optimization, local SEO, rank on Google, schema structured data, Google search specialist",
+      "/ai-video": "AI video production, generative AI video, synthetic media company, interactive video ads, AI voice generation, digital marketing, AI automation company",
+      "/social-media-management": "social media management, social media agency, brand growth online, content calendar creation, organic reach campaigns, community management"
+    };
+
+    app.get('*', async (req, res) => {
+      try {
+        const filePath = path.join(distPath, 'index.html');
+        let html = await fs.readFile(filePath, 'utf-8');
+
+        // Extract route path without trailing slash
+        const route = req.path.replace(/\/$/, "");
+
+        const activeTitle = titleMap[route] || titleMap[""];
+        const activeDesc = descMap[route] || descMap[""];
+        const activeKeywords = keywordsMap[route] || keywordsMap[""];
+        const activeUrl = `https://nexoraempire.com${route}`;
+
+        // Build precise JSON-LD structured schemas representing the page context
+        let schemaObject: any = {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Nexora Empire",
+          "url": "https://nexoraempire.com",
+          "logo": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
+          "description": activeDesc,
+          "telephone": "+237 677 079 559",
+          "email": "contact@nexoraempire.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Before slaughterhouse, Buea Town",
+            "addressLocality": "Buea",
+            "addressRegion": "South West",
+            "addressCountry": "CM"
+          }
+        };
+
+        if (route === "/training-internship") {
+          schemaObject = {
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Nexora Academy",
+            "url": "https://nexoraempire.com/training-internship",
+            "description": activeDesc,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Before slaughterhouse, Buea Town",
+              "addressLocality": "Buea",
+              "addressRegion": "South West",
+              "addressCountry": "CM"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Tech Courses",
+              "itemListElement": [
+                { "@type": "Course", "name": "Web Development", "description": "Full-stack web developer training" },
+                { "@type": "Course", "name": "Mobile Development", "description": "Native React Native & Expo training" },
+                { "@type": "Course", "name": "Graphic Design", "description": "Creative visual brand design training" },
+                { "@type": "Course", "name": "AI Video Production", "description": "AI video creation with tools like CapCut" }
+              ]
+            }
+          };
+        } else if (route.startsWith("/web-dev") || route.startsWith("/mobile-dev") || route.startsWith("/seo-growth") || route.startsWith("/branding-design") || route.startsWith("/ai-video")) {
+          schemaObject = {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": activeTitle,
+            "provider": {
+              "@type": "Organization",
+              "name": "Nexora Empire",
+              "url": "https://nexoraempire.com"
+            },
+            "description": activeDesc,
+            "areaServed": "Worldwide"
+          };
+        }
+
+        // Perform tag replacements in index.html string
+        html = html.replace(/<title>.*?<\/title>/, `<title>${activeTitle}</title>`);
+        html = html.replace(/<meta name="description" content=".*?"\s*\/?>/, `<meta name="description" content="${activeDesc}" />`);
+        html = html.replace(/<meta name="keywords" content=".*?"\s*\/?>/, `<meta name="keywords" content="${activeKeywords}" />`);
+        html = html.replace(/<meta property="og:title" content=".*?"\s*\/?>/, `<meta property="og:title" content="${activeTitle}" />`);
+        html = html.replace(/<meta property="og:description" content=".*?"\s*\/?>/, `<meta property="og:description" content="${activeDesc}" />`);
+        html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/, `<meta property="og:url" content="${activeUrl}" />`);
+        html = html.replace(/<meta name="twitter:title" content=".*?"\s*\/?>/, `<meta name="twitter:title" content="${activeTitle}" />`);
+        html = html.replace(/<meta name="twitter:description" content=".*?"\s*\/?>/, `<meta name="twitter:description" content="${activeDesc}" />`);
+
+        if (html.includes('rel="canonical"')) {
+          html = html.replace(/<link rel="canonical" href=".*?"\s*\/?>/, `<link rel="canonical" href="${activeUrl}" />`);
+        } else {
+          html = html.replace('</head>', `  <link rel="canonical" href="${activeUrl}" />\n  </head>`);
+        }
+
+        // Inject JSON-LD Schema
+        html = html.replace(/<script type="application\/ld\+json">.*?<\/script>/s, `<script type="application/ld+json" id="dynamic-schema">${JSON.stringify(schemaObject)}</script>`);
+
+        res.send(html);
+      } catch (err) {
+        res.sendFile(path.join(distPath, 'index.html'));
+      }
     });
-    console.log("Production static build routing loaded.");
+    console.log("Production dynamic SEO injection build routing loaded.");
   }
 
   app.listen(PORT, "0.0.0.0", () => {
