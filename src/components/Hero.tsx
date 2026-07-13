@@ -100,7 +100,6 @@ export const Hero: React.FC = () => {
               </h1>
             </motion.div>
 
-            {/* Interactive Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -108,7 +107,7 @@ export const Hero: React.FC = () => {
               className="font-sans text-base sm:text-lg text-gray-400 font-normal leading-relaxed mb-10 max-w-xl"
               id="hero-subtitle"
             >
-              Professional custom software development, expert website developers, and technical SEO services in Cameroon. We engineer scalable digital products that help businesses scale sales, attract customers, and dominate rankings.
+              Building digital products that help businesses and individuals <span className="font-semibold text-white">attract customers</span>, <span className="font-semibold text-white">increase sales</span>, <span className="font-semibold text-white">dominate search rankings</span>, and <span className="font-semibold text-white">strengthen their online presence</span>.
             </motion.p>
 
             {/* Call to Actions Action bar */}
