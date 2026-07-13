@@ -100,25 +100,9 @@ export default async function handler(req: any, res: any) {
     console.error("Error sending notification email:", err);
   }
 
-  // Race promises with a 4.5 seconds timeout limit to preserve instant UX for users
-  const timeoutPromise = new Promise((resolve) => setTimeout(() => resolve('timeout'), 4500));
-
-  const result = await Promise.race([
-    Promise.all([sheetsPromise, emailPromise]),
-    timeoutPromise
-  ]);
-
-  if (result === 'timeout') {
-    return res.status(200).json({
-      success: true,
-      info: "queued"
-    });
-  }
-
-  const [sheetsSuccess, emailSuccess] = result as [boolean, boolean];
   return res.status(200).json({
     success: true,
-    sheetsWebhook: sheetsSuccess,
-    emailSent: emailSuccess
+    sheetsWebhook: sheetsWebhookSuccess,
+    emailSent: emailSent
   });
 }
