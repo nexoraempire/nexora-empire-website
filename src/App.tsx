@@ -31,10 +31,30 @@ import { ReadyToBuild } from './components/ReadyToBuild.tsx';
 import { Footer } from './components/Footer.tsx';
 import { BackToTop } from './components/BackToTop.tsx';
 import { CursorSpotlight } from './components/CursorSpotlight.tsx';
+import { NotFoundPage } from './components/NotFoundPage.tsx';
 import Lenis from 'lenis';
 
+export type ViewType = 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | '404';
+
+const validViews: ViewType[] = [
+  'home', 'about-us', 'portfolio', 'pricing', 'training-internship',
+  'contact', 'web-dev', 'mobile-dev', 'branding-design',
+  'seo-growth', 'ai-video', 'social-media-management'
+];
+
+const getInitialView = (): ViewType => {
+  const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+  if (path === '' || path === 'home') {
+    return 'home';
+  }
+  if (validViews.includes(path as ViewType)) {
+    return path as ViewType;
+  }
+  return '404';
+};
+
 export default function App() {
-  const [view, setView] = useState<'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management'>('home');
+  const [view, setView] = useState<ViewType>(getInitialView());
 
   useEffect(() => {
     // Enable Lenis smooth scrolling
@@ -55,12 +75,29 @@ export default function App() {
 
     requestAnimationFrame(raf);
 
-    // Sync scroll event listener if we need any custom scroll logic
     return () => {
       lenis.destroy();
       (window as any).lenis = undefined;
     };
   }, []);
+
+  // Sync state-based routing with window.location URL pathname
+  useEffect(() => {
+    const handlePopState = () => {
+      setView(getInitialView());
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  useEffect(() => {
+    const currentPath = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    const targetPath = view === 'home' ? '' : view;
+    if (currentPath !== targetPath) {
+      window.history.pushState(null, '', view === 'home' ? '/' : `/${view}`);
+    }
+  }, [view]);
 
   // Professional SEO, Accessibility and Scroll Synchronization effect
   useEffect(() => {
@@ -84,7 +121,8 @@ export default function App() {
       'branding-design': 'Professional Graphic Design & Logo Branding Agency Cameroon',
       'seo-growth': 'Best SEO Agency in Cameroon | Professional SEO Services Buea',
       'ai-video': 'AI Video Production & Custom AI Automation Agency Cameroon',
-      'social-media-management': 'Social Media Management & Digital Marketing Company Cameroon'
+      'social-media-management': 'Social Media Management & Digital Marketing Company Cameroon',
+      '404': 'Page Not Found | Nexora Empire'
     };
 
     // 3. Dynamic Meta Description Map to prevent identical search snippets
@@ -100,7 +138,8 @@ export default function App() {
       'branding-design': 'Establish your brand authority. Professional corporate visual identity, custom logo design systems, brochures, and brand styling guidelines in Cameroon.',
       'seo-growth': 'Rank #1 on Google. Nexora Empire is the best SEO agency in Cameroon. We offer expert technical audits, semantic keyword mapping, and local SEO services.',
       'ai-video': 'Transform your business with cutting-edge AI video production, realistic custom digital avatars, synthetic marketing campaigns, and AI integration.',
-      'social-media-management': 'Sustain organic customer growth. We handle professional social media management, brand campaigns, content calendars, and digital marketing.'
+      'social-media-management': 'Sustain organic customer growth. We handle professional social media management, brand campaigns, content calendars, and digital marketing.',
+      '404': 'The requested coordinate or page could not be located in our digital empire. Return home or go back to browse.'
     };
 
     // 4. Dynamic Meta Keywords Map
@@ -116,7 +155,8 @@ export default function App() {
       'branding-design': 'branding agency, graphic design agency, visual identity, corporate brand design, logo creator, creative director, style guidelines',
       'seo-growth': 'SEO agency, technical SEO company, organic growth marketing, search engine optimization, local SEO, rank on Google, AI search engine optimization, schema structured data',
       'ai-video': 'AI video production, generative AI video, synthetic media company, interactive video ads, AI voice generation, digital marketing',
-      'social-media-management': 'social media management, social media agency, brand growth online, content calendar creation, organic reach campaigns, community management'
+      'social-media-management': 'social media management, social media agency, brand growth online, content calendar creation, organic reach campaigns, community management',
+      '404': '404, page not found, missing link, coordinate lost, Nexora Empire'
     };
 
     const activeTitle = titleMap[view] || 'Nexora Empire | Enterprise Software Development & Digital Agency';
@@ -533,11 +573,13 @@ export default function App() {
               <PricingPage setView={setView} />
             ) : view === 'training-internship' ? (
               <TrainingInternshipPage setView={setView} />
-            ) : (
+            ) : view === 'contact' ? (
               <>
                 <ContactPage setView={setView} />
                 <ReadyToBuild />
               </>
+            ) : (
+              <NotFoundPage setView={setView} />
             )}
           </motion.div>
         </AnimatePresence>

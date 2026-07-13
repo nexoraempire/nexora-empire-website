@@ -348,9 +348,26 @@ async function startServer() {
         // Extract route path without trailing slash
         const route = req.path.replace(/\/$/, "");
 
-        const activeTitle = titleMap[route] || titleMap[""];
-        const activeDesc = descMap[route] || descMap[""];
-        const activeKeywords = keywordsMap[route] || keywordsMap[""];
+        const validRoutes = [
+          "", "/about-us", "/portfolio", "/pricing", "/training-internship", 
+          "/contact", "/web-dev", "/mobile-dev", "/branding-design", 
+          "/seo-growth", "/ai-video", "/social-media-management"
+        ];
+
+        const isRouteValid = validRoutes.includes(route);
+        if (!isRouteValid) {
+          res.status(404);
+        }
+
+        const activeTitle = isRouteValid 
+          ? (titleMap[route] || titleMap[""])
+          : "Page Not Found | Nexora Empire";
+        const activeDesc = isRouteValid 
+          ? (descMap[route] || descMap[""])
+          : "The requested page was not found in our digital empire.";
+        const activeKeywords = isRouteValid 
+          ? (keywordsMap[route] || keywordsMap[""])
+          : "404, page not found, coordinate lost, Nexora Empire";
         const activeUrl = `https://nexoraempire.com${route}`;
 
         // Build precise JSON-LD structured schemas representing the page context
