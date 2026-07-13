@@ -222,11 +222,11 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
             </span>
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight">
-              We Build the <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Digital Future</span>
+              Professional <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Software Company</span> in Cameroon
             </h1>
             
             <p className="font-sans text-slate-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
-              Nexora Empire is a premier technology company committed to <span className="font-semibold text-white">designing, engineering, and optimizing bespoke digital experiences</span> for world-class brands.
+              Nexora Empire is a top-tier professional software company in Cameroon. We design, engineer, and optimize custom software architectures and web portals for global businesses.
             </p>
           </div>
         </div>

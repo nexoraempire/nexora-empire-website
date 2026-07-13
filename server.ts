@@ -296,33 +296,33 @@ async function startServer() {
     app.use(express.static(distPath));
 
     const titleMap: Record<string, string> = {
-      "": "Nexora Empire | Best Software & Web Development Company Cameroon",
-      "/about-us": "About Nexora Empire | Elite Software Developers & Tech Consultants",
-      "/portfolio": "Bespoke Software & Web Applications Portfolio | Nexora Empire",
-      "/pricing": "Transparent Software Development & SEO Investment Plans | Nexora Empire",
-      "/training-internship": "Tech Training & Software Engineering Internships | Nexora Academy",
-      "/contact": "Hire Software Developers | Contact Nexora Empire Executive Team",
-      "/web-dev": "Custom Web Development Services & SaaS Engineering | Nexora Empire",
-      "/mobile-dev": "Native & Cross-Platform Mobile App Development | Nexora Empire",
-      "/branding-design": "Premium Graphic Design & Corporate Visual Identity | Nexora Empire",
-      "/seo-growth": "Advanced Technical SEO & Google Search Strategy | Nexora Empire",
-      "/ai-video": "Generative AI Video Production & AI Automation | Nexora Empire",
-      "/social-media-management": "Strategic Social Media Management & Organic Growth | Nexora Empire"
+      "": "Nexora Empire | Best Software Development & SEO Company in Cameroon",
+      "/about-us": "About Nexora Empire | Professional Software Company in Cameroon",
+      "/portfolio": "Software Development & SEO Portfolio Cameroon | Nexora Empire",
+      "/pricing": "Web Development & SEO Pricing Cameroon | Nexora Empire",
+      "/training-internship": "Best Software Engineering Training & Certified Internships in Cameroon",
+      "/contact": "Contact Best Website Developer & Software Company in Cameroon | Nexora",
+      "/web-dev": "Best Web Development Company in Cameroon | Website Developer Buea",
+      "/mobile-dev": "Professional Mobile App Development Company in Cameroon",
+      "/branding-design": "Professional Graphic Design & Logo Branding Agency Cameroon",
+      "/seo-growth": "Best SEO Agency in Cameroon | Professional SEO Services Buea",
+      "/ai-video": "AI Video Production & Custom AI Automation Agency Cameroon",
+      "/social-media-management": "Social Media Management & Digital Marketing Company Cameroon"
     };
 
     const descMap: Record<string, string> = {
-      "": "Nexora Empire is the best software development company in Cameroon crafting enterprise websites, high-performance mobile apps, custom AI solutions, and premium branding globally.",
-      "/about-us": "Meet Nexora Empire's expert software engineering team. Based in Cameroon and serving clients worldwide, we build scalable software systems and custom digital solutions.",
-      "/portfolio": "Explore our case studies of custom React apps, native mobile app development, e-commerce, and successful technical SEO campaigns delivered globally.",
-      "/pricing": "Flexible pricing packages for web engineering, mobile app development, custom branding design systems, and hyper-targeted organic search engine growth.",
-      "/training-internship": "Join practical coding training programs in Cameroon. Learn web/mobile app development, UI/UX, AI video, and secure certified internship placements at Nexora.",
-      "/contact": "Hire the best software developers and digital marketers in Cameroon. Book an executive consultation. Office: Buea Town. Call +237 677 079 559.",
-      "/web-dev": "Pristine, responsive, and highly secure enterprise web applications, React / Next.js web systems, and custom SaaS software products with lightning-fast speeds.",
-      "/mobile-dev": "High-performance native iOS & Android applications running with custom React Native & Expo architectures, fluid interactions, and optimized security.",
-      "/branding-design": "Visual identity design, logos, custom typography guidelines, and corporate branding files to establish market authority for local and global enterprises.",
-      "/seo-growth": "Rank first on Google. We offer organic growth marketing, semantic keyword mapping, site audits, and structured schema data optimized for search crawlers.",
-      "/ai-video": "Transform campaigns with state-of-the-art AI-driven video creation, interactive synthetic media assets, and realistic 3D generative content.",
-      "/social-media-management": "Expand your social reach, scale brand impressions organically, and manage premium content calendar systems across major industry platforms."
+      "": "Nexora Empire is the best software development company & SEO agency in Cameroon. We build premium enterprise web apps, mobile apps, and custom AI systems for global businesses.",
+      "/about-us": "Learn about Nexora Empire, a professional software company in Cameroon. Meet our expert website developers, software engineers, and digital growth specialists.",
+      "/portfolio": "Explore our enterprise software engineering, responsive website development, custom mobile apps, and successful SEO campaigns across Cameroon and globally.",
+      "/pricing": "Affordable pricing plans for custom website development, mobile application engineering, professional SEO packages, and visual brand identity designs in Cameroon.",
+      "/training-internship": "Kickstart your tech career at Nexora Academy. Join practical software engineering training courses in Cameroon with guaranteed certified internship options.",
+      "/contact": "Hire the best website developers, SEO experts, and custom software company in Cameroon. Reach out to our Buea Town office or schedule a call.",
+      "/web-dev": "Looking for the best web development company in Cameroon? We build high-performance React & Next.js web applications, e-commerce stores, and custom SaaS systems.",
+      "/mobile-dev": "Top-rated mobile app development company in Cameroon. We engineer cross-platform React Native & Expo iOS and Android mobile apps for startups and enterprises.",
+      "/branding-design": "Establish your brand authority. Professional corporate visual identity, custom logo design systems, brochures, and brand styling guidelines in Cameroon.",
+      "/seo-growth": "Rank #1 on Google. Nexora Empire is the best SEO agency in Cameroon. We offer expert technical audits, semantic keyword mapping, and local SEO services.",
+      "/ai-video": "Transform your business with cutting-edge AI video production, realistic custom digital avatars, synthetic marketing campaigns, and AI integration.",
+      "/social-media-management": "Sustain organic customer growth. We handle professional social media management, brand campaigns, content calendars, and digital marketing."
     };
 
     const keywordsMap: Record<string, string> = {

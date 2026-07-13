@@ -92,10 +92,10 @@ export const Hero: React.FC = () => {
               id="headline-container"
             >
               <h1 className="font-display text-[44px] sm:text-[58px] md:text-[72px] font-extrabold text-white leading-[1.05] tracking-tight lg:whitespace-nowrap flex flex-col">
-                <span>Your Partner for</span>
-                <span>Websites, Apps &</span>
+                <span>Best Software & SEO</span>
+                <span>Company in Cameroon</span>
                 <span className="bg-gradient-to-r from-brand-electric via-[#3b82f6] to-brand-violet bg-clip-text text-transparent">
-                  Digital Solutions
+                  For Digital Solutions
                 </span>
               </h1>
             </motion.div>
@@ -108,7 +108,7 @@ export const Hero: React.FC = () => {
               className="font-sans text-base sm:text-lg text-gray-400 font-normal leading-relaxed mb-10 max-w-xl"
               id="hero-subtitle"
             >
-              Building digital products that help businesses and individuals <span className="font-semibold text-white">attract customers</span>, <span className="font-semibold text-white">increase sales</span>, and <span className="font-semibold text-white">strengthen their online presence</span>.
+              Professional custom software development, expert website developers, and technical SEO services in Cameroon. We engineer scalable digital products that help businesses scale sales, attract customers, and dominate rankings.
             </motion.p>
 
             {/* Call to Actions Action bar */}

@@ -229,14 +229,14 @@ export const MobileDevPage: React.FC<MobileDevPageProps> = ({ setView }) => {
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                Mobile Apps That Users Love <br className="hidden sm:inline" />
+                Elite Mobile App <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  to Use
+                  Development Company
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                We design and develop high-performance Android, iOS, and cross-platform mobile applications that deliver seamless user experiences and help businesses scale faster.
+                We are the top-rated mobile app development company in Cameroon. Our software engineers build secure, high-performance iOS, Android, and cross-platform (React Native/Expo) mobile applications tailored for businesses and startups globally.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
