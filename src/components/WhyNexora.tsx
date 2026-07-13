@@ -28,16 +28,21 @@ import seoTraining from '../assets/images/seo_training.png';
 import goodDesign from '../assets/images/good-design-vs-bad-design.jpg';
 const techTrainingVideo = '/assets/images/nexora-empire-student-ai-video.mp4';
 const kidsBootcampVideo = '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4';
-// @ts-ignore
 import nexoraTechEmpire from '../assets/images/nexora-tech-empire.jpg';
+
+const getSrc = (img: any): string => {
+  if (typeof img === 'string') return img;
+  if (img && typeof img === 'object' && img.src) return img.src;
+  return '';
+};
 
 interface CardData {
   id: string;
   indexStr: string;
   name: string;
   role: string;
-  avatar: string;
-  workImage: string;
+  avatar: any;
+  workImage: any;
   topic: string;
   bio1: React.ReactNode;
   bio2: React.ReactNode;
@@ -260,7 +265,7 @@ export const WhyNexora: React.FC = () => {
                       <div className="flex flex-col items-center text-center">
                         <div className="relative mb-1.5">
                           <img 
-                            src={card.avatar} 
+                            src={getSrc(card.avatar)} 
                             alt={card.name} 
                             className="w-12 h-12 rounded-full object-cover border-2 border-brand-violet/50 shadow-[0_0_15px_rgba(139,92,246,0.3)]"
                             referrerPolicy="no-referrer"
@@ -306,9 +311,9 @@ export const WhyNexora: React.FC = () => {
 
                     {/* Left half of Right Card: Rounded embedded image flush with boundaries */}
                     <div className="w-full md:w-[45%] relative overflow-hidden h-[250px] sm:h-[280px] md:h-full border-b md:border-b-0 md:border-r border-zinc-900/60 shrink-0">
-                      {card.workImage.endsWith('.mp4') ? (
+                      {getSrc(card.workImage).endsWith('.mp4') ? (
                         <video 
-                          src={card.workImage} 
+                          src={getSrc(card.workImage)} 
                           autoPlay
                           loop
                           muted
@@ -319,7 +324,7 @@ export const WhyNexora: React.FC = () => {
                         />
                       ) : (
                         <img 
-                          src={card.workImage} 
+                          src={getSrc(card.workImage)} 
                           alt={card.topic} 
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           referrerPolicy="no-referrer"

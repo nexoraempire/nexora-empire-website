@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-dark: #020205;
+  --color-brand-violet: #6d28d9;
+  --color-brand-purple-vibrant: #5a4ff3;
+  --color-brand-electric: #00befa;
+}
+
+/* Custom glow and movement effect utility classes */
+@keyframes cosmic-drift-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(40px, -40px) scale(1.15) rotate(120deg);
+  }
+  66% {
+    transform: translate(-30px, 20px) scale(0.9) rotate(240deg);
+  }
+}
+
+@keyframes cosmic-drift-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-60px, 50px) scale(1.1) rotate(-180deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.35;
+    filter: blur(80px) brightness(1);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(100px) brightness(1.2);
+  }
+}
+
+.animate-cosmic-1 {
+  animation: cosmic-drift-1 25s infinite ease-in-out;
+}
+
+.animate-cosmic-2 {
+  animation: cosmic-drift-2 30s infinite ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 10s infinite ease-in-out;
+}
+
+/* Infinte scrolling marquee keyframes and utilities */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left var(--scroll-duration, 55s) linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right var(--scroll-duration, 55s) linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Custom scrollbar to keep layout premium */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020205;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #312e81;
+}
+
+/* Lenis smooth scroll optimization rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Mockup scrolling animation on hover */
+@keyframes scroll-mockup-anim {
+  0% {
+    object-position: top;
+  }
+  45% {
+    object-position: bottom;
+  }
+  55% {
+    object-position: bottom;
+  }
+  100% {
+    object-position: top;
+  }
+}
+
+.mockup-scroll-img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Trigger animation on hover of the parent card group */
+.group:hover .mockup-scroll-img {
+  animation: scroll-mockup-anim 10s ease-in-out infinite;
+}
