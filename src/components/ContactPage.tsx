@@ -37,6 +37,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
   const [meetingEmail, setMeetingEmail] = useState('');
   const [meetingSubmitted, setMeetingSubmitted] = useState(false);
 
+  const handleWhatsAppInstant = () => {
+    window.open(`https://wa.me/237677079559?text=Hi%20Nexora%20Empire%20team%2C%20I%20want%20to%20consult%20on%20a%20project.`, '_blank');
+  };
+
   const contactFaqs: { q: string; a: React.ReactNode }[] = [
     {
       q: "How fast will I receive a reply after submitting my inquiry?",
