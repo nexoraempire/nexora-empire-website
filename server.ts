@@ -301,7 +301,7 @@ async function startServer() {
       "/portfolio": "Software Development & SEO Portfolio Cameroon | Nexora Empire",
       "/pricing": "Web Development & SEO Pricing Cameroon | Nexora Empire",
       "/training-internship": "Best Software Engineering Training & Certified Internships in Cameroon",
-      "/contact": "Contact Best Website Developer & Software Company in Cameroon | Nexora",
+      "/contact": "Nexora Empire | Best Software Development & SEO Company in Cameroon",
       "/web-dev": "Best Web Development Company in Cameroon | Website Developer Buea",
       "/mobile-dev": "Professional Mobile App Development Company in Cameroon",
       "/branding-design": "Professional Graphic Design & Logo Branding Agency Cameroon",
