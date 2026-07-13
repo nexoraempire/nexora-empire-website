@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   ArrowLeft,
+  ArrowUpRight,
   Mail,
   Phone,
   MapPin,
@@ -18,7 +19,8 @@ import {
   ChevronDown,
   ArrowRight,
   Headphones,
-  User
+  User,
+  MessageSquare
 } from 'lucide-react';
 import { ContactForm } from './ContactForm.tsx';
 
