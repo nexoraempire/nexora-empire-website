@@ -7,9 +7,10 @@ interface BrandLogoProps {
 }
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({ className = '', size = 40 }) => {
+  const logoSrc = typeof nexoraLogo === 'string' ? nexoraLogo : (nexoraLogo as any).src;
   return (
     <img
-      src={nexoraLogo}
+      src={logoSrc}
       alt="Nexora Empire Logo"
       width={size}
       height={size}

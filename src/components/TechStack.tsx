@@ -81,6 +81,16 @@ interface Technology {
 }
 
 export const TechStack: React.FC = () => {
+  const renderLogo = (logo: React.ReactNode) => {
+    if (React.isValidElement(logo)) {
+      const src = (logo.props as any).src;
+      return React.cloneElement(logo, {
+        src: typeof src === 'string' ? src : src?.src || ''
+      } as any);
+    }
+    return logo;
+  };
+
   const [activeRow1Duration, setActiveRow1Duration] = useState('50s');
   const [activeRow2Duration, setActiveRow2Duration] = useState('50s');
 
@@ -208,7 +218,7 @@ export const TechStack: React.FC = () => {
                 id={`tech-tile-r1-1-${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
               >
                 <div className="flex items-center justify-center mb-2.5 sm:mb-3 p-1.5 rounded-xl bg-slate-50/50">
-                  {tech.logo}
+                  {renderLogo(tech.logo)}
                 </div>
                 <span className="text-[10px] sm:text-[13px] font-sans font-semibold text-slate-700 tracking-wide">
                   {tech.name}
@@ -223,7 +233,7 @@ export const TechStack: React.FC = () => {
                 id={`tech-tile-r1-2-${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
               >
                 <div className="flex items-center justify-center mb-2.5 sm:mb-3 p-1.5 rounded-xl bg-slate-50/50">
-                  {tech.logo}
+                  {renderLogo(tech.logo)}
                 </div>
                 <span className="text-[10px] sm:text-[13px] font-sans font-semibold text-slate-700 tracking-wide">
                   {tech.name}
@@ -248,7 +258,7 @@ export const TechStack: React.FC = () => {
                 id={`tech-tile-r2-1-${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
               >
                 <div className="flex items-center justify-center mb-2.5 sm:mb-3 p-1.5 rounded-xl bg-slate-50/50">
-                  {tech.logo}
+                  {renderLogo(tech.logo)}
                 </div>
                 <span className="text-[10px] sm:text-[13px] font-sans font-semibold text-slate-700 tracking-wide">
                   {tech.name}
@@ -263,7 +273,7 @@ export const TechStack: React.FC = () => {
                 id={`tech-tile-r2-2-${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
               >
                 <div className="flex items-center justify-center mb-2.5 sm:mb-3 p-1.5 rounded-xl bg-slate-50/50">
-                  {tech.logo}
+                  {renderLogo(tech.logo)}
                 </div>
                 <span className="text-[10px] sm:text-[13px] font-sans font-semibold text-slate-700 tracking-wide">
                   {tech.name}
