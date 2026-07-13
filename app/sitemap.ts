@@ -2,84 +2,89 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://nexoraempire.com';
-  const currentDate = new Date();
+  const lastModified = new Date();
 
   return [
+    // Homepage
     {
-      url: `${baseUrl}/`,
-      lastModified: currentDate,
+      url: `${baseUrl}`,
+      lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
+
+    // Main Pages
     {
-      url: `${baseUrl}/#services`,
-      lastModified: currentDate,
+      url: `${baseUrl}/about-us`,
+      lastModified,
       changeFrequency: 'monthly',
-      priority: 0.95,
+      priority: 0.85,
     },
     {
-      url: `${baseUrl}/web-dev`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
+      url: `${baseUrl}/services`,
+      lastModified,
+      changeFrequency: 'weekly',
       priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/mobile-dev`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/seo-growth`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/branding-design`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.90,
     },
     {
       url: `${baseUrl}/portfolio`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
+      lastModified,
+      changeFrequency: 'monthly',
       priority: 0.90,
     },
     {
-      url: `${baseUrl}/about-us`,
-      lastModified: currentDate,
+      url: `${baseUrl}/pricing`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.80,
+    },
+    {
+      url: `${baseUrl}/training-internship`,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: currentDate,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+
+    // Service Pages
     {
-      url: `${baseUrl}/training-internship`,
-      lastModified: currentDate,
+      url: `${baseUrl}/web-dev`,
+      lastModified,
       changeFrequency: 'monthly',
-      priority: 0.85,
+      priority: 0.95,
     },
     {
-      url: `${baseUrl}/pricing`,
-      lastModified: currentDate,
+      url: `${baseUrl}/mobile-dev`,
+      lastModified,
       changeFrequency: 'monthly',
-      priority: 0.80,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/branding-design`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/seo-growth`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/ai-video`,
-      lastModified: currentDate,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.80,
     },
     {
       url: `${baseUrl}/social-media-management`,
-      lastModified: currentDate,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.80,
     },

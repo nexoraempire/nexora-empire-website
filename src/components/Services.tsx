@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 import { CardSpotlight } from './CardSpotlight.tsx';
 import { 
@@ -28,6 +31,7 @@ interface ServicesProps {
 }
 
 export const Services: React.FC<ServicesProps> = ({ setView }) => {
+  const router = useRouter();
   const services: ServiceItem[] = [
     {
       id: 'service-card-01',
@@ -174,18 +178,23 @@ export const Services: React.FC<ServicesProps> = ({ setView }) => {
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.7, delay: index * 0.05 }}
                 onClick={() => {
+                  const target = 
+                    service.id === 'service-card-01' ? 'web-dev' :
+                    service.id === 'service-card-02' ? 'mobile-dev' :
+                    service.id === 'service-card-03' ? 'branding-design' :
+                    service.id === 'service-card-05' ? 'ai-video' :
+                    service.id === 'service-card-06' ? 'seo-growth' :
+                    service.id === 'service-card-07' ? 'training-internship' :
+                    'contact';
+
                   if (setView) {
-                    if (service.id === 'service-card-01') setView('web-dev');
-                    else if (service.id === 'service-card-02') setView('mobile-dev');
-                    else if (service.id === 'service-card-03') setView('branding-design');
-                    else if (service.id === 'service-card-05') setView('ai-video');
-                    else if (service.id === 'service-card-06') setView('seo-growth');
-                    else if (service.id === 'service-card-07') setView('training-internship');
-                    else setView('contact');
-                    window.scrollTo({ top: 0, behavior: 'instant' });
-                    if ((window as any).lenis) {
-                      (window as any).lenis.scrollTo(0);
-                    }
+                    setView(target);
+                  } else {
+                    router.push(`/${target}`);
+                  }
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                  if ((window as any).lenis) {
+                    (window as any).lenis.scrollTo(0);
                   }
                 }}
                 className={`${service.gridClass} rounded-2xl bg-slate-950/40 border border-[#1e1b4b]/30 backdrop-blur-md relative overflow-hidden group hover:border-brand-electric/30 transition-all duration-500 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] cursor-pointer`}

@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 import { CardSpotlight } from './CardSpotlight.tsx';
 import { LazyVideo } from './LazyVideo';
@@ -31,6 +34,7 @@ interface FeaturedProjectsProps {
 }
 
 export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) => {
+  const router = useRouter();
   const projects: Project[] = [
     {
       id: 'hypergt',
@@ -246,31 +250,33 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
         </div>
 
         {/* View All Interactive Case Studies CTA */}
-        {setView && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center mt-16"
-            id="featured-projects-view-all-container"
-          >
-            <button
-              onClick={() => {
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex justify-center mt-16"
+          id="featured-projects-view-all-container"
+        >
+          <button
+            onClick={() => {
+              if (setView) {
                 setView('portfolio');
-                window.scrollTo({ top: 0, behavior: 'instant' });
-                if ((window as any).lenis) {
-                  (window as any).lenis.scrollTo(0);
-                }
-              }}
-              className="inline-flex items-center gap-2 px-8 py-4.5 bg-white hover:bg-brand-violet/5 border border-slate-200 hover:border-brand-violet rounded-2xl text-slate-800 hover:text-brand-violet font-sans font-bold text-sm sm:text-base transition-all duration-300 shadow-sm cursor-pointer hover:shadow-lg hover:shadow-brand-violet/10 hover:scale-[1.02] active:scale-[0.98]"
-              id="featured-projects-view-all-btn"
-            >
-              Explore Full Case Studies & Live Telemetry
-              <ArrowUpRight className="w-4.5 h-4.5 stroke-[2.5]" />
-            </button>
-          </motion.div>
-        )}
+              } else {
+                router.push('/portfolio');
+              }
+              window.scrollTo({ top: 0, behavior: 'instant' });
+              if ((window as any).lenis) {
+                (window as any).lenis.scrollTo(0);
+              }
+            }}
+            className="inline-flex items-center gap-2 px-8 py-4.5 bg-white hover:bg-brand-violet/5 border border-slate-200 hover:border-brand-violet rounded-2xl text-slate-800 hover:text-brand-violet font-sans font-bold text-sm sm:text-base transition-all duration-300 shadow-sm cursor-pointer hover:shadow-lg hover:shadow-brand-violet/10 hover:scale-[1.02] active:scale-[0.98]"
+            id="featured-projects-view-all-btn"
+          >
+            Explore Full Case Studies & Live Telemetry
+            <ArrowUpRight className="w-4.5 h-4.5 stroke-[2.5]" />
+          </button>
+        </motion.div>
       </div>
     </section>
   );

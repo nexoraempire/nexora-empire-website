@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 import { AnimatedCounter } from './AnimatedCounter';
 import { 
@@ -21,10 +24,11 @@ import {
 import dashboardImg from '../assets/images/nexora_dashboard_1782086692344.jpg';
 
 interface AboutProps {
-  setView: (view: 'home' | 'about-us') => void;
+  setView?: (view: 'home' | 'about-us') => void;
 }
 
 export const About: React.FC<AboutProps> = ({ setView }) => {
+  const router = useRouter();
   const stats = [
     {
       id: 'stat-delivered',
@@ -116,7 +120,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               transition={{ duration: 0.6, delay: 0.25 }}
             >
               <button
-                onClick={() => setView('about-us')}
+                onClick={() => setView ? setView('about-us') : router.push('/about-us')}
                 className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#0e1629] text-white font-sans text-sm font-semibold tracking-wide hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-600/15 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-95"
               >
                 Explore Our DNA & Meet Team
