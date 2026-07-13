@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AnimatedCounter } from './AnimatedCounter';
+import { LazyVideo } from './LazyVideo';
 import { 
   GraduationCap, 
   Code, 
@@ -1153,12 +1154,8 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                   {/* Project Preview */}
                   <div className="relative aspect-video overflow-hidden">
                     {proj.preview.endsWith('.mp4') ? (
-                      <video 
+                      <LazyVideo 
                         src={proj.preview} 
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onMouseEnter={(e) => { e.currentTarget.muted = false; }}
                         onMouseLeave={(e) => { e.currentTarget.muted = true; }}

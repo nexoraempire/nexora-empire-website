@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { CardSpotlight } from './CardSpotlight.tsx';
+import { LazyVideo } from './LazyVideo';
 import { 
   Car, 
   Dumbbell, 
@@ -181,12 +182,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
                   {/* Inner actual website image rendering */}
                   <div className={`flex-1 w-full rounded-b-2xl overflow-hidden relative shadow-inner ${project.mockupBg}`} id={`browser-content-${project.id}`}>
                     {project.image.endsWith('.mp4') ? (
-                      <video 
+                      <LazyVideo 
                         src={project.image} 
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                         onMouseEnter={(e) => { e.currentTarget.muted = false; }}
                         onMouseLeave={(e) => { e.currentTarget.muted = true; }}

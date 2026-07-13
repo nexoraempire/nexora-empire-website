@@ -4,6 +4,7 @@ import {
   X, 
   Check
 } from 'lucide-react';
+import { LazyVideo } from './LazyVideo';
 
 // Import generated portrait images
 // @ts-ignore
@@ -314,12 +315,8 @@ export const WhyNexora: React.FC = () => {
                     {/* Left half of Right Card: Rounded embedded image flush with boundaries */}
                     <div className="w-full md:w-[45%] relative overflow-hidden h-[250px] sm:h-[280px] md:h-full border-b md:border-b-0 md:border-r border-zinc-900/60 shrink-0">
                       {getSrc(card.workImage).endsWith('.mp4') ? (
-                        <video 
+                        <LazyVideo 
                           src={getSrc(card.workImage)} 
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           onMouseEnter={(e) => { e.currentTarget.muted = false; }}
                           onMouseLeave={(e) => { e.currentTarget.muted = true; }}

@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AnimatedCounter } from './AnimatedCounter';
 import { CardSpotlight } from './CardSpotlight.tsx';
+import { LazyVideo } from './LazyVideo';
 import { 
   ArrowLeft,
   ArrowRight,
@@ -1239,12 +1240,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                           {/* Render Mockup Showcase Box */}
                           <div className="w-full aspect-[16/13] rounded-xl overflow-hidden border border-slate-200/30 group-hover:border-indigo-200/50 transition-all duration-500 relative flex items-center justify-center">
                             {project.imageUrl.endsWith('.mp4') ? (
-                              <video
+                              <LazyVideo
                                 src={project.imageUrl}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
                                 className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105"
                                 onMouseEnter={(e) => { e.currentTarget.muted = false; }}
                                 onMouseLeave={(e) => { e.currentTarget.muted = true; }}
@@ -1533,12 +1530,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                   <div className="lg:col-span-5 space-y-4">
                     <div className="w-full aspect-video sm:aspect-[16/10] rounded-2xl overflow-hidden border border-indigo-950/40 shadow-inner flex items-center justify-center relative">
                       {activeProject.imageUrl.endsWith('.mp4') ? (
-                        <video
+                        <LazyVideo
                           src={activeProject.imageUrl}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
                           className="w-full h-full object-cover"
                           onMouseEnter={(e) => { e.currentTarget.muted = false; }}
                           onMouseLeave={(e) => { e.currentTarget.muted = true; }}
