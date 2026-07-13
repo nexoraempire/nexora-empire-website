@@ -2,18 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   ArrowLeft,
-  ArrowUpRight,
   Mail,
   Phone,
   MapPin,
   Clock,
-  CheckCircle2,
-  Send,
-  MessageSquare,
-  Sparkles,
   Calendar,
   Building,
-  DollarSign,
   ChevronRight,
   FileText,
   Video,
@@ -26,25 +20,13 @@ import {
   Headphones,
   User
 } from 'lucide-react';
+import { ContactForm } from './ContactForm.tsx';
 
 interface ContactPageProps {
   setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'contact') => void;
 }
 
 export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
-  // Form State
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    serviceInterest: 'fullstack',
-    budgetRange: 'medium',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   // Meeting Schedule Modal States
@@ -54,24 +36,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
   const [meetingName, setMeetingName] = useState('');
   const [meetingEmail, setMeetingEmail] = useState('');
   const [meetingSubmitted, setMeetingSubmitted] = useState(false);
-
-
-
-  const servicesList = [
-    { id: 'fullstack', name: 'Full-Stack Web Engineering' },
-    { id: 'mobile', name: 'Native Mobile App' },
-    { id: 'uiux', name: 'UI/UX Product Design' },
-    { id: 'ai-agents', name: 'AI Agent & Automation Systems' },
-    { id: 'academy', name: 'Training / Academy' },
-    { id: 'custom', name: 'Other Custom Solution' }
-  ];
-
-  const budgetRanges = [
-    { id: 'starter', label: 'Under $1,000 (600K XAF)' },
-    { id: 'medium', label: '$1,000 – $5,000 (3M XAF)' },
-    { id: 'enterprise', label: '$5,000 – $15,000 (9M XAF)' },
-    { id: 'custom', label: '$15,000+ (Custom Scope)' }
-  ];
 
   const contactFaqs: { q: string; a: React.ReactNode }[] = [
     {
@@ -91,46 +55,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
       a: <span>We operate as a high-efficiency global development hub with physical offices in <span className="font-semibold text-zinc-200">Douala, Cameroon</span>. This strategic hub powers both local client systems and international offshore development pipelines across Europe and North America.</span>
     }
   ];
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formState.name || !formState.email || !formState.message) return;
-
-    setIsSubmitting(true);
-
-    try {
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formState)
-      });
-    } catch (err) {
-      console.error("Contact form submission failed:", err);
-    }
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Auto reset form state
-    setTimeout(() => {
-      setFormState({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        serviceInterest: 'fullstack',
-        budgetRange: 'medium',
-        message: ''
-      });
-      setIsSubmitted(false);
-    }, 5000);
-  };
-
-  const handleWhatsAppInstant = () => {
-    const serviceName = servicesList.find(s => s.id === formState.serviceInterest)?.name || 'Software Project';
-    const msgText = `Hi Nexora, my name is ${formState.name || 'Visitor'}. I am interested in building a ${serviceName} with you. Let's discuss details!`;
-    window.open(`https://wa.me/237677079559?text=${encodeURIComponent(msgText)}`, '_blank');
-  };
 
   const handleScheduleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -370,165 +294,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
                 Send us a message, and we'll promptly discuss your project with you.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6" id="light-contact-form">
-                
-                {/* 2-Column Grid for Name & Email */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-purple-vibrant/50" />
-                    <input
-                      type="text"
-                      id="contact-name"
-                      required
-                      placeholder="Your Name"
-                      aria-label="Your Full Name"
-                      autoComplete="name"
-                      value={formState.name}
-                      onChange={(e) => setFormState(prev => ({ ...prev, name: e.target.value }))}
-                      className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200/80 focus:bg-white focus:border-brand-purple-vibrant focus:ring-1 focus:ring-brand-purple-vibrant/20 rounded-xl font-sans text-xs text-zinc-800 placeholder-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:border-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all duration-300"
-                    />
-                  </div>
-
-                  <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-purple-vibrant/50" />
-                    <input
-                      type="email"
-                      id="contact-email"
-                      required
-                      placeholder="Your Email"
-                      aria-label="Your Email Address"
-                      autoComplete="email"
-                      value={formState.email}
-                      onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
-                      className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200/80 focus:bg-white focus:border-brand-purple-vibrant focus:ring-1 focus:ring-brand-purple-vibrant/20 rounded-xl font-sans text-xs text-zinc-800 placeholder-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:border-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                {/* 2-Column Grid for Phone & Company */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-purple-vibrant/50" />
-                    <input
-                      type="tel"
-                      id="contact-phone"
-                      placeholder="Your Phone No."
-                      aria-label="Your Phone Number"
-                      autoComplete="tel"
-                      value={formState.phone}
-                      onChange={(e) => setFormState(prev => ({ ...prev, phone: e.target.value }))}
-                      className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200/80 focus:bg-white focus:border-brand-purple-vibrant focus:ring-1 focus:ring-brand-purple-vibrant/20 rounded-xl font-sans text-xs text-zinc-800 placeholder-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:border-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all duration-300"
-                    />
-                  </div>
-
-                  <div className="relative">
-                    <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-purple-vibrant/50" />
-                    <input
-                      type="text"
-                      id="contact-company"
-                      placeholder="Your Company Name"
-                      aria-label="Your Company Name"
-                      autoComplete="organization"
-                      value={formState.company}
-                      onChange={(e) => setFormState(prev => ({ ...prev, company: e.target.value }))}
-                      className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200/80 focus:bg-white focus:border-brand-purple-vibrant focus:ring-1 focus:ring-brand-purple-vibrant/20 rounded-xl font-sans text-xs text-zinc-800 placeholder-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:border-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                {/* Service of Interest */}
-                <div className="space-y-2">
-                  <label htmlFor="contact-service-interest" id="contact-service-interest-label" className="font-mono text-[9px] font-bold text-slate-500 uppercase tracking-wider block text-left">
-                    Service of Interest
-                  </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5" role="radiogroup" aria-labelledby="contact-service-interest-label">
-                    {servicesList.map(srv => {
-                      const isSelected = formState.serviceInterest === srv.id;
-                      return (
-                        <button
-                          key={srv.id}
-                          type="button"
-                          role="radio"
-                          aria-checked={isSelected}
-                          onClick={() => setFormState(prev => ({ ...prev, serviceInterest: srv.id }))}
-                          className={`p-3 rounded-xl border text-[11px] font-sans font-bold text-center transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-95 ${
-                            isSelected
-                              ? 'bg-brand-purple-vibrant/10 border-brand-purple-vibrant text-brand-purple-vibrant shadow-[0_0_15px_rgba(90,79,243,0.08)]'
-                              : 'bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-700'
-                          }`}
-                        >
-                          {srv.name}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>                 {/* Message / Inquiry text area with message icon */}
-                <div className="relative">
-                  <MessageSquare className="absolute left-4 top-4 w-4 h-4 text-brand-purple-vibrant/50" />
-                  <textarea
-                    required
-                    id="contact-message"
-                    rows={4}
-                    placeholder="Tell us about your project or Inquiry"
-                    aria-label="Tell us about your project or Inquiry"
-                    value={formState.message}
-                    onChange={(e) => setFormState(prev => ({ ...prev, message: e.target.value }))}
-                    className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200/80 focus:bg-white focus:border-brand-purple-vibrant focus:ring-1 focus:ring-brand-purple-vibrant/20 rounded-xl font-sans text-xs text-zinc-800 placeholder-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:border-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all duration-300 resize-none"
-                  />
-                </div>
-
-                {/* Submit & WhatsApp triggers - updated to match Hero premium action styles */}
-                <div className="pt-2 flex flex-col sm:flex-row gap-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || isSubmitted}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4.5 bg-gradient-to-r from-blue-600 to-brand-purple-vibrant text-white rounded-xl font-sans font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-lg shadow-indigo-600/20 hover:brightness-110 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        SENDING REQUEST...
-                      </>
-                    ) : isSubmitted ? (
-                      <>
-                        <CheckCircle2 className="w-4 h-4 text-white" />
-                        REQUEST SENT
-                      </>
-                    ) : (
-                      <>
-                        <span>SEND REQUEST</span>
-                        <ArrowUpRight className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={handleWhatsAppInstant}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-sans font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-lg shadow-emerald-600/10 hover:scale-[1.01] active:scale-[0.99] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple-vibrant focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <MessageSquare className="w-4 h-4" />
-                    Instant WhatsApp
-                  </button>
-                </div>
-
-                {/* Status Banner */}
-                <AnimatePresence>
-                  {isSubmitted && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="p-4 bg-violet-50 border border-violet-100 rounded-xl"
-                    >
-                      <p className="font-sans text-xs text-slate-600 leading-relaxed text-center">
-                        🌟 Thank you, <span className="text-zinc-900 font-bold">{formState.name}</span>. Your technical request is registered. A Nexora development lead will contact you within 2-4 hours to organize your proposal.
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-
-              </form>
+              <ContactForm />
             </div>
 
           </div>
