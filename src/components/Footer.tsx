@@ -263,7 +263,7 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
               onClick={() => handleScroll('home')} 
               className="flex items-center gap-3.5 mb-6 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-xl px-2 py-1 active:scale-[0.98] transition-transform"
             >
-              <BrandLogo size={42} />
+              <BrandLogo size={50} />
               <span className="font-display text-xl tracking-[0.18em] font-black uppercase text-white">
                 Nexora <span className="text-brand-electric text-opacity-90">Empire</span>
               </span>

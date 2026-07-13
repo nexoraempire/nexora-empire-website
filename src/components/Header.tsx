@@ -266,12 +266,12 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
           className="flex items-center gap-3 group transition-transform duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg px-2 py-1" 
           id="header-logo-link"
         >
-          <BrandLogo size={36} />
+          <BrandLogo size={46} />
           <div className="flex flex-col">
-            <span className="font-display text-lg font-bold tracking-widest text-white leading-none">
+            <span className="font-display text-xl md:text-2xl font-black tracking-widest text-white leading-none">
               NEXORA
             </span>
-            <span className="font-mono text-[9px] tracking-[0.25em] text-brand-electric font-medium uppercase mt-0.5 opacity-90 group-hover:text-white transition-colors duration-300">
+            <span className="font-mono text-[10px] tracking-[0.25em] text-brand-electric font-bold uppercase mt-0.5 opacity-90 group-hover:text-white transition-colors duration-300">
               EMPIRE
             </span>
           </div>
