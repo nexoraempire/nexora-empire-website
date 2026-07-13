@@ -92,30 +92,38 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) return;
 
     setIsSubmitting(true);
-    // Simulate API request to server
+
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState)
+      });
+    } catch (err) {
+      console.error("Contact form submission failed:", err);
+    }
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Auto reset form state
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      
-      // Auto reset form state
-      setTimeout(() => {
-        setFormState({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          serviceInterest: 'fullstack',
-          budgetRange: 'medium',
-          message: ''
-        });
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      setFormState({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        serviceInterest: 'fullstack',
+        budgetRange: 'medium',
+        message: ''
+      });
+      setIsSubmitted(false);
+    }, 5000);
   };
 
   const handleWhatsAppInstant = () => {
