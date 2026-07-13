@@ -77,64 +77,36 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     
     if (serviceId === 'service-card-01') {
       setView('web-dev');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (serviceId === 'service-card-02') {
       setView('mobile-dev');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (serviceId === 'service-card-03') {
       setView('branding-design');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (serviceId === 'service-card-08') {
       setView('social-media-management');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (serviceId === 'service-card-06') {
       setView('seo-growth');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (serviceId === 'service-card-05') {
       setView('ai-video');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (isAcademy) {
       setView('training-internship');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
@@ -157,10 +129,6 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     setActiveLink(link);
     if (link === 'About') {
       setView('about-us');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
@@ -192,37 +160,21 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
 
     if (link === 'Portfolio') {
       setView('portfolio');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (link === 'Pricing') {
       setView('pricing');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (link === 'Training & Internship') {
       setView('training-internship');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
     if (link === 'Contact') {
       setView('contact');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if ((window as any).lenis) {
-        (window as any).lenis.scrollTo(0);
-      }
       return;
     }
 
