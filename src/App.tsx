@@ -89,8 +89,8 @@ export default function App() {
 
     // 3. Dynamic Meta Description Map to prevent identical search snippets
     const descMap: Record<string, string> = {
-      'home': 'Nexora Empire is the best software development company & SEO agency in Cameroon. We build premium enterprise web apps, mobile apps, and custom AI systems for global businesses.',
-      'about-us': 'Learn about Nexora Empire, a professional software company in Cameroon. Meet our expert website developers, software engineers, and digital growth specialists.',
+      'home': 'Nexora Empire is the best software engineering company in Buea and the premier software development & SEO agency in Cameroon. We build premium enterprise web apps, mobile apps, and custom AI systems.',
+      'about-us': 'Learn about Nexora Empire, a professional software company in Cameroon and the best software engineering company in Buea. Meet our expert developers and SEO growth specialists.',
       'portfolio': 'Explore our enterprise software engineering, responsive website development, custom mobile apps, and successful SEO campaigns across Cameroon and globally.',
       'pricing': 'Affordable pricing plans for custom website development, mobile application engineering, professional SEO packages, and visual brand identity designs in Cameroon.',
       'training-internship': 'Kickstart your tech career at Nexora Academy. Join practical software engineering training courses in Cameroon with guaranteed certified internship options.',
@@ -105,8 +105,8 @@ export default function App() {
 
     // 4. Dynamic Meta Keywords Map
     const keywordsMap: Record<string, string> = {
-      'home': 'software development company, digital agency, custom software development, mobile app development, enterprise web application, branding agency, AI automation, software company',
-      'about-us': 'software company, technology partner, software engineers, digital innovation, Nexora crew, technology consulting, digital transformation',
+      'home': 'best software engineering company in Buea, software development company Cameroon, software company Buea, website developers Buea, SEO company Cameroon, digital agency Buea',
+      'about-us': 'software company, technology partner, software engineers, digital innovation, Nexora crew, technology consulting, digital transformation, software engineering company Buea',
       'portfolio': 'portfolio, case studies, software development portfolio, website showcase, mobile app design, brand identities, custom solutions',
       'pricing': 'pricing, software development cost, web development plans, mobile app pricing, branding budget, SEO services cost',
       'training-internship': 'software training, coding academy, tech internship, learn web development, mobile app course, Cameroon software training, Nexora Academy',

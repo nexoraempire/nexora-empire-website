@@ -311,8 +311,8 @@ async function startServer() {
     };
 
     const descMap: Record<string, string> = {
-      "": "Nexora Empire is the best software development company & SEO agency in Cameroon. We build premium enterprise web apps, mobile apps, and custom AI systems for global businesses.",
-      "/about-us": "Learn about Nexora Empire, a professional software company in Cameroon. Meet our expert website developers, software engineers, and digital growth specialists.",
+      "": "Nexora Empire is the best software engineering company in Buea and the premier software development & SEO agency in Cameroon. We build premium enterprise web apps, mobile apps, and custom AI systems.",
+      "/about-us": "Learn about Nexora Empire, a professional software company in Cameroon and the best software engineering company in Buea. Meet our expert developers and SEO growth specialists.",
       "/portfolio": "Explore our enterprise software engineering, responsive website development, custom mobile apps, and successful SEO campaigns across Cameroon and globally.",
       "/pricing": "Affordable pricing plans for custom website development, mobile application engineering, professional SEO packages, and visual brand identity designs in Cameroon.",
       "/training-internship": "Kickstart your tech career at Nexora Academy. Join practical software engineering training courses in Cameroon with guaranteed certified internship options.",
@@ -326,8 +326,8 @@ async function startServer() {
     };
 
     const keywordsMap: Record<string, string> = {
-      "": "software development company, digital agency, custom software development, mobile app development, enterprise web application, branding agency, AI automation, software company, best software company Cameroon, best web development company Cameroon",
-      "/about-us": "software company, technology partner, software engineers, digital innovation, Nexora crew, technology consulting, digital transformation, Cameroon developers",
+      "": "best software engineering company in Buea, software development company Cameroon, software company Buea, website developers Buea, SEO company Cameroon, digital agency Buea",
+      "/about-us": "software company, technology partner, software engineers, digital innovation, Nexora crew, technology consulting, digital transformation, software engineering company Buea",
       "/portfolio": "portfolio, case studies, software development portfolio, website showcase, mobile app design, brand identities, custom solutions, React developers, web portfolio",
       "/pricing": "pricing, software development cost, web development plans, mobile app pricing, branding budget, SEO services cost, app cost Cameroon",
       "/training-internship": "software training, coding academy, tech internship, learn web development, mobile app course, Cameroon software training, Nexora Academy, learn tech skills Buea",
