@@ -269,6 +269,8 @@ export const WhyNexora: React.FC = () => {
                             alt={card.name} 
                             className="w-12 h-12 rounded-full object-cover border-2 border-brand-violet/50 shadow-[0_0_15px_rgba(139,92,246,0.3)]"
                             referrerPolicy="no-referrer"
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div className="absolute bottom-0 right-0.5 bg-[#10b981] w-2.5 h-2.5 rounded-full border-2 border-[#05050a] flex items-center justify-center">
                             <span className="w-1 h-1 bg-white rounded-full animate-pulse" />
@@ -328,6 +330,8 @@ export const WhyNexora: React.FC = () => {
                           alt={card.topic} 
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           referrerPolicy="no-referrer"
+                          loading="lazy"
+                          decoding="async"
                         />
                       )}
                       {/* Clean gradient overlay on image */}

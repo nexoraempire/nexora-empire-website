@@ -1257,6 +1257,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                                 height={1040}
                                 className="mockup-scroll-img"
                                 referrerPolicy="no-referrer"
+                                loading="lazy"
+                                decoding="async"
                               />
                             )}
                             <div className="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/30 transition-colors duration-300 flex items-center justify-center opacity-0 hover:opacity-100 cursor-pointer pointer-events-auto"
@@ -1413,6 +1415,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                     alt={stat.label} 
                     className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="space-y-1">
@@ -1545,6 +1549,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                           alt={activeProject.title}
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
+                          loading="lazy"
+                          decoding="async"
                         />
                       )}
                     </div>
