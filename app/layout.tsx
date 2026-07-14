@@ -4,9 +4,14 @@ import { ScrollProvider } from './ScrollProvider';
 import { AppShell } from './AppShell';
 
 export const metadata: Metadata = {
-  title: 'Nexora Empire | Enterprise Software Development & Digital Solutions Agency',
-  description: 'Nexora Empire is a premier software development company and digital agency crafting enterprise websites, high-performance mobile apps, custom AI automation, and premium brand designs.',
+  title: 'Nexora Empire | Best Software & SEO Company in Cameroon',
+  description: 'Nexora Empire is one of the best software and SEO companies in Cameroon, helping businesses attract customers, increase sales, dominate search rankings, and strengthen their online presence with enterprise websites, high-performance mobile apps, AI solutions, branding, and digital marketing.',
   keywords: 'software development company, digital agency, custom software development, mobile app development, enterprise web application, branding agency, AI automation, software company, tech consulting',
+  icons: {
+    icon: '/assets/images/nexora-empire-logo.webp',
+    shortcut: '/assets/images/nexora-empire-logo.webp',
+    apple: '/assets/images/nexora-empire-logo.webp',
+  },
   robots: {
     index: true,
     follow: true,
@@ -17,8 +22,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://nexoraempire.com',
-    title: 'Nexora Empire | Enterprise Software Development & Digital Solutions Agency',
-    description: 'Nexora Empire is a premier software development company and digital agency crafting enterprise websites, high-performance mobile apps, custom AI automation, and premium brand designs.',
+    title: 'Nexora Empire | Best Software & SEO Company in Cameroon',
+    description: 'Nexora Empire is one of the best software and SEO companies in Cameroon, helping businesses attract customers, increase sales, dominate search rankings, and strengthen their online presence with enterprise websites, high-performance mobile apps, AI solutions, branding, and digital marketing.',
     siteName: 'Nexora Empire',
     images: [
       {
@@ -31,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nexora Empire | Enterprise Software Development & Digital Solutions Agency',
-    description: 'Nexora Empire is a premier software development company and digital agency crafting enterprise websites, high-performance mobile apps, custom AI automation, and premium brand designs.',
+    title: 'Nexora Empire | Best Software & SEO Company in Cameroon',
+    description: 'Nexora Empire is one of the best software and SEO companies in Cameroon, helping businesses attract customers, increase sales, dominate search rankings, and strengthen their online presence with enterprise websites, high-performance mobile apps, AI solutions, branding, and digital marketing.',
     images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200'],
   },
 };
