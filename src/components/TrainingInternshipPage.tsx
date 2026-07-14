@@ -2141,11 +2141,11 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                     {activeProgramModal.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 pt-1">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2.5 py-1 rounded">
-                      ⌛ {activeProgramModal.duration}
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-widest text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2.5 py-1 rounded">
+                      <Clock className="w-3.5 h-3.5" /> {activeProgramModal.duration}
                     </span>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded">
-                      📚 {activeProgramModal.level}
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded">
+                      <BookOpen className="w-3.5 h-3.5" /> {activeProgramModal.level}
                     </span>
                   </div>
                 </div>

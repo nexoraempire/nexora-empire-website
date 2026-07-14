@@ -1171,7 +1171,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
 
           {filteredProjects.length === 0 ? (
             <div className="text-center py-20 space-y-4" id="portfolio-empty-state">
-              <span className="text-4xl">🔍</span>
+              <Search className="w-10 h-10 text-slate-400 mx-auto mb-2" />
               <h3 className="font-display text-lg font-bold text-slate-900">No projects found matching your query</h3>
               <p className="font-sans text-xs text-slate-500 max-w-md mx-auto">
                 Try clearing your search query or selecting another category filter tab above to view our records of excellence.
