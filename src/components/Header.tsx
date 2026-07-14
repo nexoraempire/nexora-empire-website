@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { BrandLogo } from './BrandLogo.tsx';
 import { Globe, Smartphone, Palette, Cpu, TrendingUp, Video, GraduationCap, Share2 } from 'lucide-react';
 
@@ -209,12 +210,8 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Logo and Brand Name */}
-        <a 
-          href="#home" 
-          onClick={(e) => {
-            e.preventDefault();
-            handleScroll('Home');
-          }}
+        <Link 
+          href="/" 
           className="flex items-center gap-3 group transition-transform duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg px-2 py-1" 
           id="header-logo-link"
         >
@@ -227,7 +224,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
               EMPIRE
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-8" id="desktop-nav">
@@ -271,10 +268,22 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
 
                     {serviceOptions.map((opt) => {
                       const IconComponent = IconMap[opt.iconName];
+                      const servicePath = 
+                        opt.id === 'service-card-01' ? '/web-dev' :
+                        opt.id === 'service-card-02' ? '/mobile-dev' :
+                        opt.id === 'service-card-03' ? '/branding-design' :
+                        opt.id === 'service-card-08' ? '/social-media-management' :
+                        opt.id === 'service-card-06' ? '/seo-growth' :
+                        opt.id === 'service-card-05' ? '/ai-video' :
+                        '/';
                       return (
-                        <button
+                        <Link
                           key={opt.label}
-                          onClick={() => handleServiceClick(opt.id, false)}
+                          href={servicePath}
+                          onClick={() => {
+                            setServicesDropdownOpen(false);
+                            setMobileMenuOpen(false);
+                          }}
                           className="w-full text-left px-4 py-2.5 rounded-xl font-sans text-xs font-semibold text-slate-300 hover:text-white hover:bg-indigo-950/40 border border-transparent hover:border-indigo-900/35 transition-all duration-200 cursor-pointer flex items-center justify-between group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:border-transparent active:scale-[0.98]"
                         >
                           <div className="flex items-center gap-3">
@@ -284,7 +293,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
                           <span className="text-[10px] text-brand-electric opacity-0 group-hover:opacity-100 transform translate-x-[-4px] group-hover:translate-x-0 transition-all duration-200">
                             →
                           </span>
-                        </button>
+                        </Link>
                       );
                     })}
                   </div>
@@ -292,21 +301,26 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
               );
             }
 
+            const targetPath = 
+              link === 'Home' ? '/' :
+              link === 'About' ? '/about-us' :
+              link === 'Portfolio' ? '/portfolio' :
+              link === 'Pricing' ? '/pricing' :
+              link === 'Training & Internship' ? '/training-internship' :
+              link === 'Contact' ? '/contact' :
+              '/';
+
             return (
-              <a
+              <Link
                 key={link}
-                href={`#${idMap[link] || link.toLowerCase()}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScroll(link);
-                }}
+                href={targetPath}
                 className="relative text-sm font-sans font-medium tracking-wide text-gray-300/90 hover:text-white transition-colors duration-300 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg px-2 active:scale-95"
               >
                 {link}
                 {isCurrentActive && (
                   <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-brand-electric shadow-[0_0_8px_rgba(0,190,250,0.8)]" />
                 )}
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -378,18 +392,26 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
                     <div className="pl-4 py-2 flex flex-col gap-3 bg-indigo-950/10 rounded-xl my-2 border border-indigo-950/30">
                       {serviceOptions.map((opt) => {
                         const IconComponent = IconMap[opt.iconName];
+                        const servicePath = 
+                          opt.id === 'service-card-01' ? '/web-dev' :
+                          opt.id === 'service-card-02' ? '/mobile-dev' :
+                          opt.id === 'service-card-03' ? '/branding-design' :
+                          opt.id === 'service-card-08' ? '/social-media-management' :
+                          opt.id === 'service-card-06' ? '/seo-growth' :
+                          opt.id === 'service-card-05' ? '/ai-video' :
+                          '/';
                         return (
-                          <button
+                          <Link
                             key={opt.label}
+                            href={servicePath}
                             onClick={() => {
                               setMobileMenuOpen(false);
-                              handleServiceClick(opt.id, false);
                             }}
                             className="w-full text-left py-2 text-xs font-semibold text-slate-400 hover:text-white transition-all cursor-pointer flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric rounded-lg px-2 active:scale-[0.98]"
                           >
                             {IconComponent && <IconComponent className="w-3.5 h-3.5 text-indigo-400 shrink-0" />}
                             <span>{opt.label}</span>
-                          </button>
+                          </Link>
                         );
                       })}
                     </div>
@@ -398,22 +420,27 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
               );
             }
 
+            const targetPath = 
+              link === 'Home' ? '/' :
+              link === 'About' ? '/about-us' :
+              link === 'Portfolio' ? '/portfolio' :
+              link === 'Pricing' ? '/pricing' :
+              link === 'Training & Internship' ? '/training-internship' :
+              link === 'Contact' ? '/contact' :
+              '/';
+
             return (
-              <a
+              <Link
                 key={link}
-                href={`#${idMap[link] || link.toLowerCase()}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMobileMenuOpen(false);
-                  handleScroll(link);
-                }}
+                href={targetPath}
+                onClick={() => setMobileMenuOpen(false)}
                 className={`text-base font-medium py-2 border-b border-indigo-950/20 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric rounded-lg px-2 active:scale-[0.99] transition-all ${
                   isCurrentActive ? 'text-brand-electric' : 'text-gray-300'
                 }`}
               >
                 {link}
                 {isCurrentActive && <span className="w-1.5 h-1.5 rounded-full bg-brand-electric" />}
-              </a>
+              </Link>
             );
           })}
           <button
