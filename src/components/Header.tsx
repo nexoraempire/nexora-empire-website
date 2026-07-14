@@ -53,6 +53,17 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     'Contact'
   ];
 
+  const isLinkActive = (link: string) => {
+    if (view === 'about-us') return link === 'About';
+    if (['web-dev', 'mobile-dev', 'branding-design', 'seo-growth', 'ai-video', 'social-media-management'].includes(view)) return link === 'Services';
+    if (view === 'portfolio') return link === 'Portfolio';
+    if (view === 'pricing') return link === 'Pricing';
+    if (view === 'training-internship') return link === 'Training & Internship';
+    if (view === 'contact') return link === 'Contact';
+    if (view === 'home' || view === '') return link === 'Home';
+    return activeLink === link;
+  };
+
   const serviceOptions = [
     { label: 'Web Development', id: 'service-card-01', iconName: 'Globe' },
     { label: 'Mobile App Development', id: 'service-card-02', iconName: 'Smartphone' },
@@ -229,7 +240,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-8" id="desktop-nav">
           {navLinks.map((link) => {
-            const isCurrentActive = view === 'about-us' ? link === 'About' : (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video') ? link === 'Services' : view === 'portfolio' ? link === 'Portfolio' : view === 'pricing' ? link === 'Pricing' : activeLink === link;
+            const isCurrentActive = isLinkActive(link);
             
             if (link === 'Services') {
               return (
@@ -371,7 +382,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-[#020205]/95 backdrop-blur-2xl border-b border-indigo-950/40 p-6 flex flex-col gap-4 animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto" id="mobile-dropdown-menu" data-lenis-prevent>
           {navLinks.map((link) => {
-            const isCurrentActive = view === 'about-us' ? link === 'About' : (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video') ? link === 'Services' : view === 'portfolio' ? link === 'Portfolio' : view === 'pricing' ? link === 'Pricing' : view === 'training-internship' ? link === 'Training & Internship' : activeLink === link;
+            const isCurrentActive = isLinkActive(link);
             
             if (link === 'Services') {
               return (

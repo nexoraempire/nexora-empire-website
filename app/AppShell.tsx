@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'motion/react';
 import { Header } from '../src/components/Header';
 import { Footer } from '../src/components/Footer';
 import { CursorSpotlight } from '../src/components/CursorSpotlight';
@@ -40,7 +41,17 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
       <CursorSpotlight />
       <Header view={currentView} setView={handleSetView} />
       <main className="relative w-full">
-        {children}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pathname}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.28, ease: 'easeInOut' }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
       </main>
       <Footer view={currentView} setView={handleSetView} />
       <BackToTop />
