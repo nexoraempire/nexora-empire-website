@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nexoraempire.com/sitemap.xml
+Sitemap: https://www.nexoraempire.com/sitemap.xml

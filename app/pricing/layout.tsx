@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Affordable pricing plans for custom website development, mobile application engineering, professional SEO packages, and visual brand identity designs in Cameroon.',
   keywords: 'pricing, software development cost, web development plans, mobile app pricing, branding budget, SEO services cost, app cost Cameroon',
   alternates: {
-    canonical: 'https://nexoraempire.com/pricing',
+    canonical: 'https://www.nexoraempire.com/pricing',
   },
 };
 

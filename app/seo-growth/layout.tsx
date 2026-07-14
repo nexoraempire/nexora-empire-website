@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Rank #1 on Google. Nexora Empire is the best SEO agency in Cameroon. We offer expert technical audits, semantic keyword mapping, and local SEO services.',
   keywords: 'SEO agency, technical SEO company, organic growth marketing, search engine optimization, local SEO, rank on Google, schema structured data, Google search specialist, SEO company Buea, best SEO company Cameroon',
   alternates: {
-    canonical: 'https://nexoraempire.com/seo-growth',
+    canonical: 'https://www.nexoraempire.com/seo-growth',
   },
 };
 
