@@ -78,7 +78,7 @@ const testimonials: Testimonial[] = [
     role: "Web & Mobile App Developer",
     location: "Cameroon",
     flag: "🇨🇲",
-    photo: "/assets/images/photo_1_2026-07-12_09-29-53.jpg",
+    photo: "/assets/images/photo_1_2026-07-12_09-29-53.webp",
     rating: 5,
     headline: "Unmatched developer confidence and structure.",
     quote: <span>I started with the <span className="font-semibold text-slate-800">Web Development course</span> to master full-stack engineering, and then immediately completed the <span className="font-semibold text-slate-800">Mobile App Development course</span>. Building real-world commercial platforms under expert mentors gave me unmatched developer confidence!</span>
@@ -100,7 +100,7 @@ const testimonials: Testimonial[] = [
     role: "Graphic Designer",
     location: "Cameroon",
     flag: "🇨🇲",
-    photo: "/assets/images/favor.png",
+    photo: "/assets/images/favor.webp",
     rating: 5,
     headline: "From student internship to a full-time career.",
     quote: <span>Enrolling in the <span className="font-semibold text-slate-800">Graphic Design course</span> was the turning point in my career. Because of my high-quality layout submissions and strong portfolio, <span className="font-semibold text-slate-800">I was hired full-time by Nexora Empire</span> directly after completing my internship!</span>

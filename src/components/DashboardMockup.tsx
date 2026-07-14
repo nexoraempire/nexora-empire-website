@@ -1,5 +1,5 @@
 import React from 'react';
-import dashboardImg from '../assets/images/dashboard.png';
+import dashboardImg from '../assets/images/dashboard.webp';
 
 interface DashboardMockupProps {
   className?: string;

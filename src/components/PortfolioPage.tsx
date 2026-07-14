@@ -1377,28 +1377,28 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                 value: '100', 
                 sub: 'Search Engine Optimization', 
                 color: 'text-emerald-500',
-                imageUrl: '/assets/images/seo.png'
+                imageUrl: '/assets/images/seo.webp'
               },
               { 
                 label: 'Best Practices', 
                 value: '100', 
                 sub: 'Modern Web Standards', 
                 color: 'text-emerald-500',
-                imageUrl: '/assets/images/best-practices.png'
+                imageUrl: '/assets/images/best-practices.webp'
               },
               { 
                 label: 'Performance', 
                 value: '96', 
                 sub: 'Fast Loading & Interactivity', 
                 color: 'text-emerald-500',
-                imageUrl: '/assets/images/performance.png'
+                imageUrl: '/assets/images/performance.webp'
               },
               { 
                 label: 'Accessibility', 
                 value: '100', 
                 sub: 'Inclusive & Compliant Design', 
                 color: 'text-emerald-500',
-                imageUrl: '/assets/images/accessibility.png'
+                imageUrl: '/assets/images/accessibility.webp'
               }
             ].map((stat, idx) => (
               <div 

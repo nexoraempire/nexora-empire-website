@@ -1,5 +1,5 @@
 import React from 'react';
-import nexoraLogo from '../assets/images/nexora-empire-logo.png';
+import nexoraLogo from '../assets/images/nexora-empire-logo.webp';
 
 interface BrandLogoProps {
   className?: string; // Optional class for sizing or layout adjustments

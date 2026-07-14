@@ -44,17 +44,17 @@ import {
 } from 'lucide-react';
 
 // @ts-ignore
-import ashleyPhoto from '../assets/images/Ashley.jpg';
+import ashleyPhoto from '../assets/images/Ashley.webp';
 // @ts-ignore
-import syntiaPhoto from '../assets/images/syntia-bekap.jpg';
+import syntiaPhoto from '../assets/images/syntia-bekap.webp';
 // @ts-ignore
-import manaPhoto from '../assets/images/photo_1_2026-07-12_09-29-53.jpg';
+import manaPhoto from '../assets/images/photo_1_2026-07-12_09-29-53.webp';
 // @ts-ignore
-import favorPhoto from '../assets/images/favor.png';
+import favorPhoto from '../assets/images/favor.webp';
 // @ts-ignore
 import brightPhoto from '../assets/images/bright.webp';
 // @ts-ignore
-import carinePhoto from '../assets/images/photo_2_2026-07-12_09-29-53.jpg';
+import carinePhoto from '../assets/images/photo_2_2026-07-12_09-29-53.webp';
 
 interface TrainingInternshipPageProps {
   setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
@@ -486,21 +486,21 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
     {
       title: 'Restaurant Website',
       skills: 'HTML, CSS, React, Framer Motion',
-      preview: '/assets/images/nexora-empire-student-restaurant-website.png',
+      preview: '/assets/images/nexora-empire-student-restaurant-website.webp',
       studentPhoto: syntiaPhoto,
       studentName: 'Ashley Syntia Bekap'
     },
     {
       title: 'UI/UX Case Study',
       skills: 'Figma, Wireframes, Prototyping',
-      preview: '/assets/images/nexora-empire-student-uiux-figma.jpg',
+      preview: '/assets/images/nexora-empire-student-uiux-figma.webp',
       studentPhoto: ashleyPhoto,
       studentName: 'Ashley'
     },
     {
       title: 'Brand Identity Showcase',
       skills: 'Adobe Illustrator, Logo Design',
-      preview: '/assets/images/nexora-empire-student-graphic-design.png',
+      preview: '/assets/images/nexora-empire-student-graphic-design.webp',
       studentPhoto: favorPhoto,
       studentName: 'Mbekenyui Favor'
     },
@@ -1241,7 +1241,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
               className="relative rounded-2xl overflow-hidden aspect-video shadow-2xl border border-slate-100"
             >
               <img 
-                src="/assets/images/nexora-empire-tech-team-collaboration.png" 
+                src="/assets/images/nexora-empire-tech-team-collaboration.webp" 
                 alt="Students collaborating" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

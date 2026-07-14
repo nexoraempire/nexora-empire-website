@@ -136,7 +136,7 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
       title: 'Audience Discovery & Strategy',
       description: 'We analyze your target audience, platforms, and goals to build a video strategy optimized for views, engagement, and conversion.',
       icon: Search,
-      imageUrl: 'Discovery_Strategy.jpeg',
+      imageUrl: 'Discovery_Strategy.webp',
       bullets: ['Audience & Trend Analysis', 'Platform Optimization Plans', 'Visual Vibe Mapping'],
       ...BRAND_ELECTRIC_STYLE,
     },
@@ -146,7 +146,7 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
       title: 'Scripting & Creative Storyboarding',
       description: 'Our writers draft custom, highly engaging scripts while our storyboard artists visualize hook-focused scenes before production.',
       icon: Film,
-      imageUrl: 'Prototyping.jpeg',
+      imageUrl: 'Prototyping.webp',
       bullets: ['High-Retention Hooks', 'Detailed Screen Storyboards', 'Voiceover & Caption Prep'],
       ...BRAND_VIOLET_STYLE,
     },
@@ -156,7 +156,7 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
       title: 'AI Synthesis & Premium Editing',
       description: 'We synthesis high-quality visuals using state-of-the-art AI tools, combined with human professional-grade post-production editing.',
       icon: Scissors,
-      imageUrl: 'ai_video_hero_1782584633591.jpg',
+      imageUrl: 'ai_video_hero_1782584633591.webp',
       bullets: ['Generative Visual Synthesis', 'Professional Editing & Timing', 'Audio & Music Engineering'],
       ...BRAND_ELECTRIC_STYLE,
     },
@@ -176,7 +176,7 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
       title: 'Launch & Performance Analytics',
       description: 'We track your video metrics, optimize thumbnail click-through rates, and continually tweak strategies for peak retention.',
       icon: LifeBuoy,
-      imageUrl: 'nexora-empire-tech-team-collaboration.png',
+      imageUrl: 'nexora-empire-tech-team-collaboration.webp',
       bullets: ['Thumbnail & Title Iterations', 'Viewer Retention Analytics', 'Continuous Scale Strategies'],
       ...BRAND_ELECTRIC_STYLE,
     },
@@ -307,7 +307,7 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
                 {/* Primary display */}
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-indigo-950/40 mb-3 group-hover:scale-[1.01] transition-transform duration-500">
                   <img
-                    src="/assets/images/ai_video_hero_1782584633591.jpg"
+                    src="/assets/images/ai_video_hero_1782584633591.webp"
                     alt="AI Video Editing Workspace Mockup"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

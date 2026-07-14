@@ -10,28 +10,28 @@ import { LazyVideo } from './LazyVideo';
 
 // Import generated portrait images
 // @ts-ignore
-import foffeAvatar from '../assets/images/foffe_lili_profile.jpg';
+import foffeAvatar from '../assets/images/foffe_lili_profile.webp';
 // @ts-ignore
 import tundeAvatar from '../assets/images/gemon_yeseh.webp';
 // @ts-ignore
-import aishaAvatar from '../assets/images/marcus_avatar_1782241668323.jpg';
+import aishaAvatar from '../assets/images/marcus_avatar_1782241668323.webp';
 // @ts-ignore
 import marcusAvatar from '../assets/images/bright.webp';
 // @ts-ignore
-import sarahAvatar from '../assets/images/yemeli-maela.png';
+import sarahAvatar from '../assets/images/yemeli-maela.webp';
 // @ts-ignore
-import davidAvatar from '../assets/images/foffe-alladin.png';
+import davidAvatar from '../assets/images/foffe-alladin.webp';
 
 // Import work/mockup images
 // @ts-ignore
-import weBuildWebsites from '../assets/images/we-build-websites.jpg';
+import weBuildWebsites from '../assets/images/we-build-websites.webp';
 // @ts-ignore
-import seoTraining from '../assets/images/seo_training.png';
+import seoTraining from '../assets/images/seo_training.webp';
 // @ts-ignore
-import goodDesign from '../assets/images/good-design-vs-bad-design.jpg';
+import goodDesign from '../assets/images/good-design-vs-bad-design.webp';
 const techTrainingVideo = '/assets/images/nexora-empire-student-ai-video.mp4';
 const kidsBootcampVideo = '/assets/images/nexora-empire-kids-bootcamp-ai-video.mp4';
-import nexoraTechEmpire from '../assets/images/nexora-tech-empire.jpg';
+import nexoraTechEmpire from '../assets/images/nexora-tech-empire.webp';
 
 const getSrc = (img: any): string => {
   if (typeof img === 'string') return img;

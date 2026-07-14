@@ -21,7 +21,7 @@ import {
   Eye
 } from 'lucide-react';
 // @ts-ignore
-import dashboardImg from '../assets/images/nexora_dashboard_1782086692344.jpg';
+import dashboardImg from '../assets/images/dashboard.webp';
 
 interface AboutProps {
   setView?: (view: 'home' | 'about-us') => void;
