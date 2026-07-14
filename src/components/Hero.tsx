@@ -109,9 +109,9 @@ export const Hero: React.FC = () => {
 
             {/* Call to Actions Action bar */}
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.45 }}
+              transition={{ duration: 0.25, delay: 0.05 }}
               className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
               id="hero-cta-wrapper"
             >

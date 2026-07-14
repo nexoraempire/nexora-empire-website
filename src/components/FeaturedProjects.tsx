@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import { CardSpotlight } from './CardSpotlight.tsx';
 import { LazyVideo } from './LazyVideo';
 import { 
@@ -193,7 +194,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
                         onMouseLeave={(e) => { e.currentTarget.muted = true; }}
                       />
                     ) : (
-                      <img 
+                      <Image 
                         src={project.image} 
                         alt={project.title} 
                         width={1200}
@@ -201,6 +202,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
                         className="mockup-scroll-img"
                         id={`project-img-${project.id}`}
                         referrerPolicy="no-referrer"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        loading="lazy"
                       />
                     )}
                   </div>
