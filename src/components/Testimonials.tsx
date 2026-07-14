@@ -307,6 +307,8 @@ export const Testimonials: React.FC = () => {
                       src={currentNext1.photo} 
                       alt="" 
                       className="w-full h-full object-cover opacity-15 blur-[1px]"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="flex-1 min-w-0 flex flex-col justify-between h-full">
@@ -355,6 +357,8 @@ export const Testimonials: React.FC = () => {
                         alt={current.name} 
                         className="w-full h-full object-cover absolute inset-0 transition-transform duration-700 hover:scale-105"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
+                        decoding="async"
                       />
                       {/* Dark overlay gradient on mobile */}
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent md:hidden" />
@@ -398,6 +402,8 @@ export const Testimonials: React.FC = () => {
                               alt={current.name} 
                               className="w-full h-full object-cover"
                               referrerPolicy="no-referrer"
+                              loading="lazy"
+                              decoding="async"
                             />
                           </div>
                           
