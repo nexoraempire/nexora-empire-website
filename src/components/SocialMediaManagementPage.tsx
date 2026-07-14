@@ -117,7 +117,7 @@ export const SocialMediaManagementPage: React.FC<SocialMediaManagementPageProps>
       title: 'Audit & Competitive Discovery',
       description: 'We perform deep social profile auditing, target demographic discovery, and creative competitive analyses to map content pillars.',
       icon: Search,
-      imageUrl: 'Discovery_Strategy.webp',
+      imageUrl: '/assets/images/Discovery_Strategy.webp',
       bullets: ['Full Account Audits', 'Audience Demographics Scoping', 'Competitor Pillar Mapping'],
       gradient: 'from-blue-950/40',
       accentColor: 'text-blue-400',

@@ -196,7 +196,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               </div>
 
               <img 
-                src={dashboardImg} 
+                src={typeof dashboardImg === 'string' ? dashboardImg : (dashboardImg as any).src} 
                 alt="Nexora Empire SaaS Web CRM Dashboard" 
                 width={1200}
                 height={896}

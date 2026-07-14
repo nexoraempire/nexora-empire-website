@@ -1173,7 +1173,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                     {/* Student Avatar overlay */}
                     <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-slate-950/80 border border-indigo-950/60 backdrop-blur-md px-3 py-1.5 rounded-xl">
                       <img 
-                        src={proj.studentPhoto} 
+                        src={typeof proj.studentPhoto === 'string' ? proj.studentPhoto : (proj.studentPhoto as any).src} 
                         alt="Student" 
                         className="w-6 h-6 rounded-full object-cover border border-violet-400"
                         referrerPolicy="no-referrer"
@@ -1469,7 +1469,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                 {/* Profile card at bottom */}
                 <div className="flex items-center gap-3 pt-6 border-t border-slate-100 mt-6">
                   <img 
-                    src={testi.photo} 
+                    src={typeof testi.photo === 'string' ? testi.photo : (testi.photo as any).src} 
                     alt={testi.name} 
                     className="w-10 h-10 rounded-full object-cover border border-violet-100 shrink-0"
                     referrerPolicy="no-referrer"

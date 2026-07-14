@@ -301,7 +301,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
                 className="absolute left-0 top-[18%] w-[56%] bg-white rounded-3xl shadow-[0_30px_70px_rgba(15,23,42,0.12)] border border-slate-150/80 z-10 text-left overflow-hidden"
               >
                 <img 
-                  src={dashboardImg} 
+                  src={typeof dashboardImg === 'string' ? dashboardImg : (dashboardImg as any).src} 
                   alt="Nexora Dashboard Mockup" 
                   width={1200}
                   height={896}
