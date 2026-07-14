@@ -47,7 +47,7 @@ export const LazyVideo: React.FC<LazyVideoProps> = ({
           loop
           muted
           playsInline
-          preload="none"
+          preload="auto"
           className={className}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
