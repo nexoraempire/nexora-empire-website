@@ -5,14 +5,6 @@ import { motion } from 'motion/react';
 import { Phone } from 'lucide-react';
 
 export const Hero: React.FC = () => {
-  const [loadVideo, setLoadVideo] = React.useState(false);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoadVideo(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleStartProject = () => {
     window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%20I%20would%20like%20to%20start%20a%20project%20with%20you.%20I%20am%20interested%20in%20your%20digital%20solutions.', '_blank');
@@ -26,21 +18,20 @@ export const Hero: React.FC = () => {
       {/* Immersive Cosmic Background matching the reference section */}
       <div id="cosmic-bg-overlay" className="absolute inset-0 pointer-events-none">
         {/* Google Labs VideoFX Loop/Autoplay Video Background */}
-        {loadVideo && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-55 select-none pointer-events-none transition-opacity duration-1000"
-            style={{ mixBlendMode: 'screen' }}
-          >
-            <source 
-              src="/assets/images/nexora-empire-hero-bg.mp4" 
-              type="video/mp4" 
-            />
-          </video>
-        )}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover opacity-55 select-none pointer-events-none transition-opacity duration-1000"
+          style={{ mixBlendMode: 'screen' }}
+        >
+          <source 
+            src="/assets/images/nexora-empire-hero-bg.mp4" 
+            type="video/mp4" 
+          />
+        </video>
 
         {/* Ambient Darkened Tint Overlay to ensure outstanding content contrast & legibility */}
         <div className="absolute inset-0 bg-brand-dark/40 backdrop-brightness-[0.75] z-0" />
