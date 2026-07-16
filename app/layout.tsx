@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   description: 'Nexora Empire is a premier software development and SEO company in Cameroon, building enterprise websites, high-performance mobile apps, AI-powered solutions, branding, and digital products that help businesses attract customers, increase sales, dominate search rankings, and grow worldwide.',
   keywords: 'software development company, digital agency, custom software development, mobile app development, enterprise web application, branding agency, AI automation, software company, tech consulting',
   icons: {
-    icon: '/assets/images/nexora-empire-logo.webp',
-    shortcut: '/assets/images/nexora-empire-logo.webp',
-    apple: '/assets/images/nexora-empire-logo.webp',
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/icon.png',
   },
   robots: {
     index: true,
