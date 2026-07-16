@@ -19,56 +19,11 @@ import {
   Video,
   Linkedin,
   Facebook,
-  Instagram
+  Instagram,
+  Coffee
 } from 'lucide-react';
 import Image from 'next/image';
 import nexoraLogo from '../../src/assets/images/nexora-empire-logo.png';
-
-// Social links list
-const quickLinks = [
-  {
-    icon: <Globe className="w-5 h-5 text-[#1F39C4]" />,
-    title: "Nexora Empire Website",
-    desc: "Visit our official website for digital services & solutions.",
-    url: "https://www.nexoraempire.com",
-    badge: "Official",
-    badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20"
-  },
-  {
-    icon: <Compass className="w-5 h-5 text-[#8B1DCA]" />,
-    title: "DevLili Portfolio",
-    desc: "Explore our software engineering portfolio and case studies.",
-    url: "https://devlili.com",
-    badge: "Creator",
-    badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
-  },
-  {
-    icon: <Github className="w-5 h-5 text-white" />,
-    title: "GitHub Organization",
-    desc: "Browse our open-source repositories and engineering tools.",
-    url: "https://github.com/nexoraempire",
-  },
-  {
-    icon: <MessageSquare className="w-5 h-5 text-[#25D366]" />,
-    title: "WhatsApp Chat",
-    desc: "Start a real-time conversation directly with our engineering desk.",
-    url: "https://wa.me/237677079559",
-    badge: "Fast Reply",
-    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
-  },
-  {
-    icon: <MessageSquare className="w-5 h-5 text-[#FDDC00]" />,
-    title: "WhatsApp Community",
-    desc: "Join our active tech community for code sharing and jobs.",
-    url: "https://chat.whatsapp.com/HWEYrEWu372LLSYSkVOs9J",
-  },
-  {
-    icon: <Send className="w-5 h-5 text-sky-400" />,
-    title: "WhatsApp Broadcast Channel",
-    desc: "Follow our broadcast channel for tech updates and tutorials.",
-    url: "https://whatsapp.com/channel/0029Vb6zcHtGufItCndVcg0u",
-  }
-];
 
 const brands = [
   {
@@ -111,12 +66,68 @@ const brands = [
 
 export default function ConnectPage() {
   const [copiedText, setCopiedText] = useState<string | null>(null);
+  const [visitorName, setVisitorName] = useState<string>('');
 
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
     setCopiedText(label);
     setTimeout(() => setCopiedText(null), 2000);
   };
+
+  const namePlaceholder = visitorName.trim() || "[Your Name]";
+
+  const quickLinks = [
+    {
+      icon: <Globe className="w-5 h-5 text-[#1F39C4]" />,
+      title: "Nexora Empire Website",
+      desc: "Visit our official website for digital services & solutions.",
+      url: "https://www.nexoraempire.com",
+      badge: "Official",
+      badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20"
+    },
+    {
+      icon: <Compass className="w-5 h-5 text-[#8B1DCA]" />,
+      title: "DevLili Portfolio",
+      desc: "Explore our software engineering portfolio and case studies.",
+      url: "https://devlili.com",
+      badge: "Creator",
+      badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
+    },
+    {
+      icon: <Coffee className="w-5 h-5 text-amber-500" />,
+      title: "Buy DevLili Coffee",
+      desc: "Show appreciation and buy Lili a cup of coffee.",
+      url: `https://wa.me/237677079559?text=${encodeURIComponent(`Hi, Lili, my name is ${namePlaceholder}, I like your work and I want to buy you coffee!`)}`,
+      badge: "Support",
+      badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20"
+    },
+    {
+      icon: <Github className="w-5 h-5 text-white" />,
+      title: "GitHub Organization",
+      desc: "Browse our open-source repositories and engineering tools.",
+      url: "https://github.com/nexoraempire",
+    },
+    {
+      icon: <MessageSquare className="w-5 h-5 text-[#25D366]" />,
+      title: "WhatsApp Chat",
+      desc: "Start a real-time conversation directly with our engineering desk.",
+      url: `https://wa.me/237677079559?text=${encodeURIComponent(`Hi Nexora, my name is ${namePlaceholder}, I would like to know more about your services.`)}`,
+      badge: "Fast Reply",
+      badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+    },
+    {
+      icon: <MessageSquare className="w-5 h-5 text-[#FDDC00]" />,
+      title: "WhatsApp Community",
+      desc: "Join our active tech community for code sharing and jobs.",
+      url: "https://chat.whatsapp.com/HWEYrEWu372LLSYSkVOs9J",
+    },
+    {
+      icon: <Send className="w-5 h-5 text-sky-400" />,
+      title: "WhatsApp Broadcast Channel",
+      desc: "Follow our broadcast channel for tech updates and tutorials.",
+      url: "https://whatsapp.com/channel/0029Vb6zcHtGufItCndVcg0u",
+    }
+  ];
 
   return (
     <div className="relative min-h-screen bg-[#020205] text-slate-100 overflow-x-hidden font-sans select-none pb-20">
@@ -208,6 +219,27 @@ export default function ConnectPage() {
             >
               Chat on WhatsApp <MessageSquare className="w-4 h-4 text-[#25D366]" />
             </a>
+          </div>
+        </motion.div>
+
+        {/* Visitor Name Personalization Input */}
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 p-5 rounded-2xl bg-zinc-950/40 border border-zinc-900/60 backdrop-blur-md"
+        >
+          <label className="block text-xs font-bold text-zinc-400 uppercase tracking-widest mb-3">
+            Personalize your messages
+          </label>
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder="Enter your name to prefill WhatsApp..." 
+              value={visitorName}
+              onChange={(e) => setVisitorName(e.target.value)}
+              className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200"
+            />
           </div>
         </motion.div>
 
