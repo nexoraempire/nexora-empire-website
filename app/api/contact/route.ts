@@ -43,7 +43,7 @@ export async function POST(req: Request) {
       }
     }
 
-    // 2. Email Notification to nexoraempire0@gmail.com
+    // 2. Email Notification to nexoraempirehq@gmail.com
     let emailSent = false;
     try {
       const transporter = nodemailer.createTransport({
@@ -58,7 +58,7 @@ export async function POST(req: Request) {
 
       await transporter.sendMail({
         from: `"Nexora CRM" <${process.env.SMTP_USER}>`,
-        to: "nexoraempire0@gmail.com",
+        to: "nexoraempirehq@gmail.com",
         subject: `🔥 [NEW CLIENT LEAD] Nexora Contact: ${name}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 16px; background-color: #ffffff; color: #1e293b;">

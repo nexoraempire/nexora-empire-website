@@ -56,7 +56,7 @@ export async function POST(req: Request) {
 
         await transporter.sendMail({
           from: `"Nexora Admissions" <${process.env.SMTP_USER}>`,
-          to: "nexoraempire0@gmail.com",
+          to: "nexoraempirehq@gmail.com",
           subject: `New Nexora Academy Application: ${name} (${program})`,
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 16px; background-color: #ffffff; color: #1e293b;">

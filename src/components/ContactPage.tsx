@@ -452,7 +452,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
                 </p>
               </div>
               <a
-                href="mailto:nexoraempire0@gmail.com"
+                href="mailto:nexoraempirehq@gmail.com"
                 className="w-full max-w-[200px] py-3.5 px-6 bg-rose-600 hover:bg-rose-500 text-white rounded-xl font-sans font-bold text-xs tracking-wider uppercase transition-all duration-200 cursor-pointer shadow-md shadow-rose-600/10 hover:shadow-rose-600/20 text-center block focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-95"
                 id="send-email-btn"
               >
