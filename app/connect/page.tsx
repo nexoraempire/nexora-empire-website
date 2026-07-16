@@ -25,16 +25,52 @@ import {
 import Image from 'next/image';
 import nexoraLogo from '../../src/assets/images/nexora-empire-logo.png';
 
+// Premium SVG Icon Components
+const TikTokIcon = ({ className = "w-4 h-4" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
+
+const XIcon = ({ className = "w-4 h-4" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+  </svg>
+);
+
+const WhatsAppIcon = ({ className = "w-6 h-6" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+  >
+    <path d="M17.472 14.382c-.02-.007-.057-.02-.1-.04-.047-.02-.278-.137-.32-.153-.043-.017-.074-.025-.107.026-.03.05-.128.163-.157.195-.03.033-.06.037-.107.015-.047-.022-.2-.074-.381-.236-.14-.125-.235-.28-.263-.327-.028-.047-.003-.073.02-.096.022-.02.047-.055.07-.08.025-.03.033-.05.05-.084.015-.033.008-.063-.003-.085-.01-.023-.108-.26-.148-.356-.04-.097-.08-.084-.108-.088-.027-.001-.06-.001-.09-.001-.03 0-.08.01-.122.058-.042.047-.162.158-.162.385 0 .228.166.447.19.476.022.03 3.266 4.934 7.942 6.954.912.39 1.624.622 2.187.8.914.29 1.748.25 2.406.15.733-.11 2.278-.93 2.597-1.832.318-.9 0-1.67-.1-1.832-.03-.047-.074-.08-.122-.1zM12 .002C5.378.002.001 5.378.001 12c0 2.112.547 4.17 1.587 5.983L.001 24l6.18-1.623c1.74 1.026 3.745 1.625 5.819 1.625 6.623 0 12-5.378 12-12s-5.377-11.998-12-11.998zm0 21.84c-1.92 0-3.805-.517-5.46-1.493l-.393-.233-4.057 1.064 1.085-3.953-.255-.407a9.92 9.92 0 0 1-1.52-5.32c0-5.503 4.477-9.98 9.98-9.98 5.507 0 9.983 4.477 9.983 9.98 0 5.508-4.476 9.98-9.983 9.98z"/>
+  </svg>
+);
+
 const brands = [
   {
     name: "Nexora Empire",
     icon: <Smartphone className="w-6 h-6 text-[#1F39C4]" />,
     desc: "Software-first digital company helping businesses grow through high-performance software, custom AI systems, and search optimization.",
     socials: [
-      { name: "TikTok", url: "https://www.tiktok.com/@nexorae_hq?_r=1&_t=ZS-984yUgbdWsf", icon: <span className="text-xs font-bold font-mono">T</span> },
+      { name: "TikTok", url: "https://www.tiktok.com/@nexorae_hq?_r=1&_t=ZS-984yUgbdWsf", icon: <TikTokIcon className="w-4 h-4" /> },
       { name: "LinkedIn", url: "https://www.linkedin.com/company/110421026/", icon: <Linkedin className="w-4 h-4" /> },
       { name: "Facebook", url: "https://www.facebook.com/share/1AjZ7Lo9Ww/", icon: <Facebook className="w-4 h-4" /> },
-      { name: "Instagram", url: "#", icon: <Instagram className="w-4 h-4" />, placeholder: true }
+      { name: "Instagram", url: "#", icon: <Instagram className="w-4 h-4" />, placeholder: true },
+      { name: "X", url: "https://x.com/nexorae_hq", icon: <XIcon className="w-4 h-4" /> }
     ],
     primaryLink: "https://www.nexoraempire.com"
   },
@@ -44,7 +80,7 @@ const brands = [
     desc: "Creative agency specialized in vector visual identities, responsive UI/UX system layouts, and high-conversion brand guidelines.",
     socials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/showcase/116071004/", icon: <Linkedin className="w-4 h-4" /> },
-      { name: "TikTok", url: "https://www.tiktok.com/@nexorae_studio?_r=1&_t=ZS-984xklkYs5M", icon: <span className="text-xs font-bold font-mono">T</span> },
+      { name: "TikTok", url: "https://www.tiktok.com/@nexorae_studio?_r=1&_t=ZS-984xklkYs5M", icon: <TikTokIcon className="w-4 h-4" /> },
       { name: "Instagram", url: "https://www.instagram.com/nexorae_studio?igsh=MTFqZG14YXFreWx5dw==", icon: <Instagram className="w-4 h-4" /> },
       { name: "Facebook", url: "https://www.facebook.com/share/1BLqf6PAG9/", icon: <Facebook className="w-4 h-4" /> }
     ],
@@ -56,7 +92,7 @@ const brands = [
     desc: "AI-accelerated motion media studio producing premium commercials, custom digital avatars, explainers, and high-impact social video sequences.",
     socials: [
       { name: "LinkedIn", url: "#", icon: <Linkedin className="w-4 h-4" />, placeholder: true },
-      { name: "TikTok", url: "https://www.tiktok.com/@nexora.motion?_r=1&_t=ZS-984bOu0IOur", icon: <span className="text-xs font-bold font-mono">T</span> },
+      { name: "TikTok", url: "https://www.tiktok.com/@nexora.motion?_r=1&_t=ZS-984bOu0IOur", icon: <TikTokIcon className="w-4 h-4" /> },
       { name: "Instagram", url: "https://www.instagram.com/nexorae_motion?igsh=MXVnZGl5eG44MGlnbA==", icon: <Instagram className="w-4 h-4" /> },
       { name: "Facebook", url: "https://www.facebook.com/share/1JiAwi9sqW/", icon: <Facebook className="w-4 h-4" /> }
     ],
@@ -217,7 +253,7 @@ export default function ConnectPage() {
               href="https://wa.me/237677079559"
               className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white font-bold text-sm tracking-wide transition-all duration-300 hover:bg-slate-800/80 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Chat on WhatsApp <MessageSquare className="w-4 h-4 text-[#25D366]" />
+              Chat on WhatsApp <WhatsAppIcon className="w-4 h-4 fill-current text-[#25D366]" />
             </a>
           </div>
         </motion.div>
@@ -419,7 +455,7 @@ export default function ConnectPage() {
         title="Direct Support"
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping" />
-        <MessageSquare className="w-6 h-6 fill-current relative z-10" />
+        <WhatsAppIcon className="w-6 h-6 fill-current relative z-10" />
       </a>
 
     </div>
