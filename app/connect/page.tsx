@@ -152,9 +152,40 @@ export default function ConnectPage() {
             Powering the Future of Innovation
           </p>
 
-          <p className="text-sm sm:text-[14.5px] text-slate-400 max-w-xl leading-relaxed mb-8">
-            Helping businesses and individuals grow through custom software, AI, premium design, and digital innovation. We craft high-performance apps and empower developers through certified technical academy courses.
-          </p>
+          <div className="flex flex-col items-center text-center max-w-xl mb-9">
+            <p className="text-base sm:text-[17px] font-bold text-white mb-4">
+              A software-first digital company
+            </p>
+            <ul className="flex flex-col items-start gap-2.5 text-zinc-300 text-sm sm:text-[14.5px] bg-zinc-950/20 border border-zinc-900/30 p-4 sm:p-5 rounded-2xl w-full">
+              <li className="flex items-start gap-2 text-left">
+                <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                <span>High-converting, SEO-friendly websites</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <Check className="w-4 h-4 text-[#8B1DCA] shrink-0 mt-0.5" />
+                <span>Apps • Branding • AI Solutions</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                <span>Video creation with AI</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <Check className="w-4 h-4 text-[#FDDC00] shrink-0 mt-0.5" />
+                <span>Social Media Management</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <Check className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                <span>Graphic design</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                <span>Training & Mentorship</span>
+              </li>
+            </ul>
+            <p className="text-[13px] sm:text-sm font-bold text-zinc-400 tracking-wide mt-4">
+              Connect to grow your business
+            </p>
+          </div>
 
           {/* Action CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
