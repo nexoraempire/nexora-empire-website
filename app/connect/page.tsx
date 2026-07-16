@@ -32,7 +32,7 @@ const quickLinks = [
     desc: "Visit our official website for digital services & solutions.",
     url: "https://www.nexoraempire.com",
     badge: "Official",
-    badgeColor: "bg-blue-50 text-blue-600 border-blue-100"
+    badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20"
   },
   {
     icon: <Compass className="w-5 h-5 text-[#8B1DCA]" />,
@@ -40,10 +40,10 @@ const quickLinks = [
     desc: "Explore our software engineering portfolio and case studies.",
     url: "https://devlili.com",
     badge: "Creator",
-    badgeColor: "bg-purple-50 text-purple-600 border-purple-100"
+    badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
   },
   {
-    icon: <Github className="w-5 h-5 text-zinc-800" />,
+    icon: <Github className="w-5 h-5 text-white" />,
     title: "GitHub Organization",
     desc: "Browse our open-source repositories and engineering tools.",
     url: "https://github.com/nexoraempire",
@@ -54,7 +54,7 @@ const quickLinks = [
     desc: "Start a real-time conversation directly with our engineering desk.",
     url: "https://wa.me/237677079559",
     badge: "Fast Reply",
-    badgeColor: "bg-emerald-50 text-emerald-600 border-emerald-100"
+    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
   },
   {
     icon: <MessageSquare className="w-5 h-5 text-[#FDDC00]" />,
@@ -63,7 +63,7 @@ const quickLinks = [
     url: "https://chat.whatsapp.com/HWEYrEWu372LLSYSkVOs9J",
   },
   {
-    icon: <Send className="w-5 h-5 text-sky-500" />,
+    icon: <Send className="w-5 h-5 text-sky-400" />,
     title: "WhatsApp Broadcast Channel",
     desc: "Follow our broadcast channel for tech updates and tutorials.",
     url: "https://whatsapp.com/channel/0029Vb6zcHtGufItCndVcg0u",
@@ -224,15 +224,15 @@ export default function ConnectPage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="group relative flex items-center justify-between p-5 rounded-2xl bg-white border border-zinc-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 hover:scale-[1.01] hover:border-zinc-300 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] active:scale-[0.99] text-left"
+                className="group relative flex items-center justify-between p-5 rounded-2xl bg-zinc-950/40 border border-zinc-900/60 backdrop-blur-md shadow-sm transition-all duration-300 hover:scale-[1.01] hover:border-zinc-800 hover:bg-zinc-900/20 active:scale-[0.99] text-left"
               >
                 <div className="flex items-center gap-4 min-w-0 pr-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-zinc-50 border border-zinc-100 shrink-0">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-zinc-900 border border-zinc-800 shrink-0">
                     {link.icon}
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-display font-extrabold text-sm sm:text-base text-zinc-900 truncate">
+                      <span className="font-display font-extrabold text-sm sm:text-base text-white truncate">
                         {link.title}
                       </span>
                       {link.badge && (
@@ -241,13 +241,13 @@ export default function ConnectPage() {
                         </span>
                       )}
                     </div>
-                    <p className="text-xs sm:text-[13px] text-zinc-600 line-clamp-1 leading-normal">
+                    <p className="text-xs sm:text-[13px] text-zinc-500 line-clamp-1 leading-normal">
                       {link.desc}
                     </p>
                   </div>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-zinc-100 border border-zinc-200/80 flex items-center justify-center transition-all duration-300 group-hover:bg-indigo-600 group-hover:border-indigo-500 shrink-0">
-                  <ExternalLink className="w-3.5 h-3.5 text-zinc-500 transition-colors duration-300 group-hover:text-white" />
+                <div className="w-8 h-8 rounded-full bg-zinc-900/50 border border-zinc-800/80 flex items-center justify-center transition-all duration-300 group-hover:bg-indigo-600 group-hover:border-indigo-500 shrink-0">
+                  <ExternalLink className="w-3.5 h-3.5 text-zinc-400 transition-colors duration-300 group-hover:text-white" />
                 </div>
               </motion.a>
             ))}
@@ -266,32 +266,32 @@ export default function ConnectPage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-6 rounded-3xl bg-white border border-zinc-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between"
+                className="p-6 rounded-3xl bg-zinc-950/40 border border-zinc-900/60 backdrop-blur-md flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-xl bg-zinc-50 border border-zinc-100 flex items-center justify-center">
+                      <div className="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center">
                         {brand.icon}
                       </div>
-                      <h3 className="font-display font-extrabold text-base sm:text-lg text-zinc-900">
+                      <h3 className="font-display font-extrabold text-base sm:text-lg text-white">
                         {brand.name}
                       </h3>
                     </div>
                     <a 
                       href={brand.primaryLink}
-                      className="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1"
+                      className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
                     >
                       Visit <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
-                  <p className="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-6 text-left">
+                  <p className="text-xs sm:text-[13px] text-zinc-400 leading-relaxed mb-6 text-left">
                     {brand.desc}
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between border-t border-zinc-100 pt-4 mt-2">
-                  <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
+                <div className="flex items-center justify-between border-t border-zinc-900/80 pt-4 mt-2">
+                  <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">
                     Follow Brand
                   </span>
                   <div className="flex items-center gap-2">
@@ -301,8 +301,8 @@ export default function ConnectPage() {
                         href={soc.url}
                         className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 ${
                           soc.placeholder 
-                            ? "border-zinc-100 bg-zinc-50 text-zinc-300 opacity-40 cursor-not-allowed" 
-                            : "border-zinc-200 bg-zinc-50 text-zinc-600 hover:border-zinc-300 hover:bg-zinc-100 hover:text-zinc-900"
+                            ? "border-zinc-900 bg-zinc-900/20 opacity-30 cursor-not-allowed" 
+                            : "border-zinc-800 bg-zinc-900/40 text-zinc-400 hover:border-zinc-700 hover:bg-zinc-800 hover:text-white"
                         }`}
                         title={soc.placeholder ? "Coming soon" : `${brand.name} on ${soc.name}`}
                         onClick={(e) => soc.placeholder && e.preventDefault()}
@@ -325,36 +325,36 @@ export default function ConnectPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
             {/* Email Contact Card */}
-            <div className="p-4 rounded-2xl bg-white border border-zinc-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-center flex flex-col items-center justify-center">
+            <div className="p-4 rounded-2xl bg-zinc-950/20 border border-zinc-900/40 text-center flex flex-col items-center justify-center">
               <Mail className="w-5 h-5 text-indigo-500 mb-2" />
-              <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1">Email support</span>
+              <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Email support</span>
               <button 
                 onClick={() => handleCopy("nexoraempirehq@gmail.com", "Email copied")}
-                className="font-mono text-xs text-zinc-800 hover:text-indigo-600 flex items-center gap-1.5 transition-colors duration-200"
+                className="font-mono text-xs text-white hover:text-indigo-400 flex items-center gap-1.5 transition-colors duration-200"
               >
                 nexoraempirehq... <Copy className="w-3 h-3 text-zinc-400" />
               </button>
             </div>
 
             {/* Phone Contact Card */}
-            <div className="p-4 rounded-2xl bg-white border border-zinc-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-center flex flex-col items-center justify-center">
+            <div className="p-4 rounded-2xl bg-zinc-950/20 border border-zinc-900/40 text-center flex flex-col items-center justify-center">
               <Phone className="w-5 h-5 text-emerald-500 mb-2" />
-              <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1">WhatsApp line</span>
+              <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">WhatsApp line</span>
               <button 
                 onClick={() => handleCopy("+237677079559", "Phone copied")}
-                className="font-mono text-xs text-zinc-800 hover:text-emerald-600 flex items-center gap-1.5 transition-colors duration-200"
+                className="font-mono text-xs text-white hover:text-emerald-400 flex items-center gap-1.5 transition-colors duration-200"
               >
                 +237 677 079 559 <Copy className="w-3 h-3 text-zinc-400" />
               </button>
             </div>
 
             {/* Web Contact Card */}
-            <div className="p-4 rounded-2xl bg-white border border-zinc-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-center flex flex-col items-center justify-center">
+            <div className="p-4 rounded-2xl bg-zinc-950/20 border border-zinc-900/40 text-center flex flex-col items-center justify-center">
               <Globe className="w-5 h-5 text-amber-500 mb-2" />
-              <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1">Direct website</span>
+              <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Direct website</span>
               <a 
                 href="https://www.nexoraempire.com"
-                className="font-mono text-xs text-zinc-800 hover:text-amber-600 flex items-center gap-1.5 transition-colors duration-200"
+                className="font-mono text-xs text-white hover:text-amber-400 flex items-center gap-1.5 transition-colors duration-200"
               >
                 nexoraempire.com <ArrowUpRight className="w-3 h-3 text-zinc-400" />
               </a>
