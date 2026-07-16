@@ -36,10 +36,12 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
     }
   };
 
+  const isConnectPage = pathname === '/connect';
+
   return (
     <div className="relative min-h-screen bg-brand-dark text-white select-none">
       <CursorSpotlight />
-      <Header view={currentView} setView={handleSetView} />
+      {!isConnectPage && <Header view={currentView} setView={handleSetView} />}
       <main className="relative w-full">
         <AnimatePresence mode="wait">
           <motion.div
@@ -53,7 +55,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer view={currentView} setView={handleSetView} />
+      {!isConnectPage && <Footer view={currentView} setView={handleSetView} />}
       <BackToTop />
     </div>
   );
