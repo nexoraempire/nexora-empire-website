@@ -110,11 +110,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ setView }) => {
           </span>
           
           <h1 className="font-display text-4xl sm:text-5xl md:text-6.5xl font-black text-white leading-[1.1] tracking-tight">
-            Get In <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Touch</span>
+            Contact Nexora Empire | <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Buea Cameroon</span>
           </h1>
           
           <p className="font-sans text-slate-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
-            Have a project in mind or need expert guidance? Get in touch with our team. we're here to help you build, grow, and strengthen your online presence.
+            Have a custom software project in mind or need local SEO services? Get in touch with our development team in Buea. We're here to help you scale your business in Cameroon.
           </p>
           
           {/* Call to Actions Action bar */}

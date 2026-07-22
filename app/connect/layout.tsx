@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Nexora Empire | Connect',
-  description: 'Connect with Nexora Empire. Explore our software solutions, AI services, creative brands, portfolio, GitHub, WhatsApp community, and official social media.',
-  keywords: 'Nexora Empire links, Linktree alternative, DevLili portfolio, Nexora Studio, Nexora Motion, WhatsApp community, social links',
+  title: 'Nexora Empire Links | Software & Tech Company Buea',
+  description: 'Connect with Nexora Empire in Buea, Cameroon. Access our software solutions, social profiles, WhatsApp community, and developer team links.',
+  keywords: 'Nexora Empire links, custom software developer Buea, WhatsApp community tech Cameroon, social links Nexora',
   alternates: {
     canonical: 'https://www.nexoraempire.com/connect',
   },
   openGraph: {
     type: 'website',
     url: 'https://www.nexoraempire.com/connect',
-    title: 'Nexora Empire | Connect',
-    description: 'Connect with Nexora Empire. Explore our software solutions, AI services, creative brands, portfolio, GitHub, WhatsApp community, and official social media.',
+    title: 'Nexora Empire Links | Software & Tech Company Buea',
+    description: 'Connect with Nexora Empire in Buea, Cameroon. Access our software solutions, social profiles, WhatsApp community, and developer team links.',
     images: [
       {
         url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nexora Empire | Connect',
-    description: 'Connect with Nexora Empire. Explore our software solutions, AI services, creative brands, portfolio, GitHub, WhatsApp community, and official social media.',
+    title: 'Nexora Empire Links | Software & Tech Company Buea',
+    description: 'Connect with Nexora Empire in Buea, Cameroon. Access our software solutions, social profiles, WhatsApp community, and developer team links.',
     images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };

@@ -129,11 +129,11 @@ export const PricingPage: React.FC<PricingPageProps> = ({ setView }) => {
             </span>
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight">
-              Predictable Investment for <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Uncompromising Quality</span>
+              Software Development <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Pricing Cameroon</span>
             </h1>
             
             <p className="font-sans text-slate-300 text-base sm:text-lg font-normal leading-relaxed max-w-2xl">
-              Choose from our highly specialized predefined packages or utilize our interactive custom estimator calculator further down to model project costs tailored exactly to your scope.
+              Find transparent custom software, website development, mobile app, and SEO services pricing options for businesses in Cameroon and globally.
             </p>
           </div>
         </div>

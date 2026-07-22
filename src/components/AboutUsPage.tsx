@@ -224,11 +224,11 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
             </span>
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight">
-              Professional <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Software Company</span> in Cameroon
+              About Nexora Empire | Technology Company Cameroon
             </h1>
             
             <p className="font-sans text-slate-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
-              Nexora Empire is a top-tier professional software company in Cameroon. We design, engineer, and optimize custom software architectures and web portals for global businesses.
+              Nexora Empire is a software company in Buea, Cameroon. We design, engineer, and optimize custom software architectures and web portals for global businesses.
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
               </span>
               
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-[#0e1629] leading-tight tracking-tight">
-                We build digital solutions that drive <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">real growth.</span>
+                Custom software solutions that drive <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">local growth.</span>
               </h2>
               
               <p className="font-sans text-slate-500 text-base sm:text-lg leading-relaxed max-w-xl">

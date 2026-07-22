@@ -1,11 +1,29 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Software Engineering Training & Certified Internships in Cameroon',
-  description: 'Kickstart your tech career at Nexora Academy. Join practical software engineering training courses in Cameroon with guaranteed certified internship options.',
-  keywords: 'software training, coding academy, tech internship, learn web development, mobile app course, Cameroon software training, Nexora Academy, learn tech skills Buea, internship in Buea, software engineering training in Buea',
+  title: 'Software Development Training Cameroon | Nexora Empire',
+  description: 'Join our software development training and internship program in Buea, Cameroon. Learn React, Next.js, and modern tech skills.',
+  keywords: 'software development training Cameroon, coding internship Buea, learn react Buea, web development classes Cameroon',
   alternates: {
     canonical: 'https://www.nexoraempire.com/training-internship',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.nexoraempire.com/training-internship',
+    title: 'Software Development Training Cameroon | Nexora Empire',
+    description: 'Join our software development training and internship program in Buea, Cameroon. Learn React, Next.js, and modern tech skills.',
+    images: [
+      {
+        url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
+        alt: 'Software Training Cameroon Nexora Empire',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Software Development Training Cameroon | Nexora Empire',
+    description: 'Join our software development training and internship program in Buea, Cameroon. Learn React, Next.js, and modern tech skills.',
+    images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };
 

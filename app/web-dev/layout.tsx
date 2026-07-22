@@ -1,11 +1,29 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Web Development Company in Cameroon | Website Developer Buea',
-  description: 'Looking for the best web development company in Cameroon? We build high-performance React & Next.js web applications, e-commerce stores, and custom SaaS systems.',
-  keywords: 'web development company, website development services, custom web applications, full-stack development, SaaS development, enterprise web development, Next.js agency, React developers, best website developer in Buea, web development agency',
+  title: 'Custom Website Development Company in Cameroon',
+  description: 'Build high-performance React and Next.js web applications. Nexora Empire develops custom enterprise websites and ecommerce solutions in Buea.',
+  keywords: 'custom website development Cameroon, web design company Cameroon, React development company Cameroon, Next.js development Cameroon, ecommerce website development Cameroon',
   alternates: {
     canonical: 'https://www.nexoraempire.com/web-dev',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.nexoraempire.com/web-dev',
+    title: 'Custom Website Development Company in Cameroon',
+    description: 'Build high-performance React and Next.js web applications. Nexora Empire develops custom enterprise websites and ecommerce solutions in Buea.',
+    images: [
+      {
+        url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
+        alt: 'Web Development Services Nexora Empire',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Website Development Company in Cameroon',
+    description: 'Build high-performance React and Next.js web applications. Nexora Empire develops custom enterprise websites and ecommerce solutions in Buea.',
+    images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };
 

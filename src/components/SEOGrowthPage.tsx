@@ -217,14 +217,14 @@ export const SEOGrowthPage: React.FC<SEOGrowthPageProps> = ({ setView }) => {
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                Best SEO Agency <br className="hidden sm:inline" />
+                SEO Services & <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  In Cameroon
+                  Local SEO Cameroon
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                Nexora Empire is the best SEO company in Cameroon providing professional SEO services, technical search optimization audits, local SEO positioning, and digital growth campaigns to rank you #1 on Google.
+                Nexora Empire is an SEO services provider and local SEO agency in Cameroon. We offer technical search audits, semantic keyword mapping, and local SEO services in Buea.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

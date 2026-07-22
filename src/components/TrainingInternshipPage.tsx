@@ -660,8 +660,8 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight max-w-5xl"
                 id="academy-hero-title"
               >
-                Learn In-Demand Skills That Build <br className="hidden sm:inline" />
-                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Real Careers</span>
+                Software Development <br className="hidden sm:inline" />
+                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Training Cameroon</span>
               </motion.h1>
 
               {/* Description */}
@@ -672,7 +672,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                 className="font-sans text-sm sm:text-base md:text-lg text-slate-400 max-w-3xl leading-relaxed"
                 id="academy-hero-desc"
               >
-                Join practical training and internship programs designed to help students, professionals, and aspiring creators gain real-world experience, build impressive portfolios, and launch successful careers in tech.
+                Join practical software development training courses and certified internship programs in Buea, Cameroon to learn React, Next.js, and modern tech skills.
               </motion.p>
 
               {/* CTA Buttons */}

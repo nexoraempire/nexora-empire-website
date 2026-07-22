@@ -1,11 +1,29 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Software Development & SEO Portfolio Cameroon | Nexora Empire',
-  description: 'Explore our enterprise software engineering, responsive website development, custom mobile apps, and successful SEO campaigns across Cameroon and globally.',
-  keywords: 'portfolio, case studies, software development portfolio, website showcase, mobile app design, brand identities, custom solutions, React developers, web portfolio',
+  title: 'Software Development Portfolio | Nexora Empire',
+  description: 'Explore custom web apps, mobile systems, and brand design projects completed by our software developers in Buea, Cameroon.',
+  keywords: 'software development portfolio, custom web applications Cameroon, mobile app projects Buea, branding portfolio Cameroon',
   alternates: {
     canonical: 'https://www.nexoraempire.com/portfolio',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.nexoraempire.com/portfolio',
+    title: 'Software Development Portfolio | Nexora Empire',
+    description: 'Explore custom web apps, mobile systems, and brand design projects completed by our software developers in Buea, Cameroon.',
+    images: [
+      {
+        url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
+        alt: 'Software Portfolio Nexora Empire',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Software Development Portfolio | Nexora Empire',
+    description: 'Explore custom web apps, mobile systems, and brand design projects completed by our software developers in Buea, Cameroon.',
+    images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };
 

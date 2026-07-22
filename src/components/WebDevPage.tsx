@@ -229,14 +229,14 @@ export const WebDevPage: React.FC<WebDevPageProps> = ({ setView }) => {
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                Best Custom Web <br className="hidden sm:inline" />
+                Custom Website <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  Development Company
+                  Development Cameroon
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                As the leading website developer in Cameroon, we build high-performance e-commerce storefronts, SaaS platforms, corporate portals, and custom web applications optimized to rank #1 on Google Search and convert visitors into clients.
+                As a custom website development company in Cameroon, we build high-performance e-commerce storefronts, SaaS platforms, corporate portals, and custom web applications optimized to rank well on Google Search and convert visitors into clients.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

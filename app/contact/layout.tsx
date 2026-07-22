@@ -1,11 +1,29 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Nexora Empire | Best Software Development & SEO Company in Cameroon',
-  description: 'Hire the best website developers, SEO experts, and custom software company in Cameroon. Reach out to our Buea Town office or schedule a call.',
-  keywords: 'contact Nexora Empire, hire software developers, software company office hours, Buea Town Cameroon software, schedule consultation, phone number Nexora, best software company in Buea, SEO company Buea, digital marketing agency Buea',
+  title: 'Contact Nexora Empire | Buea Cameroon',
+  description: 'Get in touch with Nexora Empire in Buea, Cameroon. Let\'s discuss your custom web development, mobile apps, branding, or SEO requirements.',
+  keywords: 'contact Nexora Empire, software development office Buea, contact web developers Cameroon, local SEO consultation Buea',
   alternates: {
     canonical: 'https://www.nexoraempire.com/contact',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.nexoraempire.com/contact',
+    title: 'Contact Nexora Empire | Buea Cameroon',
+    description: 'Get in touch with Nexora Empire in Buea, Cameroon. Let\'s discuss your custom web development, mobile apps, branding, or SEO requirements.',
+    images: [
+      {
+        url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
+        alt: 'Contact Nexora Empire Cameroon',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Nexora Empire | Buea Cameroon',
+    description: 'Get in touch with Nexora Empire in Buea, Cameroon. Let\'s discuss your custom web development, mobile apps, branding, or SEO requirements.',
+    images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };
 

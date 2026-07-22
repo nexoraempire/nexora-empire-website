@@ -202,14 +202,14 @@ export const BrandingDesignPage: React.FC<BrandingDesignPageProps> = ({ setView 
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                Designs That Make Your Brand Impossible <br className="hidden sm:inline" />
+                Brand Identity & <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  to Ignore
+                  Graphic Design Agency
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                Your brand is more than just a logo—it's the first impression people remember. We create strategic visual identities, marketing materials, and digital assets that build trust, attract customers, and help your business stand out.
+                Nexora Empire is a brand identity and graphic design services agency in Cameroon. We design corporate logos, visual styles, and marketing assets to grow your business from our creative base in Buea.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

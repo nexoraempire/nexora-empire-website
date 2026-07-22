@@ -1,11 +1,29 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best SEO Agency in Cameroon | Professional SEO Services Buea',
-  description: 'Rank #1 on Google. Nexora Empire is the best SEO agency in Cameroon. We offer expert technical audits, semantic keyword mapping, and local SEO services.',
-  keywords: 'SEO agency, technical SEO company, organic growth marketing, search engine optimization, local SEO, rank on Google, schema structured data, Google search specialist, SEO company Buea, best SEO company Cameroon',
+  title: 'SEO Services & Local SEO Agency Cameroon',
+  description: 'SEO services for businesses in Cameroon. Nexora Empire provides technical audits, semantic keyword mapping, and local SEO in Buea.',
+  keywords: 'SEO services Cameroon, local SEO Buea, technical SEO agency Cameroon, search engine optimization Buea, organic growth Cameroon',
   alternates: {
     canonical: 'https://www.nexoraempire.com/seo-growth',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.nexoraempire.com/seo-growth',
+    title: 'SEO Services & Local SEO Agency Cameroon',
+    description: 'SEO services for businesses in Cameroon. Nexora Empire provides technical audits, semantic keyword mapping, and local SEO in Buea.',
+    images: [
+      {
+        url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
+        alt: 'SEO Services Cameroon Nexora Empire',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO Services & Local SEO Agency Cameroon',
+    description: 'SEO services for businesses in Cameroon. Nexora Empire provides technical audits, semantic keyword mapping, and local SEO in Buea.',
+    images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };
 

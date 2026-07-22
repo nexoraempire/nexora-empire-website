@@ -235,14 +235,14 @@ export const AIVideoPage: React.FC<AIVideoPageProps> = ({ setView }) => {
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                Create Videos That Inspire, <br className="hidden sm:inline" />
+                AI Video Creation <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  Engage & Convert
+                  Services Cameroon
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                From cinematic brand stories to AI-powered social media content, we produce professional videos that capture attention, tell compelling stories, and help businesses grow faster.
+                Nexora Empire offers AI video creation and editing services in Cameroon. We produce video marketing assets and synthetic visual content for companies from our base in Buea.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

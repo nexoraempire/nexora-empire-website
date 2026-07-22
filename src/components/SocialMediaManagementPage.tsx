@@ -246,15 +246,15 @@ export const SocialMediaManagementPage: React.FC<SocialMediaManagementPageProps>
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
-                Dominate Your <br />
+                Social Media <br />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  Social Presence
+                  Management Cameroon
                 </span>
               </h1>
             </div>
 
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Stop letting your social channels collect dust. We create breathtaking, high-converting social media content and target optimized ad campaigns to establish trust, capture leads, and scale your brand.
+              Social media management services for businesses in Cameroon. Build engagement, plan content calendars, and grow your digital audience with Nexora Empire in Buea.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

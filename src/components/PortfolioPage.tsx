@@ -976,11 +976,11 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
             </span>
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight" id="portfolio-hero-title">
-              Showcasing High-Impact <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Digital Solutions</span>
+              Software Development <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Portfolio</span>
             </h1>
             
             <p className="font-sans text-slate-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl" id="portfolio-hero-desc">
-              Explore our curated gallery of successful collaborations, where elite engineering standards meet pixel-perfect designs and scalable enterprise-level frameworks.
+              Explore our gallery of custom websites, mobile applications, brand designs, and local SEO projects engineered for clients in Buea, Cameroon, and globally.
             </p>
           </div>
 

@@ -26,6 +26,8 @@ export const Hero: React.FC = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover opacity-55 select-none pointer-events-none transition-opacity duration-1000"
           style={{ mixBlendMode: 'screen' }}
+          // @ts-ignore
+          fetchpriority="high"
         >
           <source 
             src="/assets/images/nexora-empire-hero-bg.mp4" 
@@ -92,10 +94,10 @@ export const Hero: React.FC = () => {
               id="headline-container"
             >
               <h1 className="font-display text-[44px] sm:text-[58px] md:text-[72px] font-extrabold text-white leading-[1.05] tracking-tight lg:whitespace-nowrap flex flex-col">
-                <span>Best Software & SEO</span>
-                <span>Company in Cameroon</span>
+                <span>Software & Web</span>
+                <span>Development Cameroon</span>
                 <span className="bg-gradient-to-r from-brand-electric via-[#3b82f6] to-brand-violet bg-clip-text text-transparent">
-                  For Digital Solutions
+                  Custom Digital Solutions
                 </span>
               </h1>
             </div>

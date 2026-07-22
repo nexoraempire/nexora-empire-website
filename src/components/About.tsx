@@ -96,7 +96,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               id="about-heading-wrapper"
             >
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-[#0e1629] tracking-tight mt-6 mb-6 leading-none">
-                Building Digital Solutions That <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Drive Growth</span>
+                Custom Digital Solutions That <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Drive Local Growth</span>
               </h2>
             </motion.div>
 
@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               className="text-sm sm:text-base md:text-md text-slate-500 max-w-xl leading-relaxed font-normal"
               id="about-description"
             >
-              Nexora Empire is a <span className="font-semibold text-slate-900">premier technology agency</span> that helps <span className="font-semibold text-slate-900">ambitious businesses</span> and <span className="font-semibold text-slate-900">visionary creators</span> build their digital presence through <span className="font-semibold text-slate-900">high-performance websites</span>, <span className="font-semibold text-slate-900">premium mobile apps</span>, <span className="font-semibold text-slate-900">bespoke artificial intelligence solutions</span>, and <span className="font-semibold text-slate-900">data-backed scaling strategies</span>.
+              Nexora Empire is a <span className="font-semibold text-slate-900">software and web development company</span> that helps <span className="font-semibold text-slate-900">businesses in Cameroon</span> and across Central Africa build their digital presence through <span className="font-semibold text-slate-900">high-performance websites</span>, <span className="font-semibold text-slate-900">custom mobile apps</span>, <span className="font-semibold text-slate-900">bespoke artificial intelligence solutions</span>, and <span className="font-semibold text-slate-900">data-backed local SEO growth strategies</span> from our tech base in Buea.
             </motion.p>
 
             {/* Action link button to the full About Us Page / Our DNA */}
