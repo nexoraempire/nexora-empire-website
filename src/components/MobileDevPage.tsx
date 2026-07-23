@@ -238,7 +238,7 @@ export const MobileDevPage: React.FC<MobileDevPageProps> = ({ setView }) => {
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                We are a mobile app development company in Cameroon. Our software engineers build secure, high-performance iOS, Android, and cross-platform (React Native/Expo) mobile applications tailored for businesses and startups globally from our tech hub in Buea.
+                Nexora Empire builds custom mobile applications in Cameroon. Our developers design and build high-performance iOS, Android, and cross-platform mobile solutions in Buea.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

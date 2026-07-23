@@ -5,9 +5,9 @@ import { AppShell } from './AppShell';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.nexoraempire.com'),
-  title: 'Nexora Empire | Custom Software, Web Development & SEO Company in Cameroon',
-  description: 'Nexora Empire helps businesses in Cameroon grow with custom software development, high-performance websites, mobile apps, SEO, AI solutions, and digital transformation services.',
-  keywords: 'custom software development Cameroon, web design company Cameroon, website development company Buea, mobile app development Cameroon, SEO services Cameroon, AI automation Cameroon, branding agency Cameroon',
+  title: 'Software Development Company Cameroon | Nexora Empire',
+  description: 'Nexora Empire is a software development company in Cameroon. We build custom software solutions, enterprise platforms, and digital applications from Buea.',
+  keywords: 'software development company Cameroon, custom software development Cameroon, software solutions Cameroon, technology company Cameroon',
   alternates: {
     canonical: 'https://www.nexoraempire.com',
   },
@@ -26,22 +26,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.nexoraempire.com',
-    title: 'Nexora Empire | Custom Software, Web Development & SEO Company in Cameroon',
-    description: 'Nexora Empire helps businesses in Cameroon grow with custom software development, high-performance websites, mobile apps, SEO, AI solutions, and digital transformation services.',
+    title: 'Software Development Company Cameroon | Nexora Empire',
+    description: 'Nexora Empire is a software development company in Cameroon. We build custom software solutions, enterprise platforms, and digital applications from Buea.',
     siteName: 'Nexora Empire',
     images: [
       {
         url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
         width: 1200,
         height: 630,
-        alt: 'Nexora Empire Cameroon Banner',
+        alt: 'Nexora Empire Cameroon Software Development Banner',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nexora Empire | Custom Software, Web Development & SEO Company in Cameroon',
-    description: 'Nexora Empire helps businesses in Cameroon grow with custom software development, high-performance websites, mobile apps, SEO, AI solutions, and digital transformation services.',
+    title: 'Software Development Company Cameroon | Nexora Empire',
+    description: 'Nexora Empire is a software development company in Cameroon. We build custom software solutions, enterprise platforms, and digital applications from Buea.',
     images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };

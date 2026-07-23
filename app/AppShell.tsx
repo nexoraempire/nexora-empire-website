@@ -147,19 +147,55 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
         schemas.push({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "Web Development Services",
+          "serviceType": "Website Development Company Cameroon",
           "provider": { "@id": "https://www.nexoraempire.com/#organization" },
           "areaServed": "Cameroon",
-          "description": "Custom website development, React & Next.js web apps, and enterprise database systems in Buea."
+          "description": "Website development company in Cameroon building custom web design projects and corporate sites."
+        });
+      } else if (pathname === '/mobile-dev') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Mobile App Development Cameroon",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "areaServed": "Cameroon",
+          "description": "Mobile app development services in Cameroon building custom native iOS, Android, and cross-platform apps."
         });
       } else if (pathname === '/seo-growth') {
         schemas.push({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "SEO & Growth Services",
+          "serviceType": "SEO Services Cameroon",
           "provider": { "@id": "https://www.nexoraempire.com/#organization" },
           "areaServed": "Cameroon",
-          "description": "Technical audits, local SEO growth campaigns, semantic markup, and rankings management."
+          "description": "Professional SEO services in Cameroon offering local search optimization, technical SEO, and audits."
+        });
+      } else if (pathname === '/branding-design') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Branding Agency Cameroon",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "areaServed": "Cameroon",
+          "description": "Professional branding agency in Cameroon specialized in custom logos, brand identity, and graphics."
+        });
+      } else if (pathname === '/ai-video') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "AI Video Creation Cameroon",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "areaServed": "Cameroon",
+          "description": "AI video creation and automated commercial video design services for companies in Cameroon."
+        });
+      } else if (pathname === '/social-media-management') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Social Media Management Cameroon",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "areaServed": "Cameroon",
+          "description": "Social media management and strategy services for businesses in Cameroon to grow online channels."
         });
       }
     }

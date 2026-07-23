@@ -254,7 +254,7 @@ export const SocialMediaManagementPage: React.FC<SocialMediaManagementPageProps>
             </div>
 
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Social media management services for businesses in Cameroon. Build engagement, plan content calendars, and grow your digital audience with Nexora Empire in Buea.
+              Nexora Empire provides professional social media management services in Cameroon. We construct content strategies, manage visual channels, and design ad campaigns from Buea.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
