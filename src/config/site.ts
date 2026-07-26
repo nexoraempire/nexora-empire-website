@@ -7,11 +7,11 @@ export const siteConfig = {
   name: 'Nexora Empire',
   
   // Contact Channels
-  phone: '+237 677 079 959',
-  phoneRaw: 'tel:+237677079959',
-  whatsappUrl: 'https://wa.me/237677079959',
+  phone: '+237 677 079 559',
+  phoneRaw: 'tel:+237677079559',
+  whatsappUrl: 'https://wa.me/237677079559',
   email: 'contact@nexoraempire.com',
   
   // Geographic Details
-  address: 'Douala, Cameroon',
+  address: 'Buea, Cameroon',
 };
