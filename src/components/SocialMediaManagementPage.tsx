@@ -248,13 +248,13 @@ export const SocialMediaManagementPage: React.FC<SocialMediaManagementPageProps>
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
                 Social Media <br />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  Management Cameroon
+                  Management
                 </span>
               </h1>
             </div>
 
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Nexora Empire provides professional social media management services in Cameroon. We construct content strategies, manage visual channels, and design ad campaigns from Buea.
+              Nexora Empire provides professional social media management services. We construct content strategies, manage visual channels, and design ad campaigns from Buea.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

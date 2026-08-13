@@ -22,7 +22,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
   const [activeLink, setActiveLink] = useState(
-    view === 'about-us' ? 'About' : (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video' || view === 'social-media-management') ? 'Services' : view === 'portfolio' ? 'Portfolio' : view === 'pricing' ? 'Pricing' : view === 'training-internship' ? 'Training & Internship' : view === 'contact' ? 'Contact' : 'Home'
+    view === 'about-us' ? 'About' : (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video' || view === 'social-media-management') ? 'Services' : view === 'portfolio' ? 'Work' : view === 'pricing' ? 'Pricing' : view === 'training-internship' ? 'Courses' : view === 'contact' ? 'Contact' : 'Home'
   );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -47,18 +47,18 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     'Home',
     'About',
     'Services',
-    'Portfolio',
+    'Work',
     'Pricing',
-    'Training & Internship',
+    'Courses',
     'Contact'
   ];
 
   const isLinkActive = (link: string) => {
     if (view === 'about-us') return link === 'About';
     if (['web-dev', 'mobile-dev', 'branding-design', 'seo-growth', 'ai-video', 'social-media-management'].includes(view)) return link === 'Services';
-    if (view === 'portfolio') return link === 'Portfolio';
+    if (view === 'portfolio') return link === 'Work';
     if (view === 'pricing') return link === 'Pricing';
-    if (view === 'training-internship') return link === 'Training & Internship';
+    if (view === 'training-internship') return link === 'Courses';
     if (view === 'contact') return link === 'Contact';
     if (view === 'home' || view === '') return link === 'Home';
     return activeLink === link;
@@ -77,9 +77,9 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     'Home': 'home',
     'About': 'about',
     'Services': 'services',
-    'Portfolio': 'work',
+    'Work': 'work',
     'Pricing': 'pricing',
-    'Training & Internship': 'training-internship',
+    'Courses': 'training-internship',
     'Contact': 'contact'
   };
 
@@ -170,7 +170,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
       return;
     }
 
-    if (link === 'Portfolio') {
+    if (link === 'Work') {
       setView('portfolio');
       return;
     }
@@ -180,7 +180,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
       return;
     }
 
-    if (link === 'Training & Internship') {
+    if (link === 'Courses') {
       setView('training-internship');
       return;
     }
@@ -315,9 +315,9 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
             const targetPath = 
               link === 'Home' ? '/' :
               link === 'About' ? '/about-us' :
-              link === 'Portfolio' ? '/portfolio' :
+              link === 'Work' ? '/portfolio' :
               link === 'Pricing' ? '/pricing' :
-              link === 'Training & Internship' ? '/training-internship' :
+              link === 'Courses' ? '/training-internship' :
               link === 'Contact' ? '/contact' :
               '/';
 
@@ -337,13 +337,13 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
         </nav>
 
         {/* Desktop Action Button */}
-        <div className="hidden lg:block" id="header-action-container">
+        <div className="hidden lg:block shrink-0" id="header-action-container">
           <button
             id="start-project bg-btn"
             onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%20I%20would%20like%20to%20start%20a%20project%20with%20you.%20I%20am%20interested%20in%20your%20digital%20solutions.', '_blank')}
-            className="group relative px-6 py-2.5 rounded-full bg-indigo-950/20 text-white font-sans text-sm font-semibold tracking-wide border border-indigo-500/30 overflow-hidden transition-all duration-300 hover:border-brand-electric hover:shadow-[0_0_20px_rgba(0,190,250,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-95"
+            className="group relative px-6 py-2.5 rounded-full bg-indigo-950/20 text-white font-sans text-sm font-semibold tracking-wide border border-indigo-500/30 overflow-hidden transition-all duration-300 hover:border-brand-electric hover:shadow-[0_0_20px_rgba(0,190,250,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-95 whitespace-nowrap"
           >
-            <span className="relative z-10 flex items-center gap-1.5 group-hover:text-brand-electric transition-colors duration-300">
+            <span className="relative z-10 flex items-center gap-1.5 group-hover:text-brand-electric transition-colors duration-300 whitespace-nowrap">
               Start a Project 
               <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 ↗
@@ -434,9 +434,9 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
             const targetPath = 
               link === 'Home' ? '/' :
               link === 'About' ? '/about-us' :
-              link === 'Portfolio' ? '/portfolio' :
+              link === 'Work' ? '/portfolio' :
               link === 'Pricing' ? '/pricing' :
-              link === 'Training & Internship' ? '/training-internship' :
+              link === 'Courses' ? '/training-internship' :
               link === 'Contact' ? '/contact' :
               '/';
 

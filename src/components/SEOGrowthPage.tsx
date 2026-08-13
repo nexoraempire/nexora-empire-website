@@ -217,14 +217,14 @@ export const SEOGrowthPage: React.FC<SEOGrowthPageProps> = ({ setView }) => {
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                SEO Services <br className="hidden sm:inline" />
+                SEO & <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  Cameroon
+                  Digital Growth
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                Nexora Empire provides professional SEO services in Cameroon. We offer search engine optimization, technical audits, semantic keyword strategies, and local SEO services in Buea.
+                Nexora Empire provides professional SEO services. We offer search engine optimization, technical audits, semantic keyword strategies, and local SEO services in Buea.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

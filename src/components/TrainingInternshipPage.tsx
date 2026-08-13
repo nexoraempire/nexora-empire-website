@@ -661,7 +661,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                 id="academy-hero-title"
               >
                 Software Development <br className="hidden sm:inline" />
-                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Training Cameroon</span>
+                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Courses</span>
               </motion.h1>
 
               {/* Description */}
@@ -672,7 +672,7 @@ export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ 
                 className="font-sans text-sm sm:text-base md:text-lg text-slate-400 max-w-3xl leading-relaxed"
                 id="academy-hero-desc"
               >
-                Join practical software development training courses and certified internship programs in Buea, Cameroon to learn React, Next.js, and modern tech skills.
+                Join practical software development training courses and certified internship programs in Buea to learn React, Next.js, and modern tech skills.
               </motion.p>
 
               {/* CTA Buttons */}

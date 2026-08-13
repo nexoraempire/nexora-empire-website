@@ -209,8 +209,8 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
   const companyLinks = [
     { name: 'About Us', id: 'about' },
     { name: 'Services', id: 'services' },
-    { name: 'Portfolio', id: 'portfolio' },
-    { name: 'Training & Internship', id: 'training-internship' },
+    { name: 'Work', id: 'portfolio' },
+    { name: 'Courses', id: 'training-internship' },
     { name: 'Contact Us', id: 'contact' }
   ];
 

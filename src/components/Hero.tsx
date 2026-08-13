@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
               <h1 className="font-display text-[44px] sm:text-[58px] md:text-[72px] font-extrabold text-white leading-[1.05] tracking-tight lg:whitespace-nowrap flex flex-col">
                 <span>Software Development</span>
                 <span className="bg-gradient-to-r from-brand-electric via-[#3b82f6] to-brand-violet bg-clip-text text-transparent">
-                  Company Cameroon
+                  Company
                 </span>
               </h1>
             </div>
@@ -105,7 +105,7 @@ export const Hero: React.FC = () => {
               className="font-sans text-base sm:text-lg text-gray-400 font-normal leading-relaxed mb-10 max-w-xl"
               id="hero-subtitle"
             >
-              We are a software development company in Cameroon. From our tech hub in Buea, we build custom software, enterprise platforms, and digital solutions that help businesses streamline operations and scale.
+              We are a software development company. From our tech hub in Buea, we build custom software, enterprise platforms, and digital solutions that help businesses streamline operations and scale.
             </p>
 
             {/* Call to Actions Action bar */}

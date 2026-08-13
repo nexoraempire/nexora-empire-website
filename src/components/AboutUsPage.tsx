@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -144,50 +145,6 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {
       socials: [
         { name: 'youtube', icon: Youtube, url: '#' },
         { name: 'instagram', icon: Instagram, url: '#' },
-        { name: 'mail', icon: Mail, url: 'mailto:contact@nexoraempire.com' }
-      ]
-    },
-    {
-      id: 'remy',
-      name: 'Remy Malick',
-      role: 'Video Editor',
-      bio: 'Creates compelling edits that bring ideas to life through creativity and precision.',
-      image: '/assets/images/malick.webp',
-      badgeIcon: Video,
-      badgeColor: 'text-purple-500 bg-purple-50 border-purple-100',
-      socials: [
-        { name: 'youtube', icon: Youtube, url: '#' },
-        { name: 'instagram', icon: Instagram, url: '#' },
-        { name: 'mail', icon: Mail, url: 'mailto:contact@nexoraempire.com' }
-      ]
-    },
-    {
-      id: 'favor',
-      name: 'Mbekenyui Favor',
-      role: 'Graphic Designer',
-      bio: 'Tells compelling brand stories through beautiful graphic designs and pixel-perfect layouts.',
-      image: '/assets/images/favor.webp',
-      badgeIcon: PenTool,
-      badgeColor: 'text-pink-500 bg-pink-50 border-pink-100',
-      socials: [
-        { name: 'linkedin', icon: Linkedin, url: '#' },
-        { name: 'dribbble', icon: Dribbble, url: '#' },
-        { name: 'instagram', icon: Instagram, url: '#' },
-        { name: 'mail', icon: Mail, url: 'mailto:contact@nexoraempire.com' }
-      ]
-    },
-    {
-      id: 'asaah',
-      name: 'Marcus Tunde',
-      role: 'UI/UX Designer',
-      bio: 'Designs seamless and intuitive digital experiences that delight users and drive results.',
-      image: '/assets/images/marcus_avatar_1782241668323.webp',
-      badgeIcon: Layers,
-      badgeColor: 'text-pink-500 bg-pink-50 border-pink-100',
-      socials: [
-        { name: 'linkedin', icon: Linkedin, url: '#' },
-        { name: 'figma', icon: Figma, url: '#' },
-        { name: 'dribbble', icon: Dribbble, url: '#' },
         { name: 'mail', icon: Mail, url: 'mailto:contact@nexoraempire.com' }
       ]
     }

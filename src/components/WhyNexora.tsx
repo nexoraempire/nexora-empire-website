@@ -248,74 +248,32 @@ export const WhyNexora: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Stacking Sticky Cards Container */}
-        <div className="relative w-full max-w-6xl mx-auto flex flex-col gap-16 md:gap-20">
           {cards.map((card, idx) => {
             return (
               <div
                 key={card.id}
-                className="lg:sticky relative w-full lg:h-[395px] h-auto transition-all duration-500 lg:top-[var(--sticky-top)] top-0"
+                className="lg:sticky relative w-full h-auto transition-all duration-500 lg:top-[var(--sticky-top)] top-0"
                 style={{ 
                   '--sticky-top': `${90 + idx * 8}px`,
                   zIndex: 10 + idx
                 } as React.CSSProperties}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch w-full h-full">
-                  
-                  {/* LEFT CARD (Span: 4): Personal bio card */}
-                  <div className="hidden lg:flex lg:col-span-4 bg-[#05050a]/95 backdrop-blur-xl border border-zinc-850 p-4 lg:p-5 rounded-3xl flex-col justify-between h-full relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-brand-violet/30 transition-colors duration-500">
-                    <div className="space-y-2.5">
-                      <div className="flex flex-col items-center text-center">
-                        <div className="relative mb-1.5">
-                          <img 
-                            src={getSrc(card.avatar)} 
-                            alt={card.name} 
-                            className="w-12 h-12 rounded-full object-cover border-2 border-brand-violet/50 shadow-[0_0_15px_rgba(139,92,246,0.3)]"
-                            referrerPolicy="no-referrer"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                          <div className="absolute bottom-0 right-0.5 bg-[#10b981] w-2.5 h-2.5 rounded-full border-2 border-[#05050a] flex items-center justify-center">
-                            <span className="w-1 h-1 bg-white rounded-full animate-pulse" />
-                          </div>
-                        </div>
-                        <h3 className="font-display text-base font-bold text-white tracking-tight">{card.name}</h3>
-                        <p className="text-[10px] font-mono font-medium text-brand-violet mt-0.5">{card.role}</p>
-                        <p className="text-[8px] text-zinc-500 font-mono uppercase tracking-wider">Nexora Empire</p>
-                      </div>
-                      
-                      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
-                      
-                      <div className="space-y-1.5 text-left font-sans text-xs sm:text-[11.5px] text-zinc-400 leading-relaxed font-normal">
-                        <p>{card.bio1}</p>
-                        <p>{card.bio2}</p>
-                        <p>{card.bio3}</p>
-                      </div>
-                    </div>
+                <div className="bg-[#05050a]/95 backdrop-blur-xl border border-zinc-850 rounded-3xl p-5 md:p-6 lg:p-8 relative group shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-brand-violet/30 transition-colors duration-500">
+                  {/* Subtle card radial gradient overlay */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(109,40,217,0.02)_0%,transparent_100%)] pointer-events-none" />
 
-                    <div className="mt-3 pt-2 border-t border-zinc-900">
-                      <button
-                        onClick={() => handleWhatsAppRedirect(card.whatsappMsg)}
-                        className="group w-full relative py-2 px-3 rounded-xl bg-indigo-950/20 border border-indigo-500/10 text-white font-sans font-bold text-xs flex items-center justify-center gap-2 hover:border-brand-electric hover:shadow-[0_4px_20px_rgba(0,190,250,0.15)] active:scale-[0.98] transition-all duration-300 cursor-pointer"
-                      >
-                        <span className="relative z-10 flex items-center gap-1.5 font-bold tracking-wide text-zinc-300 group-hover:text-white transition-colors">
-                          Let's talk 
-                          <svg className="w-3.5 h-3.5 fill-brand-electric group-hover:fill-white transition-colors" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.588 1.976 14.113.953 11.5.953c-5.44 0-9.865 4.371-9.869 9.802-.001 1.736.463 3.429 1.343 4.92l-.996 3.639 3.737-.961c1.472.8 2.946 1.2 4.41.2zM17.15 14.92c-.284-.144-1.68-.823-1.94-.917-.26-.094-.449-.144-.638.144-.19.288-.731.917-.897 1.107-.165.19-.33.213-.614.07-.284-.144-1.2-.441-2.285-1.41-.845-.75-1.415-1.678-1.58-1.965-.165-.288-.018-.444.124-.585.129-.127.284-.33.427-.496.142-.165.19-.283.284-.472.094-.19.047-.354-.024-.496-.071-.142-.638-1.536-.874-2.107-.23-.554-.462-.48-.638-.49-.166-.008-.354-.01-.543-.01-.189 0-.496.071-.756.354-.26.283-.992.969-.992 2.364s1.015 2.738 1.157 2.926c.142.189 2.002 3.036 4.85 4.248.678.29 1.206.463 1.618.593.681.216 1.3.186 1.79.113.547-.081 1.68-.686 1.916-1.35.236-.663.236-1.231.165-1.35-.071-.12-.26-.19-.544-.334z" />
-                          </svg>
-                        </span>
-                        <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-brand-violet/15 to-indigo-950/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                      </button>
-                    </div>
+                  {/* Large decorative index marker top-right */}
+                  <div className="absolute top-4 right-6 text-right select-none pointer-events-none">
+                    <span className="font-mono text-3xl sm:text-4xl font-black text-indigo-950/70 tracking-tighter block leading-none">
+                      {card.indexStr}
+                    </span>
+                    <div className="w-6 h-[1.5px] bg-brand-violet/40 ml-auto mt-0.5" />
                   </div>
 
-                  {/* RIGHT CARD (Span: 8): Problem and Solution split with Left-hand Mockup Image */}
-                  <div className="lg:col-span-8 bg-[#05050a]/95 backdrop-blur-xl border border-zinc-850 rounded-3xl overflow-hidden flex flex-col md:flex-row h-full relative group shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-brand-violet/30 transition-colors duration-500">
-                    {/* Subtle card radial gradient overlay */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(109,40,217,0.02)_0%,transparent_100%)] pointer-events-none" />
-
-                    {/* Left half of Right Card: Rounded embedded image flush with boundaries */}
-                    <div className="w-full md:w-[45%] relative overflow-hidden h-[250px] sm:h-[280px] md:h-full border-b md:border-b-0 md:border-r border-zinc-900/60 shrink-0">
+                  <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch text-left">
+                    
+                    {/* Left side: Mockup Image or Lazy Video */}
+                    <div className="w-full lg:w-[35%] relative overflow-hidden h-[340px] sm:h-[400px] lg:h-auto border border-zinc-900 rounded-2xl shrink-0 min-h-[340px] lg:min-h-[420px]">
                       {getSrc(card.workImage).endsWith('.mp4') ? (
                         <LazyVideo 
                           src={getSrc(card.workImage)} 
@@ -334,71 +292,72 @@ export const WhyNexora: React.FC = () => {
                         />
                       )}
                       {/* Clean gradient overlay on image */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020205]/85 via-[#020205]/20 to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#020205]/80 via-transparent to-transparent pointer-events-none" />
                     </div>
 
-                    {/* Right half of Right Card: Problem, Solution, Index badge and CTA */}
-                    <div className="w-full md:w-[55%] p-4 lg:p-5 flex flex-col justify-between h-full relative text-left">
+                    {/* Right side: Topic, Problem/Solution side-by-side, and CTA */}
+                    <div className="flex-1 flex flex-col justify-between gap-6">
                       
-                      {/* Large decorative index marker top-right */}
-                      <div className="absolute top-3 right-5 text-right select-none pointer-events-none">
-                        <span className="font-mono text-3xl sm:text-4xl font-black text-indigo-950/70 tracking-tighter block leading-none">
-                          {card.indexStr}
-                        </span>
-                        <div className="w-6 h-[1.5px] bg-brand-violet/40 ml-auto mt-0.5" />
-                      </div>
-
-                      {/* Header/Content Area */}
-                      <div className="space-y-2.5 lg:space-y-2.5 pr-2">
-                        
-                        {/* PROBLEM SECTION */}
-                        <div className="space-y-0.5">
-                          <div className="flex items-center gap-1.5 text-red-500">
-                            <span className="w-4 h-4 rounded-full bg-red-950/40 border border-red-800/40 flex items-center justify-center shrink-0">
-                              <X className="w-2 h-2 stroke-[2.5]" />
-                            </span>
-                            <span className="text-[8px] font-mono font-bold tracking-[0.2em] uppercase">
-                              PROBLEM
-                            </span>
-                          </div>
-                          <h4 className="font-display font-extrabold text-xs sm:text-[13px] text-white leading-tight">
-                            {card.problem.title}
-                          </h4>
-                          <p className="font-sans text-[10.5px] sm:text-[11.5px] text-zinc-400 leading-relaxed font-normal">
-                            {card.problem.desc}
-                          </p>
+                      <div className="space-y-4">
+                        {/* Header Topic */}
+                        <div className="border-b border-zinc-900 pb-3">
+                          <span className="text-xs font-mono font-bold text-brand-electric uppercase tracking-widest">
+                            {card.topic}
+                          </span>
                         </div>
 
-                        {/* Fine separator */}
-                        <div className="w-full h-[1px] bg-zinc-900" />
-
-                        {/* SOLUTION SECTION */}
-                        <div className="space-y-0.5">
-                          <div className="flex items-center gap-1.5 text-emerald-400">
-                            <span className="w-4 h-4 rounded-full bg-emerald-950/40 border border-emerald-800/40 flex items-center justify-center shrink-0">
-                              <Check className="w-2 h-2 stroke-[2.5]" />
-                            </span>
-                            <span className="text-[8px] font-mono font-bold tracking-[0.2em] uppercase">
-                              SOLUTION
-                            </span>
+                        {/* Side-by-side layout for Problem & Solution */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 relative">
+                          
+                          {/* PROBLEM SECTION */}
+                          <div className="space-y-2 bg-red-950/5 border border-red-900/10 rounded-2xl p-4 sm:p-5 hover:border-red-900/25 transition-all duration-300">
+                            <div className="flex items-center gap-1.5 text-red-500">
+                              <span className="w-4 h-4 rounded-full bg-red-950/40 border border-red-800/40 flex items-center justify-center shrink-0">
+                                <X className="w-2 h-2 stroke-[2.5]" />
+                              </span>
+                              <span className="text-[9px] font-mono font-bold tracking-[0.2em] uppercase">
+                                PROBLEM
+                              </span>
+                            </div>
+                            <h4 className="font-display font-extrabold text-sm text-white leading-tight">
+                              {card.problem.title}
+                            </h4>
+                            <p className="font-sans text-xs text-zinc-400 leading-relaxed font-normal">
+                              {card.problem.desc}
+                            </p>
                           </div>
-                          <h4 className="font-display font-extrabold text-xs sm:text-[13px] text-white leading-tight">
-                            {card.solution.title}
-                          </h4>
-                          <p className="font-sans text-[10.5px] sm:text-[11.5px] text-zinc-300 leading-relaxed font-normal">
-                            {card.solution.desc}
-                          </p>
-                        </div>
 
+                          {/* Divider line for larger screens */}
+                          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-zinc-900/80 -translate-x-1/2" />
+
+                          {/* SOLUTION SECTION */}
+                          <div className="space-y-2 bg-emerald-950/5 border border-emerald-900/10 rounded-2xl p-4 sm:p-5 hover:border-emerald-900/25 transition-all duration-300">
+                            <div className="flex items-center gap-1.5 text-emerald-400">
+                              <span className="w-4 h-4 rounded-full bg-emerald-950/40 border border-emerald-800/40 flex items-center justify-center shrink-0">
+                                <Check className="w-2 h-2 stroke-[2.5]" />
+                              </span>
+                              <span className="text-[9px] font-mono font-bold tracking-[0.2em] uppercase">
+                                SOLUTION
+                              </span>
+                            </div>
+                            <h4 className="font-display font-extrabold text-sm text-white leading-tight">
+                              {card.solution.title}
+                            </h4>
+                            <p className="font-sans text-xs text-zinc-300 leading-relaxed font-normal">
+                              {card.solution.desc}
+                            </p>
+                          </div>
+
+                        </div>
                       </div>
 
-                      {/* Premium wide CTA Banner button at bottom */}
-                      <div className="mt-2.5 lg:mt-3">
+                      {/* Bottom CTA Action Button */}
+                      <div className="flex justify-start">
                         <button
                           onClick={() => handleWhatsAppRedirect(card.whatsappMsg)}
-                          className="group w-full relative py-2.5 px-3.5 rounded-xl bg-gradient-to-r from-blue-700 to-brand-violet text-white font-sans text-xs font-semibold flex items-center justify-between gap-3 transition-all duration-300 hover:shadow-[0_4px_25px_rgba(99,102,241,0.3)] hover:brightness-110 active:scale-[0.98] cursor-pointer"
+                          className="group relative w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-700 to-brand-violet text-white font-sans text-xs font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:shadow-[0_4px_25px_rgba(99,102,241,0.3)] hover:brightness-110 active:scale-[0.98] cursor-pointer"
                         >
-                          <span className="relative z-10 font-medium text-left">
+                          <span className="relative z-10 font-medium">
                             {card.ctaText}
                           </span>
                           <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -410,13 +369,10 @@ export const WhyNexora: React.FC = () => {
                     </div>
 
                   </div>
-
                 </div>
               </div>
             );
           })}
-        </div>
-
       </div>
     </section>
   );
