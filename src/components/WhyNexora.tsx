@@ -73,20 +73,20 @@ export const WhyNexora: React.FC = () => {
       role: 'Founder & CEO & CTO',
       avatar: foffeAvatar,
       workImage: weBuildWebsites,
-      topic: 'Websites & Applications',
+      topic: 'Custom Software & Apps',
       bio1: <span>Hi, I'm Foffe — <span className="font-semibold text-white">Founder, CEO & CTO</span> at Nexora Empire.</span>,
-      bio2: <span>Outdated, slow, or poorly developed websites are the <span className="font-semibold text-white">silent killers of business growth</span>. A modern brand needs <span className="font-semibold text-white">lightning-fast, secure, and beautiful systems</span> to compete.</span>,
-      bio3: <span>Let's craft an <span className="font-semibold text-white">elite digital experience</span> that elevates your business above the competition and <span className="font-semibold text-white">converts visitors into customers</span>.</span>,
-      whatsappMsg: "Hi Foffe, I'd like to discuss starting a modern website or application project with Nexora Empire!",
+      bio2: <span>Slow, rigid, or poorly engineered business systems are the <span className="font-semibold text-white">silent killers of operational growth</span>. Modern brands require <span className="font-semibold text-white">custom software development services</span> that are secure and built to scale.</span>,
+      bio3: <span>Let's build an <span className="font-semibold text-white">enterprise software solution</span> tailored precisely to your workflows to <span className="font-semibold text-white">automate operations and boost productivity</span>.</span>,
+      whatsappMsg: "Hi Foffe, I'd like to discuss custom software development services and applications with Nexora Empire!",
       problem: {
-        title: 'No Professional Presence',
-        desc: <span>Outdated websites or no website at all makes your business look <span className="font-semibold text-zinc-300">untrustworthy</span> and <span className="font-semibold text-zinc-300">drives potential customers away</span>.</span>
+        title: 'Rigid Off-The-Shelf Software',
+        desc: <span>Generic, off-the-shelf systems force you to adapt your workflows to their limits, causing <span className="font-semibold text-zinc-300">integration friction, operational delays</span>, and <span className="font-semibold text-zinc-300">security vulnerabilities</span>.</span>
       },
       solution: {
-        title: 'Modern Websites That Convert',
-        desc: <span>We build <span className="font-semibold text-white">fast, responsive, and high-converting websites</span> that establish trust, reflect your brand, and turn visitors into loyal customers.</span>
+        title: 'Custom Enterprise Software Development',
+        desc: <span>We provide <span className="font-semibold text-white">enterprise software development services</span>, including <span className="font-semibold text-white">custom CRM development</span> and tailored <span className="font-semibold text-white">custom business software</span> designed from scratch around your specific workflows.</span>
       },
-      ctaText: 'Ready to elevate your digital presence?'
+      ctaText: 'Ready to discuss custom enterprise software development?'
     },
     {
       id: 'yeseh',

@@ -51,7 +51,7 @@ export const FAQ: React.FC<FAQProps> = ({ setView }) => {
       id: 'faq-5',
       indexStr: '05',
       question: 'What types of software can Nexora Empire build?',
-      answer: <span>We build a wide range of custom software solutions, including web applications, native and cross-platform mobile apps (iOS & Android), custom CRM systems, e-commerce platforms, workflow automation scripts, API integrations, and bespoke AI applications. All our systems are designed with modern tech stacks like React, Next.js, Node.js, and Python.</span>
+      answer: <span>We design and deliver a wide range of software development solutions tailored to specific industries. This includes <span className="font-semibold text-zinc-200">custom CRM development</span>, scalable <span className="font-semibold text-zinc-200">ecommerce software solutions</span>, custom web portals, and native mobile apps. If your organization requires <span className="font-semibold text-zinc-200">healthcare software solutions</span> or <span className="font-semibold text-zinc-200">education software solutions</span>, we engineer systems that optimize operations and meet compliance standards.</span>
     },
     {
       id: 'faq-6',

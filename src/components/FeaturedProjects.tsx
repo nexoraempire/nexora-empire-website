@@ -142,7 +142,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setView }) =
           
           {/* Elegant Subtitle Description with specific word styling requested */}
           <p className="text-sm sm:text-base md:text-md text-slate-500 max-w-3xl mx-auto leading-relaxed font-normal" id="projects-description">
-            Explore some of the websites, applications, and digital experiences we've designed and developed for businesses across <span className="font-semibold text-slate-800">different industries</span>.
+            Explore our custom software development projects, enterprise platforms, web applications, and digital experiences engineered to solve real business challenges.
           </p>
         </motion.div>
       </div>
