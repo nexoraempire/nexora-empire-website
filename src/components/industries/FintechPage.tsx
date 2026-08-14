@@ -245,15 +245,16 @@ export const FintechPage: React.FC<FintechPageProps> = ({ setView }) => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/30" id="fintech-faq-section">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* FAQ Section (Always Dark Mode) */}
+      <section className="relative py-20 md:py-28 border-t border-indigo-950/20 bg-[#060814] text-white" id="fintech-faq-section">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#060814] via-[#060814]/90 to-[#020205]/95 pointer-events-none" />
+        <div className="relative max-w-4xl mx-auto px-6 z-10">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/50 text-xs font-bold text-blue-600 tracking-wider uppercase font-sans mb-4">
-              <span className="w-1.5 h-1.5 rounded-full border border-blue-600 bg-transparent" />
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-bold text-blue-300 tracking-wider uppercase font-sans mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
               FAQ
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#0e1629] leading-tight tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
               Frequently Asked Questions
             </h2>
           </div>
@@ -261,14 +262,14 @@ export const FintechPage: React.FC<FintechPageProps> = ({ setView }) => {
             {faqs.map((faq, idx) => (
               <div 
                 key={idx}
-                className="border-b border-slate-200/60 pb-4"
+                className="border-b border-indigo-950/40 pb-4"
               >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                  className="w-full py-4 flex justify-between items-center text-left text-base sm:text-lg font-bold text-[#0e1629] hover:text-indigo-600 transition-colors focus:outline-none"
+                  className="w-full py-4 flex justify-between items-center text-left text-base sm:text-lg font-bold text-white hover:text-indigo-400 transition-colors focus:outline-none"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-450 transform transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-slate-500 transform transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {expandedFaq === idx && (
@@ -278,7 +279,7 @@ export const FintechPage: React.FC<FintechPageProps> = ({ setView }) => {
                       exit={{ height: 0, opacity: 0 }}
                       className="overflow-hidden"
                     >
-                      <p className="font-sans text-xs sm:text-sm text-slate-500 leading-relaxed pt-2">
+                      <p className="font-sans text-xs sm:text-sm text-slate-400 leading-relaxed pt-2">
                         {faq.a}
                       </p>
                     </motion.div>
@@ -290,13 +291,14 @@ export const FintechPage: React.FC<FintechPageProps> = ({ setView }) => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/40 text-center" id="fintech-cta-section">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#0e1629] leading-tight tracking-tight mb-6">
+      {/* CTA (Always Dark Mode) */}
+      <section className="relative py-20 md:py-28 border-t border-indigo-950/20 bg-[#020205] text-white text-center" id="fintech-cta-section">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-[#020205]/95 to-[#060814]/80 pointer-events-none" />
+        <div className="relative max-w-4xl mx-auto px-6 z-10">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6">
             Ready to Build Your Fintech Platform?
           </h2>
-          <p className="font-sans text-slate-500 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="font-sans text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             Partner with our software development company to engineer custom fintech systems and payment architectures.
           </p>
           <button 
