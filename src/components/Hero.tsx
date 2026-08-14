@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
             >
               <h1 className="font-display text-[36px] sm:text-[50px] md:text-[60px] lg:text-[68px] font-extrabold text-white leading-[1.08] tracking-tight">
                 Custom Software <br />
-                Development Services <br />
+                Development Company <br />
                 for <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Modern Businesses</span>
               </h1>
             </div>
