@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  ArrowUpRight, 
+  ArrowRight, 
+  ChevronRight,
   ChevronDown, 
   Heart, 
   ShieldCheck, 
@@ -12,7 +13,8 @@ import {
   Server, 
   Users, 
   Database,
-  CheckCircle2
+  CheckCircle2,
+  Headphones
 } from 'lucide-react';
 
 interface HealthcarePageProps {
@@ -50,85 +52,210 @@ export const HealthcarePage: React.FC<HealthcarePageProps> = ({ setView }) => {
   ];
 
   return (
-    <div className="relative w-full bg-white text-slate-900 overflow-hidden min-h-screen" id="healthcare-page-root">
-      {/* Visual background grid accents */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none -z-10" />
+    <div className="relative w-full bg-[#030308] text-slate-100 overflow-hidden" id="healthcare-page-root">
+      
+      {/* Background radial accent glows */}
+      <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-indigo-900/10 rounded-full filter blur-[120px] pointer-events-none" />
+      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full filter blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-[10%] left-[20%] w-[500px] h-[500px] bg-brand-violet/10 rounded-full filter blur-[130px] pointer-events-none" />
+      
+      {/* Structural grid overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none -z-10" />
 
-      {/* Hero Wrapper */}
-      <div className="relative w-full overflow-hidden border-b border-slate-900/10 bg-[#060814]" id="healthcare-hero-wrapper">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 scale-105 pointer-events-none"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop')" }} 
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060814] via-[#060814]/85 to-[#020205]/95 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
+      {/* Left-Aligned Premium Hero */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 border-b border-indigo-950/40 bg-[#020205]/40" id="healthcare-hero">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left side text contents */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <span className="font-mono text-[10px] sm:text-xs tracking-[0.25em] font-black text-brand-electric uppercase px-3 py-1.5 rounded-full bg-brand-electric/5 border border-brand-electric/15 inline-flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-electric animate-pulse" />
+                Healthcare Software Solutions
+              </span>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-20 md:pt-40 md:pb-28 z-10 text-left">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-300 tracking-wider uppercase font-sans mb-6">
-            <Heart className="w-4 h-4 text-indigo-400 animate-pulse shrink-0" />
-            Healthcare Software Solutions
-          </span>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
-            Custom Healthcare <br className="hidden sm:inline" />
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-              Software Development
-            </span>
-          </h1>
-          <p className="font-sans text-slate-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl mb-8">
-            Nexora Empire is a custom healthcare software development company. We engineer secure, HIPAA-compliant healthcare software solutions, telemedicine applications, and healthcare management software designed to improve patient care and streamline clinical operations.
-          </p>
-          <button 
-            onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%20I%20would%20like%20to%20discuss%20custom%20healthcare%20software%20development%20solutions%20for%20my%20organization.', '_blank')}
-            className="group inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-sans text-sm font-semibold tracking-wide rounded-2xl transition-all duration-300 shadow-lg shadow-blue-600/15"
-          >
-            Consult Our Healthcare Tech Experts
-            <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </button>
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
+                Custom Healthcare <br className="hidden sm:inline" />
+                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
+                  Software Development
+                </span>
+              </h1>
+
+              <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                Nexora Empire is a custom healthcare software development company. We engineer secure, HIPAA-compliant healthcare software solutions, telemedicine applications, and healthcare management software designed to improve patient care and streamline clinical operations.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button
+                  onClick={() => {
+                    window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%20I%20would%20like%20to%20discuss%20custom%20healthcare%20software%20development%20solutions%20for%20my%20organization.', '_blank');
+                  }}
+                  className="flex items-center justify-center px-8 py-4 rounded-2xl bg-[linear-gradient(90deg,#2F5BFF_0%,#4A47FF_35%,#6A38F8_70%,#8B1DCA_100%)] text-white font-sans text-sm font-semibold tracking-wide hover:brightness-110 hover:shadow-[0_0_20px_rgba(106,56,248,0.3)] transition-all cursor-pointer"
+                >
+                  Start Your Project
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
+              </div>
+            </div>
+            
+            <div className="lg:col-span-5" />
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Row 1: Left/Right Narrative */}
-      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/30" id="healthcare-dna-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      {/* Services Section in Light Mode (What We Build Cards) */}
+      <section className="relative py-28 sm:py-36 bg-[#fafbfc] border-t border-b border-slate-200/50 overflow-hidden" id="healthcare-services-section">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-tr from-blue-50/40 to-indigo-50/40 rounded-full blur-[140px] pointer-events-none opacity-80" />
+        
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 font-sans">
+          
+          {/* Section Header */}
+          <div className="w-full mb-20 flex flex-col items-center text-center max-w-3xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full bg-[#2F5BFF]/5 border border-[#2F5BFF]/20 mb-6 select-none shadow-[0_2px_10px_rgba(47,91,255,0.03)]"
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-[#2F5BFF]" />
+              <span className="font-mono text-xs tracking-[0.18em] font-extrabold text-[#2F5BFF]">
+                WHAT WE BUILD
+              </span>
+            </motion.div>
+
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-display text-5xl md:text-6xl lg:text-[64px] font-[900] text-slate-900 leading-[1.1] tracking-tight mb-6"
+            >
+              Healthcare Tech <br className="hidden sm:inline" />
+              <span className="bg-[linear-gradient(90deg,#2F5BFF_0%,#4A47FF_35%,#6A38F8_70%,#8B1DCA_100%)] bg-clip-text text-transparent">Every Need</span>
+            </motion.h2>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-slate-500 font-sans text-base sm:text-lg leading-relaxed font-medium max-w-2xl mx-auto"
+            >
+              We understand that healthcare providers require secure, reliable, and high-performance digital platforms.
+            </motion.p>
+          </div>
+
+          {/* Grid of services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="healthcare-services-grid">
+            {[
+              {
+                id: 'ehr',
+                title: 'EHR/EMR Systems',
+                description: 'Custom electronic health records software designed for secure charts management and laboratory access control.',
+                icon: Database
+              },
+              {
+                id: 'telemed',
+                title: 'Telemedicine Apps',
+                description: 'Web and mobile app solutions built with secure WebRTC video, calendar bookings, and encrypted messaging.',
+                icon: Users
+              },
+              {
+                id: 'portal',
+                title: 'Healthcare Portals',
+                description: 'Self-service patient dashboards offering secure medical history access, invoice records, and prescription renewals.',
+                icon: Lock
+              },
+              {
+                id: 'clinic',
+                title: 'Clinical Management',
+                description: 'Robust hospital enterprise systems built to streamline staff rosters, inventory tracking, and billing integrations.',
+                icon: Server
+              }
+            ].map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div 
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                  transition={{ duration: 0.7, delay: index * 0.05 }}
+                  className="bg-white rounded-[24px] border border-slate-100/90 p-8 flex flex-col h-full justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_24px_50px_rgba(47,91,255,0.05)] hover:border-[#2F5BFF]/25 group cursor-pointer text-left"
+                  id={service.id}
+                >
+                  <div>
+                    {/* Icon Box */}
+                    <div className="w-14 h-14 rounded-2xl bg-[#2F5BFF]/10 flex items-center justify-center mb-6 transition-all group-hover:bg-[#2F5BFF]/15">
+                      <Icon className="w-7 h-7 text-[#2F5BFF]" strokeWidth={1.5} />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-display text-[22px] font-bold text-slate-900 leading-snug tracking-tight mb-3">
+                      {service.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-slate-500 text-sm font-sans leading-relaxed mb-8">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Learn More link */}
+                  <div className="inline-flex items-center gap-2 text-[#2F5BFF] hover:text-[#8B1DCA] font-semibold text-sm select-none group/btn transition-colors duration-200">
+                    <span>Learn More</span>
+                    <div className="w-5 h-5 rounded-full border border-[#2F5BFF] flex items-center justify-center transition-transform duration-300 group-hover/btn:translate-x-1.5">
+                      <ChevronRight className="w-3 h-3 text-[#2F5BFF]" />
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Left/Right Narrative (Aligned to Services light/dark values) */}
+      <section className="relative py-20 md:py-28 bg-[#020205] border-b border-indigo-950/20" id="healthcare-dna-section">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-5 space-y-6 text-left">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/50 text-xs font-bold text-blue-600 tracking-wider uppercase font-sans">
-                <span className="w-1.5 h-1.5 rounded-full border border-blue-600 bg-transparent" />
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <span className="font-mono text-[10px] tracking-[0.25em] font-bold text-brand-electric uppercase px-3 py-1.5 rounded-full bg-brand-electric/5 border border-brand-electric/15 inline-flex items-center">
                 Specialized Digital Solutions
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-[#0e1629] leading-tight tracking-tight">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-[900] text-white leading-tight tracking-tight">
                 Enterprise Healthcare <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Digital Solutions</span>
               </h2>
-              <p className="font-sans text-slate-500 text-base sm:text-lg leading-relaxed max-w-xl">
+              <p className="font-sans text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl">
                 We understand that healthcare providers require secure, reliable, and high-performance digital platforms. Our customized software solutions integrate seamlessly with existing hospital infrastructure, allowing doctors and medical staff to focus on delivering quality care.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-left">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
-                  <span className="font-sans text-xs sm:text-sm text-slate-600">HIPAA & GDPR Data Compliance</span>
+                  <CheckCircle2 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-350">HIPAA & GDPR Data Compliance</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
-                  <span className="font-sans text-xs sm:text-sm text-slate-600">Secure HL7/FHIR Integrations</span>
+                  <CheckCircle2 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-350">Secure HL7/FHIR Integrations</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
-                  <span className="font-sans text-xs sm:text-sm text-slate-600">Robust Patient Portal Security</span>
+                  <CheckCircle2 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-350">Robust Patient Portal Security</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
-                  <span className="font-sans text-xs sm:text-sm text-slate-600">Real-time Lab Analytics Dashboard</span>
+                  <CheckCircle2 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-350">Real-time Lab Analytics Dashboard</span>
                 </div>
               </div>
             </div>
             
-            <div className="lg:col-span-7 relative w-full h-[320px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-50">
-              <div className="absolute inset-0 bg-cover bg-center filter brightness-[0.95] contrast-[1.05]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop')" }} />
+            <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-indigo-950/40 bg-zinc-950/30">
+              <div className="absolute inset-0 bg-cover bg-center filter brightness-[0.7] contrast-[1.05]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop')" }} />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 z-10 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
-                  <Activity className="w-5 h-5 animate-pulse" />
+                <div className="w-10 h-10 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center text-white">
+                  <Activity className="w-5 h-5 animate-pulse text-indigo-400" />
                 </div>
                 <span className="font-mono text-xs text-white tracking-widest uppercase font-bold">Secure Clinic System Grid</span>
               </div>
@@ -137,174 +264,173 @@ export const HealthcarePage: React.FC<HealthcarePageProps> = ({ setView }) => {
         </div>
       </section>
 
-      {/* What We Build Cards */}
-      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/30" id="healthcare-cards-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/50 text-xs font-bold text-blue-600 tracking-wider uppercase font-sans mb-4">
-            <span className="w-1.5 h-1.5 rounded-full border border-blue-600 bg-transparent" />
-            Our Offerings
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#0e1629] leading-tight tracking-tight mb-16">
-            What We Build for Healthcare Providers
-          </h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* Card 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
-                <Database className="w-5 h-5 text-indigo-600" />
-              </div>
-              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
-                EHR/EMR Systems
-              </h3>
-              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                Custom electronic health records software designed for secure charts management and laboratory access control.
-              </p>
-              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
-                01
-              </div>
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
-                <Users className="w-5 h-5 text-indigo-600" />
-              </div>
-              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
-                Telemedicine Apps
-              </h3>
-              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                Web and mobile app solutions built with secure WebRTC video, calendar bookings, and encrypted messaging.
-              </p>
-              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
-                02
-              </div>
-            </motion.div>
-
-            {/* Card 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
-                <Lock className="w-5 h-5 text-indigo-600" />
-              </div>
-              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
-                Healthcare Portals
-              </h3>
-              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                Self-service patient dashboards offering secure medical history access, invoice records, and prescription renewals.
-              </p>
-              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
-                03
-              </div>
-            </motion.div>
-
-            {/* Card 4 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
-                <Server className="w-5 h-5 text-indigo-600" />
-              </div>
-              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
-                Clinical Management
-              </h3>
-              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                Robust hospital enterprise systems built to streamline staff rosters, inventory tracking, and billing integrations.
-              </p>
-              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
-                04
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section (Always Dark Mode) */}
-      <section className="relative py-20 md:py-28 border-t border-indigo-950/20 bg-[#060814] text-white" id="healthcare-faq-section">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#060814] via-[#060814]/90 to-[#020205]/95 pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-6 z-10">
+      {/* FAQ Section (Services exact accordion style) */}
+      <section className="relative py-20 bg-[#030308]/40 overflow-hidden border-t border-indigo-950/25" id="healthcare-faq">
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-bold text-blue-300 tracking-wider uppercase font-sans mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-              FAQ
+            <span className="font-mono text-[10px] tracking-[0.25em] font-bold text-indigo-400 uppercase">
+              RELIABLE ANSWERS
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white mt-3">
               Frequently Asked Questions
             </h2>
           </div>
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <div 
-                key={idx}
-                className="border-b border-indigo-950/40 pb-4"
-              >
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                  className="w-full py-4 flex justify-between items-center text-left text-base sm:text-lg font-bold text-white hover:text-indigo-400 transition-colors focus:outline-none"
+
+          <div className="space-y-4 max-w-3xl mx-auto">
+            {faqs.map((faq, idx) => {
+              const isOpen = expandedFaq === idx;
+              const indexStr = String(idx + 1).padStart(2, '0');
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.05 }}
+                  className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
+                    isOpen 
+                      ? "bg-gradient-to-r from-brand-electric/50 via-indigo-500/50 to-brand-violet/50 p-[1px] shadow-[0_4px_30px_rgba(109,40,217,0.12)]" 
+                      : "bg-[#05050a]/60 border border-zinc-900 hover:border-zinc-800"
+                  }`}
                 >
-                  <span>{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-500 transform transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
-                </button>
-                <AnimatePresence>
-                  {expandedFaq === idx && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
+                  <div className={`w-full rounded-[15px] bg-[#05050a] ${isOpen ? 'p-5 sm:p-6' : 'p-4 sm:p-5'}`}>
+                    {/* Question Header */}
+                    <button
+                      onClick={() => setExpandedFaq(isOpen ? null : idx)}
+                      className="w-full flex items-center justify-between gap-4 text-left cursor-pointer"
                     >
-                      <p className="font-sans text-xs sm:text-sm text-slate-400 leading-relaxed pt-2">
-                        {faq.a}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+                      <div className="flex items-center gap-4">
+                        {/* Index Badge */}
+                        <div className="shrink-0 flex items-center justify-center w-10 h-8 rounded-lg bg-indigo-950/35 border border-indigo-500/10 text-[#818cf8] font-mono text-[13px] font-bold">
+                          {indexStr}
+                        </div>
+                        
+                        {/* Question Text */}
+                        <span className="font-display font-bold text-white text-sm sm:text-base md:text-[17px] tracking-tight leading-tight">
+                          {faq.q}
+                        </span>
+                      </div>
+
+                      {/* Chevron Indicator */}
+                      <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-zinc-950/60 border border-zinc-900 text-zinc-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-brand-electric border-brand-violet/30 bg-violet-950/20' : ''}`}>
+                        <ChevronDown className="w-4 h-4 stroke-[2.5]" />
+                      </div>
+                    </button>
+
+                    {/* Expandable Answer */}
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pt-4 sm:pl-14 text-zinc-400 font-sans text-xs sm:text-sm leading-relaxed font-normal">
+                            {faq.a}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
+
+          {/* Bottom Banner Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-4xl mx-auto mt-16 sm:mt-20 p-5 sm:p-6 rounded-2xl sm:rounded-full bg-zinc-950/30 border border-zinc-900 backdrop-blur-xl flex flex-col sm:flex-row items-center justify-between gap-6"
+          >
+            <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
+              <div className="w-12 h-12 rounded-full bg-violet-950/40 border border-brand-violet/30 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(109,40,217,0.2)]">
+                <Headphones className="w-5.5 h-5.5 text-brand-violet" />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-white text-base">
+                  Still have questions?
+                </h3>
+                <p className="font-sans text-zinc-400 text-xs sm:text-sm mt-0.5">
+                  We're just a message away and ready to help you.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+              <button
+                onClick={() => {
+                  if (setView) setView('contact');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
+                className="group w-full sm:w-auto relative py-2.5 px-5 rounded-full bg-gradient-to-r from-blue-600 to-brand-violet text-white font-sans text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-1.5 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(99,102,241,0.25)] hover:brightness-110 active:scale-[0.98] cursor-pointer"
+              >
+                <span>Talk to Our Team</span>
+                <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
+              </button>
+
+              <button
+                onClick={() => {
+                  const msg = encodeURIComponent("Hi, I have some questions about your Healthcare Software Solutions.");
+                  window.open(`https://wa.me/237677079559?text=${msg}`, '_blank');
+                }}
+                className="group w-full sm:w-auto relative py-2.5 px-5 rounded-full bg-[#020205] text-gray-200 hover:text-white font-sans text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-2 transition-all duration-300 border border-zinc-800 hover:border-brand-violet/50 hover:bg-violet-950/10 active:scale-[0.98] cursor-pointer"
+              >
+                <svg className="w-4 h-4 fill-[#25d366] group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.588 1.976 14.113.953 11.5.953c-5.44 0-9.865 4.371-9.869 9.802-.001 1.736.463 3.429 1.343 4.92l-.996 3.639 3.737-.961c1.472.8 2.946 1.2 4.41.2zM17.15 14.92c-.284-.144-1.68-.823-1.94-.917-.26-.094-.449-.144-.638.144-.19.288-.731.917-.897 1.107-.165.19-.33.213-.614.07-.284-.144-1.2-.441-2.285-1.41-.845-.75-1.415-1.678-1.58-1.965-.165-.288-.018-.444.124-.585.129-.127.284-.33.427-.496.142-.165.19-.283.284-.472.094-.19.047-.354-.024-.496-.071-.142-.638-1.536-.874-2.107-.23-.554-.462-.48-.638-.49-.166-.008-.354-.01-.543-.01-.189 0-.496.071-.756.354-.26.283-.992.969-.992 2.364s1.015 2.738 1.157 2.926c.142.189 2.002 3.036 4.85 4.248.678.29 1.206.463 1.618.593.681.216 1.3.186 1.79.113.547-.081 1.68-.686 1.916-1.35.236-.663.236-1.231.165-1.35-.071-.12-.26-.19-.544-.334z" />
+                </svg>
+                <span>WhatsApp Us</span>
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA (Always Dark Mode) */}
-      <section className="relative py-20 md:py-28 border-t border-indigo-950/20 bg-[#020205] text-white text-center" id="healthcare-cta-section">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-[#020205]/95 to-[#060814]/80 pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-6 z-10">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6">
-            Ready to Build Your Healthcare Platform?
-          </h2>
-          <p className="font-sans text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-            Partner with our software development agency to build custom, secure, and performant healthcare digital products.
+      {/* Call to Action Aligned to Services Page Footer CTA */}
+      <section className="relative py-20 bg-[#020205] text-white text-center overflow-hidden border-t border-indigo-950/25" id="healthcare-cta">
+        <div className="max-w-4xl mx-auto px-6 space-y-8 relative z-10">
+          <span className="font-mono text-[10px] tracking-[0.25em] font-bold text-indigo-400 uppercase">
+            Let's Construct Your Web Presence
+          </span>
+          <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white">
+            Ready to Build Your <br />
+            Healthcare <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Digital Asset?</span>
+          </h3>
+          <p className="font-sans text-sm sm:text-base text-slate-400 max-w-xl mx-auto leading-relaxed">
+            Configure a personalized project blueprint or request a dynamic web stack demonstration from our lead software engineers today.
           </p>
-          <button 
-            onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%2520I%2520am%2520interested%2520in%2520your%2520healthcare%2520software%2520development%2520services.', '_blank')}
-            className="group inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-sans text-sm font-semibold tracking-wide rounded-2xl transition-all duration-300 shadow-lg shadow-blue-600/15"
-          >
-            Initiate Discovery Call
-            <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </button>
+
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-4">
+            <button
+              onClick={() => {
+                if (setView) setView('contact');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                if ((window as any).lenis) {
+                  (window as any).lenis.scrollTo(0);
+                }
+              }}
+              className="flex items-center justify-center px-8 py-4 rounded-2xl bg-[linear-gradient(90deg,#2F5BFF_0%,#4A47FF_35%,#6A38F8_70%,#8B1DCA_100%)] text-white font-sans text-sm font-semibold hover:brightness-110 hover:shadow-[0_0_25px_rgba(106,56,248,0.35)] transition-all cursor-pointer w-full sm:w-auto"
+            >
+              Get Custom Proposal
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </button>
+            <button
+              onClick={() => {
+                if (setView) setView('home');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                if ((window as any).lenis) {
+                  (window as any).lenis.scrollTo(0);
+                }
+              }}
+              className="flex items-center justify-center px-8 py-4 rounded-2xl bg-[#080815]/60 border border-indigo-500/25 text-white font-sans text-sm font-semibold hover:border-indigo-400 hover:bg-indigo-500/5 transition-all cursor-pointer w-full sm:w-auto"
+            >
+              Back to Home
+            </button>
+          </div>
         </div>
       </section>
     </div>
