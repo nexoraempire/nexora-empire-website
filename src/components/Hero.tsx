@@ -105,7 +105,7 @@ export const Hero: React.FC = () => {
               className="font-sans text-base sm:text-lg text-gray-400 font-normal leading-relaxed mb-10 max-w-xl"
               id="hero-subtitle"
             >
-              Nexora Empire builds custom software, enterprise platforms, and digital solutions for businesses, startups, and organizations locally and internationally.
+              We provide custom software development services, building tailored software solutions, enterprise applications, web applications, and digital products that help businesses, startups, and organizations solve problems, streamline operations, and grow.
             </p>
 
             {/* Call to Actions Action bar */}

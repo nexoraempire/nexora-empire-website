@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               className="text-sm sm:text-base md:text-md text-slate-500 max-w-xl leading-relaxed font-normal"
               id="about-description"
             >
-              Nexora Empire builds custom software solutions, high-performance web applications, and mobile apps. We help businesses automate workflows and grow their digital presence through enterprise software systems, local SEO strategies, and custom digital platforms engineered from our technology base in Buea, Cameroon.
+              As a custom software development agency, Nexora Empire builds tailored software solutions, high-performance web applications, and mobile apps. Our software development company helps businesses automate workflows, integrate custom CRM software, and grow through enterprise software development services.
             </motion.p>
 
             {/* Action link button to the full About Us Page / Our DNA */}
