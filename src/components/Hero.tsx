@@ -105,7 +105,7 @@ export const Hero: React.FC = () => {
               className="font-sans text-base sm:text-lg text-gray-400 font-normal leading-relaxed mb-10 max-w-xl"
               id="hero-subtitle"
             >
-              We provide custom software development services, building tailored software solutions, enterprise applications, web applications, and digital products that help businesses, startups, and organizations solve problems, streamline operations, and grow.
+              We provide <span className="font-semibold text-white">custom software development services</span>, building tailored <span className="font-semibold text-white">software solutions</span>, <span className="font-semibold text-white">enterprise applications</span>, <span className="font-semibold text-white">web applications</span>, and <span className="font-semibold text-white">digital products</span> that help businesses, startups, and organizations solve problems, <span className="font-semibold text-white">streamline operations</span>, and <span className="font-semibold text-white">grow</span>.
             </p>
 
             {/* Call to Actions Action bar */}

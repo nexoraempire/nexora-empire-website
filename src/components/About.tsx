@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               className="text-sm sm:text-base md:text-md text-slate-500 max-w-xl leading-relaxed font-normal"
               id="about-description"
             >
-              As a custom software development agency, Nexora Empire builds tailored software solutions, high-performance web applications, and mobile apps. Our software development company helps businesses automate workflows, integrate custom CRM software, and grow through enterprise software development services.
+              As a <span className="font-semibold text-slate-950">custom software development agency</span>, Nexora Empire builds tailored <span className="font-semibold text-slate-950">software solutions</span>, high-performance <span className="font-semibold text-slate-950">web applications</span>, and <span className="font-semibold text-slate-950">mobile apps</span>. Our <span className="font-semibold text-slate-950">software development company</span> helps businesses <span className="font-semibold text-slate-950">automate workflows</span>, integrate custom <span className="font-semibold text-slate-950">CRM software</span>, and grow through <span className="font-semibold text-slate-950">enterprise software development services</span>.
             </motion.p>
 
             {/* Action link button to the full About Us Page / Our DNA */}
