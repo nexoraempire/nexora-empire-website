@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  ArrowRight, 
+  ArrowUpRight, 
   ChevronDown, 
   GraduationCap, 
   ShieldCheck, 
@@ -12,7 +12,8 @@ import {
   Server, 
   Users, 
   Database,
-  Award
+  Award,
+  CheckCircle2
 } from 'lucide-react';
 
 interface EducationPageProps {
@@ -21,6 +22,14 @@ interface EducationPageProps {
 
 export const EducationPage: React.FC<EducationPageProps> = ({ setView }) => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+
+  // Scroll to top on load
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
+  }, []);
 
   const faqs = [
     {
@@ -42,172 +51,260 @@ export const EducationPage: React.FC<EducationPageProps> = ({ setView }) => {
   ];
 
   return (
-    <div className="relative w-full bg-slate-950 text-white overflow-hidden min-h-screen">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#0f172a_0%,#020617_100%)]" />
-      <div className="absolute top-[10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-indigo-900/10 blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[45vw] h-[45vw] rounded-full bg-violet-900/10 blur-[150px] pointer-events-none" />
+    <div className="relative w-full bg-white text-slate-900 overflow-hidden min-h-screen" id="education-page-root">
+      {/* Visual background grid accents */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none -z-10" />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 md:px-12 z-10 max-w-7xl mx-auto flex flex-col items-start text-left">
-        <span className="font-mono text-xs tracking-[0.2em] text-indigo-400 font-bold uppercase mb-6 flex items-center gap-2">
-          <GraduationCap className="w-4 h-4 text-indigo-400" />
-          Education Technology Solutions
-        </span>
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-          Education Software <br className="hidden sm:inline" />
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-            Development Solutions
+      {/* Hero Wrapper */}
+      <div className="relative w-full overflow-hidden border-b border-slate-900/10 bg-[#060814]" id="education-hero-wrapper">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 scale-105 pointer-events-none"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop')" }} 
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060814] via-[#060814]/85 to-[#020205]/95 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-20 md:pt-40 md:pb-28 z-10 text-left">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-300 tracking-wider uppercase font-sans mb-6">
+            <GraduationCap className="w-4 h-4 text-indigo-400 shrink-0" />
+            Education Technology Solutions
           </span>
-        </h1>
-        <p className="font-sans text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed mb-8">
-          Nexora Empire delivers custom education software solutions development. We design responsive learning management systems, e-learning platform development architectures, and education management software to automate academic workflows.
-        </p>
-        <button 
-          onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%20I%20would%20like%20to%20discuss%20custom%20education%20software%20solutions%20for%20my%20school.', '_blank')}
-          className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-brand-violet text-white font-sans text-sm font-semibold tracking-wide hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 active:scale-[0.97]"
-        >
-          Consult Our EdTech Experts
-          <ArrowRight className="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" />
-        </button>
-      </section>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+            Education Software <br className="hidden sm:inline" />
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
+              Development Solutions
+            </span>
+          </h1>
+          <p className="font-sans text-slate-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl mb-8">
+            Nexora Empire delivers custom education software solutions development. We design responsive learning management systems, e-learning platform development architectures, and education management software to automate academic workflows.
+          </p>
+          <button 
+            onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%20I%20would%20like%20to%20discuss%20custom%20education%20software%20solutions%20for%20my%20school.', '_blank')}
+            className="group inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-sans text-sm font-semibold tracking-wide rounded-2xl transition-all duration-300 shadow-lg shadow-blue-600/15"
+          >
+            Consult Our EdTech Experts
+            <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </button>
+        </div>
+      </div>
 
-      {/* Left/Right Visual Section (Education layout: Content on the Left, Image on the Right) */}
-      <section className="relative py-20 px-6 md:px-12 z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
-              Custom Education Management Software & Apps
-            </h2>
-            <p className="font-sans text-sm sm:text-base text-slate-400 leading-relaxed">
-              We design and construct interactive virtual classrooms, mobile learning applications, and student record software systems. Our systems are built around your school curriculum workflows to manage online learning seamlessly.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                <span className="font-sans text-xs sm:text-sm text-slate-300">Custom LMS Dashboard Portals</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                <span className="font-sans text-xs sm:text-sm text-slate-300">Interactive Quiz Engines</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                <span className="font-sans text-xs sm:text-sm text-slate-300">Unified Student Grade Ledgers</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                <span className="font-sans text-xs sm:text-sm text-slate-300">Automated Performance Reports</span>
+      {/* Row 1: Left/Right Narrative */}
+      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/30" id="education-dna-section">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/50 text-xs font-bold text-blue-600 tracking-wider uppercase font-sans">
+                <span className="w-1.5 h-1.5 rounded-full border border-blue-600 bg-transparent" />
+                Specialized Digital Solutions
+              </span>
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-[#0e1629] leading-tight tracking-tight">
+                Custom Education Management <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">Software & Apps</span>
+              </h2>
+              <p className="font-sans text-slate-500 text-base sm:text-lg leading-relaxed max-w-xl">
+                We design and construct interactive virtual classrooms, mobile learning applications, and student record software systems. Our systems are built around your school curriculum workflows to manage online learning seamlessly.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-left">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-600">Custom LMS Dashboard Portals</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-600">Interactive Quiz Engines</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-600">Unified Student Grade Ledgers</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                  <span className="font-sans text-xs sm:text-sm text-slate-600">Automated Performance Reports</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="lg:col-span-5 relative h-[320px] sm:h-[400px] rounded-3xl bg-slate-900 border border-indigo-950/40 overflow-hidden flex items-center justify-center">
-            {/* Visual fallback/abstract mockup */}
-            <div className="absolute inset-0 bg-cover bg-center opacity-45" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop')" }} />
-            <div className="relative z-10 flex flex-col items-center gap-4 px-6 text-center">
-              <BookOpen className="w-12 h-12 text-indigo-400 animate-bounce" />
-              <span className="font-mono text-xs text-indigo-300 tracking-wider">E-LEARNING DASHBOARD</span>
+            
+            <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-50">
+              <div className="absolute inset-0 bg-cover bg-center filter brightness-[0.95] contrast-[1.05]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop')" }} />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 z-10 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
+                  <BookOpen className="w-5 h-5 animate-pulse" />
+                </div>
+                <span className="font-mono text-xs text-white tracking-widest uppercase font-bold">Interactive Learning Hub</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What We Build */}
-      <section className="relative py-20 px-6 md:px-12 z-10 max-w-7xl mx-auto text-left">
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight mb-12 text-center">
-          What We Build for Academic Institutions
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-indigo-950/30 flex flex-col justify-between">
-            <div>
-              <BookOpen className="w-8 h-8 text-indigo-400 mb-4" />
-              <h3 className="font-display text-lg font-bold text-white mb-2">LMS Architectures</h3>
-              <p className="font-sans text-xs text-slate-400 leading-relaxed">
+      {/* What We Build Cards */}
+      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/30" id="education-cards-section">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/50 text-xs font-bold text-blue-600 tracking-wider uppercase font-sans mb-4">
+            <span className="w-1.5 h-1.5 rounded-full border border-blue-600 bg-transparent" />
+            Our Offerings
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#0e1629] leading-tight tracking-tight mb-16">
+            What We Build for Academic Institutions
+          </h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Card 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
+                <BookOpen className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
+                LMS Architectures
+              </h3>
+              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
                 Custom course managers, video hosting systems, and visual timelines mapping syllabus progression.
               </p>
-            </div>
-          </div>
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-indigo-950/30 flex flex-col justify-between">
-            <div>
-              <Video className="w-8 h-8 text-indigo-400 mb-4" />
-              <h3 className="font-display text-lg font-bold text-white mb-2">Virtual Classrooms</h3>
-              <p className="font-sans text-xs text-slate-400 leading-relaxed">
+              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
+                01
+              </div>
+            </motion.div>
+
+            {/* Card 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
+                <Video className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
+                Virtual Classrooms
+              </h3>
+              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
                 Secure real-time audio/video links integrated directly with class calendars and student rosters.
               </p>
-            </div>
-          </div>
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-indigo-950/30 flex flex-col justify-between">
-            <div>
-              <Award className="w-8 h-8 text-indigo-400 mb-4" />
-              <h3 className="font-display text-lg font-bold text-white mb-2">Grading Engines</h3>
-              <p className="font-sans text-xs text-slate-400 leading-relaxed">
+              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
+                02
+              </div>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
+                <Award className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
+                Grading Engines
+              </h3>
+              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
                 Interactive auto-graded questionnaire files and customizable digital certificates issuance pipelines.
               </p>
-            </div>
-          </div>
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-indigo-950/30 flex flex-col justify-between">
-            <div>
-              <Database className="w-8 h-8 text-indigo-400 mb-4" />
-              <h3 className="font-display text-lg font-bold text-white mb-2">Admissions Portals</h3>
-              <p className="font-sans text-xs text-slate-400 leading-relaxed">
+              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
+                03
+              </div>
+            </motion.div>
+
+            {/* Card 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="p-6 sm:p-8 rounded-[32px] bg-white border border-slate-150 shadow-[0_15px_30px_rgba(15,23,42,0.012)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.05)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50/60 flex items-center justify-center text-indigo-600 mb-5 border border-indigo-100/30">
+                <Database className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h3 className="font-display text-base font-bold text-[#0e1629] mb-3">
+                Admissions Portals
+              </h3>
+              <p className="text-slate-500 text-xs sm:text-sm font-sans leading-relaxed mb-6">
                 Automated student registry systems, tuition payment channels, and school statistics trackers.
               </p>
-            </div>
+              <div className="mt-auto w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center text-xs font-mono font-bold text-slate-400 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)]">
+                04
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20 px-6 md:px-12 z-10 max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight mb-12 text-center">
-          Frequently Asked Questions
-        </h2>
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => (
-            <div 
-              key={idx}
-              className="border-b border-indigo-950/40 pb-4"
-            >
-              <button
-                onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                className="w-full py-4 flex justify-between items-center text-left text-base sm:text-lg font-medium text-white hover:text-indigo-400 transition-colors focus:outline-none"
+      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/30" id="education-faq-section">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/50 text-xs font-bold text-blue-600 tracking-wider uppercase font-sans mb-4">
+              <span className="w-1.5 h-1.5 rounded-full border border-blue-600 bg-transparent" />
+              FAQ
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#0e1629] leading-tight tracking-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div 
+                key={idx}
+                className="border-b border-slate-200/60 pb-4"
               >
-                <span>{faq.q}</span>
-                <ChevronDown className={`w-5 h-5 text-slate-500 transform transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
-              </button>
-              <AnimatePresence>
-                {expandedFaq === idx && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
-                  >
-                    <p className="font-sans text-xs sm:text-sm text-slate-400 leading-relaxed pt-2">
-                      {faq.a}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
+                <button
+                  onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
+                  className="w-full py-4 flex justify-between items-center text-left text-base sm:text-lg font-bold text-[#0e1629] hover:text-indigo-600 transition-colors focus:outline-none"
+                >
+                  <span>{faq.q}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-450 transform transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>
+                  {expandedFaq === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="font-sans text-xs sm:text-sm text-slate-500 leading-relaxed pt-2">
+                        {faq.a}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 px-6 text-center z-10 max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-6">
-          Ready to Build Your E-Learning Platform?
-        </h2>
-        <p className="font-sans text-sm sm:text-base text-slate-400 mb-8 max-w-xl mx-auto">
-          Partner with our software development agency to build custom, secure, and modern education technology solutions.
-        </p>
-        <button 
-          onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%2520I%2520am%2520interested%2520in%2520your%2520education%2520software%2520solutions.', '_blank')}
-          className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-brand-violet text-white font-sans text-sm font-semibold tracking-wide hover:shadow-lg hover:shadow-indigo-500/20 active:scale-[0.98] transition-all cursor-pointer"
-        >
-          Initiate Discovery Call
-        </button>
+      <section className="relative py-20 md:py-28 border-t border-slate-100 bg-[#fafbfc]/40 text-center" id="education-cta-section">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#0e1629] leading-tight tracking-tight mb-6">
+            Ready to Build Your E-Learning Platform?
+          </h2>
+          <p className="font-sans text-slate-500 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            Partner with our software development agency to build custom, secure, and modern education technology solutions.
+          </p>
+          <button 
+            onClick={() => window.open('https://wa.me/237677079559?text=Hello%20Nexora%20Empire!%2520I%2520am%2520interested%2520in%2520your%2520education%2520software%2520solutions.', '_blank')}
+            className="group inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-sans text-sm font-semibold tracking-wide rounded-2xl transition-all duration-300 shadow-lg shadow-blue-600/15"
+          >
+            Initiate Discovery Call
+            <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </button>
+        </div>
       </section>
     </div>
   );
