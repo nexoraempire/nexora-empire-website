@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-55 select-none pointer-events-none transition-opacity duration-1000"
           style={{ mixBlendMode: 'screen' }}
           // @ts-ignore
-          fetchpriority="high"
+          fetchPriority="high"
         >
           <source 
             src="/assets/images/nexora-empire-hero-bg.mp4" 
