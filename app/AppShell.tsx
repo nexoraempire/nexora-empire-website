@@ -213,6 +213,46 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
           "areaServed": "Cameroon",
           "description": "Social media management and strategy services for businesses in Cameroon to grow online channels."
         });
+      } else if (pathname === '/industries/healthcare') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Custom Healthcare Software Development Company",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "description": "HIPAA-compliant custom healthcare software development services building EHR/EMR platforms and virtual care systems."
+        });
+      } else if (pathname === '/industries/fintech') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Fintech Software Development Company",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "description": "PCI-compliant fintech software development solutions including digital wallets, payment integrations, and microfinance systems."
+        });
+      } else if (pathname === '/industries/education') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Education Software Solutions Development",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "description": "Learning Management System (LMS) development, student databases, and customized educational portal engineering."
+        });
+      } else if (pathname === '/industries/ecommerce') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Ecommerce Software Solution Development",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "description": "High-performance e-commerce software platforms, B2B ordering portals, and multi-vendor marketplaces."
+        });
+      } else if (pathname === '/industries/enterprise') {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Enterprise Software Development Services",
+          "provider": { "@id": "https://www.nexoraempire.com/#organization" },
+          "description": "Custom enterprise software development, ERP platforms, workflow automation, and secure API integrations."
+        });
       }
     }
 

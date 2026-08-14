@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import { BrandLogo } from './BrandLogo.tsx';
-import { Globe, Smartphone, Palette, Cpu, TrendingUp, Video, GraduationCap, Share2 } from 'lucide-react';
+import { Globe, Smartphone, Palette, Cpu, TrendingUp, Video, GraduationCap, Share2, Heart, CreditCard, ShoppingBag, Layers } from 'lucide-react';
 
 const IconMap: Record<string, React.FC<any>> = {
   Globe,
@@ -12,21 +12,33 @@ const IconMap: Record<string, React.FC<any>> = {
   TrendingUp,
   Video,
   GraduationCap,
-  Share2
+  Share2,
+  Heart,
+  CreditCard,
+  ShoppingBag,
+  Layers
 };
 
 interface HeaderProps {
-  view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | '404';
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | '404') => void;
+  view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | 'industries/healthcare' | 'industries/fintech' | 'industries/education' | 'industries/ecommerce' | 'industries/enterprise' | '404';
+  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | 'industries/healthcare' | 'industries/fintech' | 'industries/education' | 'industries/ecommerce' | 'industries/enterprise' | '404') => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
   const [activeLink, setActiveLink] = useState(
-    view === 'about-us' ? 'About' : (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video' || view === 'social-media-management') ? 'Services' : view === 'portfolio' ? 'Work' : view === 'pricing' ? 'Pricing' : view === 'training-internship' ? 'Courses' : view === 'contact' ? 'Contact' : 'Home'
+    view === 'about-us' ? 'About' : 
+    (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video' || view === 'social-media-management') ? 'Services' : 
+    view.startsWith('industries/') ? 'Industries' :
+    view === 'portfolio' ? 'Work' : 
+    view === 'pricing' ? 'Pricing' : 
+    view === 'training-internship' ? 'Courses' : 
+    view === 'contact' ? 'Contact' : 'Home'
   );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
 
   React.useEffect(() => {
     const lenis = (window as any).lenis;
@@ -47,6 +59,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     'Home',
     'About',
     'Services',
+    'Industries',
     'Work',
     'Pricing',
     'Courses',
@@ -56,6 +69,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
   const isLinkActive = (link: string) => {
     if (view === 'about-us') return link === 'About';
     if (['web-dev', 'mobile-dev', 'branding-design', 'seo-growth', 'ai-video', 'social-media-management'].includes(view)) return link === 'Services';
+    if (view.startsWith('industries/')) return link === 'Industries';
     if (view === 'portfolio') return link === 'Work';
     if (view === 'pricing') return link === 'Pricing';
     if (view === 'training-internship') return link === 'Courses';
@@ -73,10 +87,19 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     { label: 'AI Video Production & Editing', id: 'service-card-05', iconName: 'Video' }
   ];
 
+  const industryOptions = [
+    { label: 'Healthcare', path: '/industries/healthcare', iconName: 'Heart' },
+    { label: 'Fintech', path: '/industries/fintech', iconName: 'CreditCard' },
+    { label: 'Education', path: '/industries/education', iconName: 'GraduationCap' },
+    { label: 'E-commerce', path: '/industries/ecommerce', iconName: 'ShoppingBag' },
+    { label: 'Enterprise Software', path: '/industries/enterprise', iconName: 'Layers' }
+  ];
+
   const idMap: Record<string, string> = {
     'Home': 'home',
     'About': 'about',
     'Services': 'services',
+    'Industries': 'industries',
     'Work': 'work',
     'Pricing': 'pricing',
     'Courses': 'training-internship',
@@ -312,6 +335,68 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
               );
             }
 
+            if (link === 'Industries') {
+              return (
+                <div
+                  key={link}
+                  className="relative group/industries-dropdown py-1"
+                  onMouseEnter={() => setIndustriesDropdownOpen(true)}
+                  onMouseLeave={() => setIndustriesDropdownOpen(false)}
+                >
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIndustriesDropdownOpen(!industriesDropdownOpen);
+                    }}
+                    className="flex items-center gap-1.5 text-sm font-sans font-medium tracking-wide text-gray-300/90 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg px-2 py-0.5 active:scale-95 cursor-pointer"
+                  >
+                    <span>{link}</span>
+                    <span className="text-[9px] text-gray-400 transform group-hover/industries-dropdown:rotate-180 transition-transform duration-300">
+                      ▼
+                    </span>
+                    {isCurrentActive && (
+                      <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-brand-electric shadow-[0_0_8px_rgba(0,190,250,0.8)]" />
+                    )}
+                  </button>
+
+                  {/* Dropdown Card */}
+                  <div
+                    className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-[#05050c]/95 backdrop-blur-3xl border border-indigo-950/70 rounded-2xl shadow-2xl p-3 flex flex-col gap-1.5 transition-all duration-300 z-50 origin-top ${
+                      industriesDropdownOpen
+                        ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
+                        : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    }`}
+                  >
+                    {/* Transparent bridge */}
+                    <div className="absolute -top-3 left-0 right-0 h-3 bg-transparent pointer-events-auto" />
+
+                    {industryOptions.map((opt) => {
+                      const IconComponent = IconMap[opt.iconName];
+                      return (
+                        <Link
+                          key={opt.label}
+                          href={opt.path}
+                          onClick={() => {
+                            setIndustriesDropdownOpen(false);
+                            setMobileMenuOpen(false);
+                          }}
+                          className="w-full text-left px-4 py-2.5 rounded-xl font-sans text-xs font-semibold text-slate-300 hover:text-white hover:bg-indigo-950/40 border border-transparent hover:border-indigo-900/35 transition-all duration-200 cursor-pointer flex items-center justify-between group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric focus-visible:border-transparent active:scale-[0.98]"
+                        >
+                          <div className="flex items-center gap-3">
+                            {IconComponent && <IconComponent className="w-4 h-4 text-indigo-400 group-hover:text-brand-electric transition-colors duration-200" />}
+                            <span className="tracking-wide">{opt.label}</span>
+                          </div>
+                          <span className="text-[10px] text-brand-electric opacity-0 group-hover:opacity-100 transform translate-x-[-4px] group-hover:translate-x-0 transition-all duration-200">
+                            →
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            }
+
             const targetPath = 
               link === 'Home' ? '/' :
               link === 'About' ? '/about-us' :
@@ -415,6 +500,45 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
                           <Link
                             key={opt.label}
                             href={servicePath}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                            }}
+                            className="w-full text-left py-2 text-xs font-semibold text-slate-400 hover:text-white transition-all cursor-pointer flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric rounded-lg px-2 active:scale-[0.98]"
+                          >
+                            {IconComponent && <IconComponent className="w-3.5 h-3.5 text-indigo-400 shrink-0" />}
+                            <span>{opt.label}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            if (link === 'Industries') {
+              return (
+                <div key={link} className="flex flex-col border-b border-indigo-950/20">
+                  <button
+                    onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                    className={`w-full text-base font-medium py-2 flex justify-between items-center text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-electric rounded-lg px-2 py-1 active:scale-[0.99] transition-all cursor-pointer ${
+                      isCurrentActive ? 'text-brand-electric font-semibold' : 'text-gray-300'
+                    }`}
+                  >
+                    <span>{link}</span>
+                    <span className={`text-[10px] text-slate-500 transform transition-transform duration-300 ${mobileIndustriesOpen ? 'rotate-180' : ''}`}>
+                      ▼
+                    </span>
+                  </button>
+                  
+                  {mobileIndustriesOpen && (
+                    <div className="pl-4 py-2 flex flex-col gap-3 bg-indigo-950/10 rounded-xl my-2 border border-indigo-950/30">
+                      {industryOptions.map((opt) => {
+                        const IconComponent = IconMap[opt.iconName];
+                        return (
+                          <Link
+                            key={opt.label}
+                            href={opt.path}
                             onClick={() => {
                               setMobileMenuOpen(false);
                             }}

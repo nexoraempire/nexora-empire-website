@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { AnimatedCounter } from './AnimatedCounter';
 import { 
@@ -110,6 +111,17 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               id="about-description"
             >
               As a <span className="font-semibold text-slate-950">custom software development agency</span>, Nexora Empire builds tailored <span className="font-semibold text-slate-950">software solutions</span>, high-performance <span className="font-semibold text-slate-950">web applications</span>, and <span className="font-semibold text-slate-950">mobile apps</span>. Our <span className="font-semibold text-slate-950">software development company</span> helps businesses <span className="font-semibold text-slate-950">automate workflows</span>, integrate custom <span className="font-semibold text-slate-950">CRM software</span>, and grow through <span className="font-semibold text-slate-950">enterprise software development services</span>.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.7, delay: 0.22 }}
+              className="text-sm sm:text-base md:text-md text-slate-500 max-w-xl leading-relaxed font-normal mt-4"
+              id="about-industries-links"
+            >
+              We engineer specialized systems across key sectors, delivering custom <Link href="/industries/healthcare" className="text-indigo-600 hover:text-indigo-800 font-semibold underline decoration-indigo-200">healthcare software solutions</Link>, secure <Link href="/industries/fintech" className="text-indigo-650 hover:text-indigo-800 font-semibold underline decoration-indigo-200">fintech platforms</Link>, interactive <Link href="/industries/education" className="text-indigo-600 hover:text-indigo-850 font-semibold underline decoration-indigo-200">e-learning systems</Link>, scalable <Link href="/industries/ecommerce" className="text-indigo-600 hover:text-indigo-800 font-semibold underline decoration-indigo-200">e-commerce stores</Link>, and robust <Link href="/industries/enterprise" className="text-indigo-600 hover:text-indigo-800 font-semibold underline decoration-indigo-200">enterprise software</Link>.
             </motion.p>
 
             {/* Action link button to the full About Us Page / Our DNA */}
