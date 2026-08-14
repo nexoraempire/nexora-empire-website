@@ -1,28 +1,28 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Website Development Company Cameroon | Nexora Empire',
-  description: 'Nexora Empire is a website development company in Cameroon. We build custom websites, e-commerce stores, and high-performance React and Next.js applications in Buea.',
-  keywords: 'Website Development Company Cameroon, Web Design Cameroon, Business Website Development Cameroon, Custom Website Development Cameroon',
+  title: 'Web Design & Development Services | Nexora Empire',
+  description: 'Nexora Empire offers professional web design and development services. We build responsive business website development, e-commerce stores, and custom web applications.',
+  keywords: 'Web Design and Development Services, Website Development Services, Custom Website Development, Web Development Services, Web Design Services, Business Website Development, Web Application Development, Web Design Services for Small Business',
   alternates: {
     canonical: 'https://www.nexoraempire.com/web-dev',
   },
   openGraph: {
     type: 'website',
     url: 'https://www.nexoraempire.com/web-dev',
-    title: 'Website Development Company Cameroon | Nexora Empire',
-    description: 'Nexora Empire is a website development company in Cameroon. We build custom websites, e-commerce stores, and high-performance React and Next.js applications in Buea.',
+    title: 'Web Design & Development Services | Nexora Empire',
+    description: 'Nexora Empire offers professional web design and development services. We build responsive business website development, e-commerce stores, and custom web applications.',
     images: [
       {
         url: 'https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp',
-        alt: 'Website Development Company Cameroon - Nexora Empire',
+        alt: 'Web Design & Development Services - Nexora Empire',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Development Company Cameroon | Nexora Empire',
-    description: 'Nexora Empire is a website development company in Cameroon. We build custom websites, e-commerce stores, and high-performance React and Next.js applications in Buea.',
+    title: 'Web Design & Development Services | Nexora Empire',
+    description: 'Nexora Empire offers professional web design and development services. We build responsive business website development, e-commerce stores, and custom web applications.',
     images: ['https://www.nexoraempire.com/assets/images/nexora-empire-logo.webp'],
   },
 };

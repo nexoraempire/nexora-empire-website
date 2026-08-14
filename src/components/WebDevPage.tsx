@@ -229,14 +229,14 @@ export const WebDevPage: React.FC<WebDevPageProps> = ({ setView }) => {
               </span>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none tracking-tight">
-                Custom Website <br className="hidden sm:inline" />
+                Web Design and <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-brand-violet bg-clip-text text-transparent">
-                  Development
+                  Development Services
                 </span>
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                As a custom website development company, we build high-performance e-commerce storefronts, SaaS platforms, corporate portals, and custom web applications optimized to rank well on Google Search and convert visitors into clients.
+                Nexora Empire offers professional web design and development services. We build responsive business websites, custom e-commerce storefronts, and optimized corporate portals that convert visitors into clients.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

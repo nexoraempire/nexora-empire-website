@@ -104,18 +104,34 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What custom software development services do you offer?",
+            "name": "What is custom software development?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nexora Empire provides custom software development, mobile application development (iOS & Android), web development (React & Next.js), SEO services, visual branding design, and AI automation tools in Buea, Cameroon."
+              "text": "Custom software development is the process of designing, building, deploying, and maintaining software tailored specifically for a set of users, functions, or organizations. Unlike off-the-shelf software, custom software solutions are engineered to fit your exact workflows, integrate with existing business systems, and scale alongside your business."
             }
           },
           {
             "@type": "Question",
-            "name": "How does Nexora Empire optimize websites for local SEO in Cameroon?",
+            "name": "How much does custom software development cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We optimize technical search properties, structure semantic content layouts, implement JSON-LD microdata schema, establish NAP consistency with Google Business Profile, and build fast, mobile-friendly platforms."
+              "text": "The cost of custom software development varies based on scope, feature complexity, integrations, and project requirements. We provide clear, transparent proposals with milestone-based pricing after our discovery session."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build custom software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Timelines depend directly on the scale and depth of the project. A standard business web application or website development project typically takes 3 to 6 weeks, while advanced custom enterprise software or native mobile applications can take 8 to 16 weeks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with businesses outside Cameroon?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! While Nexora Empire is proudly based in Buea, Cameroon, we operate as a global development partner. We serve international clients across Europe, North America, and other regions, using remote collaboration tools and agile methodologies."
             }
           }
         ]

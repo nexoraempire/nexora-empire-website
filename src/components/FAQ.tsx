@@ -26,38 +26,44 @@ export const FAQ: React.FC<FAQProps> = ({ setView }) => {
     {
       id: 'faq-1',
       indexStr: '01',
-      question: 'What services does Nexora Empire offer?',
-      answer: <span>We offer a complete range of digital services including <span className="font-semibold text-zinc-200">website development</span>, mobile app development, branding & graphic design, AI solutions, <span className="font-semibold text-zinc-200">AI video creation & editing</span>, digital growth services, and training & internship programs.</span>
+      question: 'What is custom software development?',
+      answer: <span>Custom software development is the process of designing, building, deploying, and maintaining software tailored specifically for a set of users, functions, or organizations. Unlike off-the-shelf software, custom software solutions are engineered to fit your exact workflows, integrate with existing business systems, and scale alongside your business.</span>
     },
     {
       id: 'faq-2',
       indexStr: '02',
-      question: 'How long does it take to complete a project?',
-      answer: <span>The timeline depends on complexity. A standard professional website typically takes <span className="font-semibold text-zinc-200">2–4 weeks</span>, while complex web or mobile applications can take <span className="font-semibold text-zinc-200">6–12 weeks</span>. We provide clear milestone schedules for every project.</span>
+      question: 'How much does custom software development cost?',
+      answer: <span>The cost of custom software development varies based on scope, feature complexity, integrations, and project requirements. A simple custom tool or MVP might start at a lower range, whereas a fully featured enterprise software solution or complex digital platform requires more resources. We provide clear, transparent proposals with milestone-based pricing after our discovery session.</span>
     },
     {
       id: 'faq-3',
       indexStr: '03',
-      question: 'Do you offer ongoing support after project delivery?',
-      answer: <span>Yes, we provide flexible support and maintenance packages. This includes <span className="font-semibold text-zinc-200">regular updates, security monitoring, content edits</span>, performance optimization, and immediate troubleshooting to ensure your platform runs flawlessly.</span>
+      question: 'How long does it take to build custom software?',
+      answer: <span>Timelines depend directly on the scale and depth of the project. A standard business web application or website development project typically takes <span className="font-semibold text-zinc-200">3 to 6 weeks</span>, while advanced custom enterprise software or native mobile applications can take <span className="font-semibold text-zinc-200">8 to 16 weeks</span>. We work in sprints to deliver functional milestones throughout the project.</span>
     },
     {
       id: 'faq-4',
       indexStr: '04',
-      question: 'Can you work with our existing brand or team?',
-      answer: <span>Absolutely! We can seamlessly integrate with your existing brand guidelines, designs, or working team. Whether you need us to build on top of an existing codebase or collaborate with your internal developers, <span className="font-semibold text-zinc-200">we adapt to your workflow</span>.</span>
+      question: 'What should I look for in a custom software development company?',
+      answer: <span>When evaluating software development companies, prioritize technical expertise, a clear communication framework, a proven development process, and a strong portfolio of real-world projects. A reliable technology partner should not only write code but also understand your business objectives, offering recommendations on architecture, scalability, and security.</span>
     },
     {
       id: 'faq-5',
       indexStr: '05',
-      question: 'What is your pricing structure?',
-      answer: <span>We work with both fixed-price projects and monthly retainer models, depending on the scope. After an initial consultation, we provide a <span className="font-semibold text-zinc-200">transparent, detailed proposal</span> with no hidden costs so you know exactly what is included.</span>
+      question: 'What types of software can Nexora Empire build?',
+      answer: <span>We build a wide range of custom software solutions, including web applications, native and cross-platform mobile apps (iOS & Android), custom CRM systems, e-commerce platforms, workflow automation scripts, API integrations, and bespoke AI applications. All our systems are designed with modern tech stacks like React, Next.js, Node.js, and Python.</span>
     },
     {
       id: 'faq-6',
       indexStr: '06',
-      question: 'How do we get started with Nexora Empire?',
-      answer: <span>Getting started is simple! Click the "Start a Project" button below to fill out our briefing form, or reach out directly <span className="font-semibold text-zinc-200">via WhatsApp</span>. We will schedule a free discovery call to discuss your goals and lay out a strategic plan.</span>
+      question: 'Do you work with businesses outside Cameroon?',
+      answer: <span>Yes! While Nexora Empire is proudly based in Buea, Cameroon, we operate as a global development partner. We serve international clients across Europe, North America, and other regions, using remote collaboration tools and agile methodologies to ensure seamless project delivery and real-time communication regardless of time zones.</span>
+    },
+    {
+      id: 'faq-7',
+      indexStr: '07',
+      question: 'How do I get started with a software development project?',
+      answer: <span>Getting started is simple! Click the "Start a Project" button to fill out our briefing form, or connect with our team directly via WhatsApp. We will schedule a free discovery consultation to discuss your business requirements, scope out a project plan, and provide a detailed custom software quote.</span>
     }
   ];
 
