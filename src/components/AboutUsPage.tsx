@@ -44,7 +44,7 @@ import { FAQ } from './FAQ';
 type TabType = 'mission' | 'vision' | 'approach';
 
 interface AboutUsPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
+  setView: (view: any) => void;
 }
 
 export const AboutUsPage: React.FC<AboutUsPageProps> = ({ setView }) => {

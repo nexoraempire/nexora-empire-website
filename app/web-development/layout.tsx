@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description: 'Nexora Empire offers professional web design and development services. We build responsive business website development, e-commerce stores, and custom web applications.',
   keywords: 'Web Design and Development Services, Website Development Services, Custom Website Development, Web Development Services, Web Design Services, Business Website Development, Web Application Development, Web Design Services for Small Business',
   alternates: {
-    canonical: 'https://www.nexoraempire.com/web-dev',
+    canonical: 'https://www.nexoraempire.com/web-development',
   },
   openGraph: {
     type: 'website',
-    url: 'https://www.nexoraempire.com/web-dev',
+    url: 'https://www.nexoraempire.com/web-development',
     title: 'Web Design & Development Services | Nexora Empire',
     description: 'Nexora Empire offers professional web design and development services. We build responsive business website development, e-commerce stores, and custom web applications.',
     images: [

@@ -159,7 +159,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
       });
 
       // Specific Service details
-      if (pathname === '/web-dev') {
+      if (pathname === '/web-development') {
         schemas.push({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -168,7 +168,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
           "areaServed": "Cameroon",
           "description": "Website development company in Cameroon building custom web design projects and corporate sites."
         });
-      } else if (pathname === '/mobile-dev') {
+      } else if (pathname === '/mobile-app-development') {
         schemas.push({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -177,7 +177,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
           "areaServed": "Cameroon",
           "description": "Mobile app development services in Cameroon building custom native iOS, Android, and cross-platform apps."
         });
-      } else if (pathname === '/seo-growth') {
+      } else if (pathname === '/seo-services') {
         schemas.push({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -195,7 +195,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
           "areaServed": "Cameroon",
           "description": "Professional branding agency in Cameroon specialized in custom logos, brand identity, and graphics."
         });
-      } else if (pathname === '/ai-video') {
+      } else if (pathname === '/ai-video-creation') {
         schemas.push({
           "@context": "https://schema.org",
           "@type": "Service",

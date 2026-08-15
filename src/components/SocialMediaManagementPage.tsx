@@ -40,7 +40,7 @@ import {
 } from 'lucide-react';
 
 interface SocialMediaManagementPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
+  setView: (view: any) => void;
 }
 
 export const SocialMediaManagementPage: React.FC<SocialMediaManagementPageProps> = ({ setView }) => {

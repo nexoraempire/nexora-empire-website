@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description: 'Nexora Empire provides professional SEO services in Cameroon. We specialize in search engine optimization, technical audits, and local SEO from Buea.',
   keywords: 'SEO Services Cameroon, Local SEO Cameroon, Google Ranking Cameroon, SEO Agency Cameroon',
   alternates: {
-    canonical: 'https://www.nexoraempire.com/seo-growth',
+    canonical: 'https://www.nexoraempire.com/seo-services',
   },
   openGraph: {
     type: 'website',
-    url: 'https://www.nexoraempire.com/seo-growth',
+    url: 'https://www.nexoraempire.com/seo-services',
     title: 'SEO Services Cameroon | Nexora Empire',
     description: 'Nexora Empire provides professional SEO services in Cameroon. We specialize in search engine optimization, technical audits, and local SEO from Buea.',
     images: [

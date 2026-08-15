@@ -9,8 +9,8 @@ import {
 import { BrandLogo } from './BrandLogo.tsx';
 
 interface FooterProps {
-  view?: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | '404';
-  setView?: (view?: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | '404') => void;
+  view?: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-development' | 'mobile-app-development' | 'branding-design' | 'seo-services' | 'ai-video-creation' | 'social-media-management' | '404';
+  setView?: (view?: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-development' | 'mobile-app-development' | 'branding-design' | 'seo-services' | 'ai-video-creation' | 'social-media-management' | '404') => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
@@ -27,8 +27,8 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
       return;
     }
 
-    if (id === 'web-dev') {
-      setView?.('web-dev');
+    if (id === 'web-development') {
+      setView?.('web-development');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if ((window as any).lenis) {
         (window as any).lenis.scrollTo(0);
@@ -36,8 +36,8 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
       return;
     }
 
-    if (id === 'mobile-dev') {
-      setView?.('mobile-dev');
+    if (id === 'mobile-app-development') {
+      setView?.('mobile-app-development');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if ((window as any).lenis) {
         (window as any).lenis.scrollTo(0);
@@ -54,8 +54,8 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
       return;
     }
 
-    if (id === 'seo-growth') {
-      setView?.('seo-growth');
+    if (id === 'seo-services') {
+      setView?.('seo-services');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if ((window as any).lenis) {
         (window as any).lenis.scrollTo(0);
@@ -63,8 +63,8 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
       return;
     }
 
-    if (id === 'ai-video') {
-      setView?.('ai-video');
+    if (id === 'ai-video-creation') {
+      setView?.('ai-video-creation');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if ((window as any).lenis) {
         (window as any).lenis.scrollTo(0);
@@ -216,12 +216,12 @@ export const Footer: React.FC<FooterProps> = ({ view, setView }) => {
 
   // Services list links
   const serviceLinks = [
-    { name: 'Website Development', id: 'web-dev' },
-    { name: 'Mobile App Development', id: 'mobile-dev' },
+    { name: 'Website Development', id: 'web-development' },
+    { name: 'Mobile App Development', id: 'mobile-app-development' },
     { name: 'Branding & Graphic Design', id: 'branding-design' },
     { name: 'Social Media Management', id: 'social-media-management' },
-    { name: 'SEO & Digital Growth', id: 'seo-growth' },
-    { name: 'AI Video Creation & Editing', id: 'ai-video' },
+    { name: 'SEO & Digital Growth', id: 'seo-services' },
+    { name: 'AI Video Creation & Editing', id: 'ai-video-creation' },
     { name: 'Training Programs', id: 'training-internship' }
   ];
 

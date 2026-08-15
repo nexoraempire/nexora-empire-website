@@ -20,14 +20,14 @@ const IconMap: Record<string, React.FC<any>> = {
 };
 
 interface HeaderProps {
-  view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | 'industries/healthcare' | 'industries/fintech' | 'industries/education' | 'industries/ecommerce' | 'industries/enterprise' | '404';
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | 'industries/healthcare' | 'industries/fintech' | 'industries/education' | 'industries/ecommerce' | 'industries/enterprise' | '404') => void;
+  view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-development' | 'mobile-app-development' | 'branding-design' | 'seo-services' | 'ai-video-creation' | 'social-media-management' | 'industries/healthcare' | 'industries/fintech' | 'industries/education' | 'industries/ecommerce' | 'industries/enterprise' | '404';
+  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-development' | 'mobile-app-development' | 'branding-design' | 'seo-services' | 'ai-video-creation' | 'social-media-management' | 'industries/healthcare' | 'industries/fintech' | 'industries/education' | 'industries/ecommerce' | 'industries/enterprise' | '404') => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
   const [activeLink, setActiveLink] = useState(
     view === 'about-us' ? 'About' : 
-    (view === 'web-dev' || view === 'mobile-dev' || view === 'branding-design' || view === 'seo-growth' || view === 'ai-video' || view === 'social-media-management') ? 'Services' : 
+    (view === 'web-development' || view === 'mobile-app-development' || view === 'branding-design' || view === 'seo-services' || view === 'ai-video-creation' || view === 'social-media-management') ? 'Services' : 
     view.startsWith('industries/') ? 'Industries' :
     view === 'portfolio' ? 'Work' : 
     view === 'pricing' ? 'Pricing' : 
@@ -68,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
 
   const isLinkActive = (link: string) => {
     if (view === 'about-us') return link === 'About';
-    if (['web-dev', 'mobile-dev', 'branding-design', 'seo-growth', 'ai-video', 'social-media-management'].includes(view)) return link === 'Services';
+    if (['web-development', 'mobile-app-development', 'branding-design', 'seo-services', 'ai-video-creation', 'social-media-management'].includes(view)) return link === 'Services';
     if (view.startsWith('industries/')) return link === 'Industries';
     if (view === 'portfolio') return link === 'Work';
     if (view === 'pricing') return link === 'Pricing';
@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
     setMobileMenuOpen(false);
     
     if (serviceId === 'service-card-01') {
-      setView('web-dev');
+      setView('web-development');
       return;
     }
 
@@ -303,12 +303,12 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
                     {serviceOptions.map((opt) => {
                       const IconComponent = IconMap[opt.iconName];
                       const servicePath = 
-                        opt.id === 'service-card-01' ? '/web-dev' :
-                        opt.id === 'service-card-02' ? '/mobile-dev' :
+                        opt.id === 'service-card-01' ? '/web-development' :
+                        opt.id === 'service-card-02' ? '/mobile-app-development' :
                         opt.id === 'service-card-03' ? '/branding-design' :
                         opt.id === 'service-card-08' ? '/social-media-management' :
-                        opt.id === 'service-card-06' ? '/seo-growth' :
-                        opt.id === 'service-card-05' ? '/ai-video' :
+                        opt.id === 'service-card-06' ? '/seo-services' :
+                        opt.id === 'service-card-05' ? '/ai-video-creation' :
                         '/';
                       return (
                         <Link
@@ -489,12 +489,12 @@ export const Header: React.FC<HeaderProps> = ({ view, setView }) => {
                       {serviceOptions.map((opt) => {
                         const IconComponent = IconMap[opt.iconName];
                         const servicePath = 
-                          opt.id === 'service-card-01' ? '/web-dev' :
-                          opt.id === 'service-card-02' ? '/mobile-dev' :
+                          opt.id === 'service-card-01' ? '/web-development' :
+                          opt.id === 'service-card-02' ? '/mobile-app-development' :
                           opt.id === 'service-card-03' ? '/branding-design' :
                           opt.id === 'service-card-08' ? '/social-media-management' :
-                          opt.id === 'service-card-06' ? '/seo-growth' :
-                          opt.id === 'service-card-05' ? '/ai-video' :
+                          opt.id === 'service-card-06' ? '/seo-services' :
+                          opt.id === 'service-card-05' ? '/ai-video-creation' :
                           '/';
                         return (
                           <Link

@@ -96,7 +96,7 @@ const brands = [
       { name: "Instagram", url: "https://www.instagram.com/nexorae_motion?igsh=MXVnZGl5eG44MGlnbA==", icon: <Instagram className="w-4 h-4" /> },
       { name: "Facebook", url: "https://www.facebook.com/share/1JiAwi9sqW/", icon: <Facebook className="w-4 h-4" /> }
     ],
-    primaryLink: "https://www.nexoraempire.com/ai-video"
+    primaryLink: "https://www.nexoraempire.com/ai-video-creation"
   }
 ];
 

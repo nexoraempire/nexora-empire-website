@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description: 'Nexora Empire offers custom mobile app development in Cameroon. Our developers build high-performance iOS, Android, and cross-platform mobile applications in Buea.',
   keywords: 'Mobile App Development Cameroon, Android App Development Cameroon, iOS App Development Cameroon, Cross Platform App Development Cameroon',
   alternates: {
-    canonical: 'https://www.nexoraempire.com/mobile-dev',
+    canonical: 'https://www.nexoraempire.com/mobile-app-development',
   },
   openGraph: {
     type: 'website',
-    url: 'https://www.nexoraempire.com/mobile-dev',
+    url: 'https://www.nexoraempire.com/mobile-app-development',
     title: 'Mobile App Development Cameroon | Nexora Empire',
     description: 'Nexora Empire offers custom mobile app development in Cameroon. Our developers build high-performance iOS, Android, and cross-platform mobile applications in Buea.',
     images: [

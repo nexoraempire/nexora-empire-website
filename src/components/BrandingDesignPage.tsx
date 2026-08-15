@@ -30,7 +30,7 @@ import {
 } from 'lucide-react';
 
 interface BrandingDesignPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design') => void;
+  setView: (view: any) => void;
 }
 
 export const BrandingDesignPage: React.FC<BrandingDesignPageProps> = ({ setView }) => {

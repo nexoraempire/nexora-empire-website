@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description: 'Nexora Empire provides professional AI video creation in Cameroon. We generate high-quality marketing, commercial, and social media videos from Buea.',
   keywords: 'AI Video Creation Cameroon, AI Marketing Videos, AI Commercial Videos, AI Content Creation',
   alternates: {
-    canonical: 'https://www.nexoraempire.com/ai-video',
+    canonical: 'https://www.nexoraempire.com/ai-video-creation',
   },
   openGraph: {
     type: 'website',
-    url: 'https://www.nexoraempire.com/ai-video',
+    url: 'https://www.nexoraempire.com/ai-video-creation',
     title: 'AI Video Creation Cameroon | Nexora Empire',
     description: 'Nexora Empire provides professional AI video creation in Cameroon. We generate high-quality marketing, commercial, and social media videos from Buea.',
     images: [

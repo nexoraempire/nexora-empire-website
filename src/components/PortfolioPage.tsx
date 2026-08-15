@@ -31,7 +31,7 @@ import {
 } from 'lucide-react';
 
 interface PortfolioPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
+  setView: (view: any) => void;
 }
 
 interface ProjectDetail {

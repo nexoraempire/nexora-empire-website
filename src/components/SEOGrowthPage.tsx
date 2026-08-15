@@ -36,7 +36,7 @@ import {
 } from 'lucide-react';
 
 interface SEOGrowthPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth') => void;
+  setView: (view: any) => void;
 }
 
 export const SEOGrowthPage: React.FC<SEOGrowthPageProps> = ({ setView }) => {

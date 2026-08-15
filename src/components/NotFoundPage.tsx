@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Compass, Home, ArrowLeft } from 'lucide-react';
 
 interface NotFoundPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management' | '404') => void;
+  setView: (view: any) => void;
 }
 
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({ setView }) => {

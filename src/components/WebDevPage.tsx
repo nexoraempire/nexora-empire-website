@@ -33,7 +33,7 @@ import {
 } from 'lucide-react';
 
 interface WebDevPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'contact' | 'web-dev' | 'mobile-dev') => void;
+  setView: (view: any) => void;
 }
 
 export const WebDevPage: React.FC<WebDevPageProps> = ({ setView }) => {

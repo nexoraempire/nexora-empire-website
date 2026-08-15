@@ -35,7 +35,7 @@ import {
 } from 'lucide-react';
 
 interface MobileDevPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'contact' | 'web-dev' | 'mobile-dev') => void;
+  setView: (view: any) => void;
 }
 
 export const MobileDevPage: React.FC<MobileDevPageProps> = ({ setView }) => {

@@ -57,7 +57,7 @@ import brightPhoto from '../assets/images/bright.webp';
 import carinePhoto from '../assets/images/photo_2_2026-07-12_09-29-53.webp';
 
 interface TrainingInternshipPageProps {
-  setView: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'academy' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
+  setView: (view: any) => void;
 }
 
 export const TrainingInternshipPage: React.FC<TrainingInternshipPageProps> = ({ setView }) => {

@@ -27,7 +27,7 @@ interface ServiceItem {
 }
 
 interface ServicesProps {
-  setView?: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-dev' | 'mobile-dev' | 'branding-design' | 'seo-growth' | 'ai-video' | 'social-media-management') => void;
+  setView?: (view: 'home' | 'about-us' | 'portfolio' | 'pricing' | 'training-internship' | 'contact' | 'web-development' | 'mobile-app-development' | 'branding-design' | 'seo-services' | 'ai-video-creation' | 'social-media-management') => void;
 }
 
 export const Services: React.FC<ServicesProps> = ({ setView }) => {
@@ -179,11 +179,11 @@ export const Services: React.FC<ServicesProps> = ({ setView }) => {
                 transition={{ duration: 0.7, delay: index * 0.05 }}
                 onClick={() => {
                   const target = 
-                    service.id === 'service-card-01' ? 'web-dev' :
-                    service.id === 'service-card-02' ? 'mobile-dev' :
+                    service.id === 'service-card-01' ? 'web-development' :
+                    service.id === 'service-card-02' ? 'mobile-app-development' :
                     service.id === 'service-card-03' ? 'branding-design' :
-                    service.id === 'service-card-05' ? 'ai-video' :
-                    service.id === 'service-card-06' ? 'seo-growth' :
+                    service.id === 'service-card-05' ? 'ai-video-creation' :
+                    service.id === 'service-card-06' ? 'seo-services' :
                     service.id === 'service-card-07' ? 'training-internship' :
                     'contact';
 
